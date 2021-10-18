@@ -1,0 +1,13 @@
+C:\Users\Admin\source\repos\Wargame\Wargame\bin\Debug\Wargame.exe.config
+C:\Users\Admin\source\repos\Wargame\Wargame\bin\Debug\Wargame.exe
+C:\Users\Admin\source\repos\Wargame\Wargame\bin\Debug\Wargame.pdb
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.Properties.Resources.resources
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.exe
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.pdb
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.Form1.resources
+C:\Users\Admin\source\repos\Wargame\Wargame\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\source\repos\Wargame\Wargame\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\source\repos\Wargame\Wargame\obj\Debug\Wargame.csproj.CopyComplete

@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F195B7A-942C-4813-BD65-17A600111CFF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Wargame</RootNamespace>
+    <AssemblyName>Wargame</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AttackerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttackerForm.Designer.cs">
+      <DependentUpon>AttackerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BattleConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BattleConfigurationForm.Designer.cs">
+      <DependentUpon>BattleConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefenderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefenderForm.Designer.cs">
+      <DependentUpon>DefenderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Defined\Air\Air_Unit_Class.cs" />
+    <Compile Include="User_Defined\Battlefield\Battlefield_Class.cs" />
+    <Compile Include="User_Defined\Battlefield\Front_Class.cs" />
+    <Compile Include="User_Defined\Commander\Commander_Class.cs" />
+    <Compile Include="User_Defined\Doctrine\Doctrine_Class.cs" />
+    <Compile Include="User_Defined\Enum\Enums.cs" />
+    <Compile Include="User_Defined\Ter\Ter_Unit_Class.cs" />
+    <EmbeddedResource Include="Forms\AttackerForm.resx">
+      <DependentUpon>AttackerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BattleConfigurationForm.resx">
+      <DependentUpon>BattleConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefenderForm.resx">
+      <DependentUpon>DefenderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\battlefield_config_wallpaper1.jpg" />
+    <None Include="Resources\attacker_wallpaper.jpg" />
+    <None Include="Resources\defender_wallpaper.jpg" />
+    <Content Include="Resources\Icons\air_experience_icon.png" />
+    <Content Include="Resources\Icons\army_experience_icon.png" />
+    <Content Include="Resources\Icons\Button Icons\exit_button_icon.png" />
+    <Content Include="Resources\Icons\Button Icons\options_button_icon.png" />
+    <Content Include="Resources\Icons\Button Icons\play_button_icon.png" />
+    <Content Include="Resources\Icons\Button Icons\play_button_icon_fhd.png" />
+    <Content Include="Resources\Icons\Button Icons\title_picture.png" />
+    <Content Include="Resources\Icons\Button Icons\title_picture_fhd.png" />
+    <Content Include="Resources\Icons\Flags\SOV_flag.png" />
+    <Content Include="Resources\Icons\Flags\USA_flag.png" />
+    <Content Include="Resources\Icons\fort_icon.png" />
+    <Content Include="Resources\Icons\fuel_icon.png" />
+    <None Include="Resources\Icons\generic_bg_307x113.jpg" />
+    <None Include="Resources\Icons\multi_group_bg.jpg" />
+    <None Include="Resources\Icons\gen_1.png" />
+    <None Include="Resources\Icons\gen_2.png" />
+    <None Include="Resources\Icons\gen_3.png" />
+    <Content Include="Resources\Icons\night_icon.png" />
+    <Content Include="Resources\Icons\river_icon.png" />
+    <Content Include="Resources\Icons\terrain_forest.png" />
+    <Content Include="Resources\Icons\terrain_hills.png" />
+    <Content Include="Resources\Icons\terrain_mountain.png" />
+    <Content Include="Resources\Icons\terrain_plains.png" />
+    <Content Include="Resources\Icons\terrain_urban.png" />
+    <Content Include="Resources\Icons\weather_clear.png" />
+    <Content Include="Resources\Icons\weather_heavy_rain.png" />
+    <Content Include="Resources\Icons\weather_light_rain.png" />
+    <Content Include="Resources\Icons\winter_indicator.png" />
+    <Content Include="Resources\main_menu_wallpaper.jpg" />
+    <Content Include="Resources\main_menu_wallpaper_2.jpg" />
+    <None Include="Resources\main_menu_wallpaper_merged.jpg" />
+    <None Include="Resources\title_picture_fhd.png" />
+    <None Include="Resources\options_wallpaper.jpg" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_AtkHeli_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_AtkHeli_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_AtkHeli_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_CAS_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_CAS_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_CAS_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_Interd_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_Interd_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_Interd_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_L_AtkHeli_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_L_AtkHeli_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_L_AtkHeli_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_MultiRole_Jet_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_MultiRole_Jet_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SOV_MultiRole_Jet_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_AtkHeli_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_AtkHeli_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_AtkHeli_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_CAS_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_CAS_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_CAS_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_Interd_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_Interd_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_Interd_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_L_AtkHeli_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_L_AtkHeli_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_L_AtkHeli_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_MultiRole_Jet_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_MultiRole_Jet_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Air_Units\SUA_MultiRole_Jet_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_AAG_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_AAG_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_AAG_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Art_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Art_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Art_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_AT_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_AT_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_AT_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_H_Art_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_H_Art_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_H_Art_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_H_Mech_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_H_Mech_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_H_Mech_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Inf_Eq_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Inf_Eq_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Inf_Eq_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Art_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Art_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Art_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Mech_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Mech_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Mech_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Tank_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Tank_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_L_Tank_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_MBT_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_MBT_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_MBT_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Mot_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Mot_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_Mot_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPAAG_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPAAG_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPAAG_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPArt_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPArt_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPArt_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPAT_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPAT_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPAT_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPH_Art_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPH_Art_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPH_Art_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPL_Art_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPL_Art_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPL_Art_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPRArt_Gen1.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPRArt_Gen2.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SOV_SPRArt_Gen3.png" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_AAG_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_AAG_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_AAG_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Art_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Art_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Art_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_AT_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_AT_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_AT_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_H_Art_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_H_Art_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_H_Art_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_H_Mech_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_H_Mech_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_H_Mech_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Inf_Eq_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Inf_Eq_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Inf_Eq_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Art_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Art_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Art_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Mech_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Mech_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Mech_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Tank_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Tank_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_L_Tank_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_MBT_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_MBT_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_MBT_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Mot_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Mot_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_Mot_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPAAG_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPAAG_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPAAG_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPArt_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPArt_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPArt_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPAT_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPAT_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPAT_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPH_Art_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPH_Art_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPH_Art_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPL_Art_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPL_Art_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPL_Art_Gen3.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPRArt_Gen1.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPRArt_Gen2.PNG" />
+    <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPRArt_Gen3.PNG" />
+    <Content Include="Resources\wallpaper.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
