@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Battlefield_NS;
 
 namespace Wargame.Forms
 {
@@ -113,6 +114,29 @@ namespace Wargame.Forms
         {
             airUnitNameCounter++;
             airUnitNameCounter = airUnitNameCounter % airUnitNames.Count();
+            PictureAir.Image = Image.FromFile(UpdateUnitPicture(airUnitNames, airUnitNameCounter, airGen, true));
+        }
+        private void BtnPrevLeg_Click(object sender, EventArgs e)
+        {
+            legUnitNameCounter--;
+            if (legUnitNameCounter < 0)
+                legUnitNameCounter = legUnitNames.Count() - 1;
+            PictureLeg.Image = Image.FromFile(UpdateUnitPicture(legUnitNames, legUnitNameCounter, legGen));
+        }
+
+        private void BtnPrevMob_Click(object sender, EventArgs e)
+        {
+            mobUnitNameCounter--;
+            if (mobUnitNameCounter < 0)
+                mobUnitNameCounter = mobUnitNames.Count() - 1;
+            PictureMob.Image = Image.FromFile(UpdateUnitPicture(mobUnitNames, mobUnitNameCounter, mobGen));
+        }
+
+        private void BtnPrevAir_Click(object sender, EventArgs e)
+        {
+            airUnitNameCounter--;
+            if (airUnitNameCounter < 0)
+                airUnitNameCounter = airUnitNames.Count() - 1;
             PictureAir.Image = Image.FromFile(UpdateUnitPicture(airUnitNames, airUnitNameCounter, airGen, true));
         }
     }

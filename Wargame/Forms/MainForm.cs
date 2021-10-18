@@ -9,19 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+using Battlefield_NS;
+
 using Wargame.Forms;
 
 namespace Wargame
 {
     public partial class MainForm : Form
     {
-        int flagCounterDef = 0;
-
+        static Battlefield battlefieldInstance = new Battlefield();
 
         private Form activeForm;
+
         public MainForm()
         {
             InitializeComponent();
+            
+
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -59,6 +63,11 @@ namespace Wargame
         private void BtnDefConfig_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.DefenderForm(), sender);
+        }
+
+        private void BtnPlay_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.PlayForm(), sender);
         }
     }
 }

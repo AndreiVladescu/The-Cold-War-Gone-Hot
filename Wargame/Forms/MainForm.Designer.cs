@@ -34,11 +34,11 @@ namespace Wargame
             this.PanelSideMainMenu = new System.Windows.Forms.Panel();
             this.BtnDefConfig = new System.Windows.Forms.Button();
             this.BtnAtkConfig = new System.Windows.Forms.Button();
-            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.BtnBattlefieldConfig = new System.Windows.Forms.Button();
             this.BtnPlay = new System.Windows.Forms.Button();
             this.BtnOptions = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
+            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.PictureMainMenuWallpaper = new System.Windows.Forms.PictureBox();
             this.PanelDesktopPanel.SuspendLayout();
             this.PanelSideMainMenu.SuspendLayout();
@@ -103,14 +103,6 @@ namespace Wargame
             this.BtnAtkConfig.UseVisualStyleBackColor = true;
             this.BtnAtkConfig.Click += new System.EventHandler(this.BtnAtkConfig_Click);
             // 
-            // PanelMiniDesktop
-            // 
-            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
-            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
-            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
-            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
-            this.PanelMiniDesktop.TabIndex = 2;
-            // 
             // BtnBattlefieldConfig
             // 
             this.BtnBattlefieldConfig.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
@@ -137,6 +129,7 @@ namespace Wargame
             this.BtnPlay.Size = new System.Drawing.Size(203, 90);
             this.BtnPlay.TabIndex = 2;
             this.BtnPlay.UseVisualStyleBackColor = true;
+            this.BtnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
             // BtnOptions
             // 
@@ -164,6 +157,14 @@ namespace Wargame
             this.BtnClose.TabIndex = 0;
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnCloseApp);
+            // 
+            // PanelMiniDesktop
+            // 
+            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
+            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
+            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
+            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
+            this.PanelMiniDesktop.TabIndex = 2;
             // 
             // PictureMainMenuWallpaper
             // 

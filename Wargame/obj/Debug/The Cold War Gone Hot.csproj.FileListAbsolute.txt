@@ -31,3 +31,4 @@ C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.PlayForm.resources

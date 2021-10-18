@@ -151,6 +151,7 @@ namespace Wargame.Forms
             this.BtnPrevLeg.TabIndex = 13;
             this.BtnPrevLeg.Text = "<";
             this.BtnPrevLeg.UseVisualStyleBackColor = true;
+            this.BtnPrevLeg.Click += new System.EventHandler(this.BtnPrevLeg_Click);
             // 
             // BtnNextLeg
             // 
@@ -317,6 +318,7 @@ namespace Wargame.Forms
             this.BtnPrevMob.TabIndex = 13;
             this.BtnPrevMob.Text = "<";
             this.BtnPrevMob.UseVisualStyleBackColor = true;
+            this.BtnPrevMob.Click += new System.EventHandler(this.BtnPrevMob_Click);
             // 
             // BtnNextMob
             // 
@@ -479,6 +481,7 @@ namespace Wargame.Forms
             this.BtnPrevAir.TabIndex = 13;
             this.BtnPrevAir.Text = "<";
             this.BtnPrevAir.UseVisualStyleBackColor = true;
+            this.BtnPrevAir.Click += new System.EventHandler(this.BtnPrevAir_Click);
             // 
             // BtnNextAir
             // 

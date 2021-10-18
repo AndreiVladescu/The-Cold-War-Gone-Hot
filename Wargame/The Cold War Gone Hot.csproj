@@ -80,6 +80,12 @@
     <Compile Include="Forms\OptionsForm.Designer.cs">
       <DependentUpon>OptionsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayForm.Designer.cs">
+      <DependentUpon>PlayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SplashScreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,7 @@
     </Compile>
     <Compile Include="User_Defined\Air\Air_Unit_Class.cs" />
     <Compile Include="User_Defined\Battlefield\Battlefield_Class.cs" />
+    <Compile Include="User_Defined\Battlefield\Battlefield_Instance.cs" />
     <Compile Include="User_Defined\Battlefield\Front_Class.cs" />
     <Compile Include="User_Defined\Commander\Commander_Class.cs" />
     <Compile Include="User_Defined\Doctrine\Doctrine_Class.cs" />
@@ -114,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OptionsForm.resx">
       <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlayForm.resx">
+      <DependentUpon>PlayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreenForm.resx">
       <DependentUpon>SplashScreenForm.cs</DependentUpon>
@@ -174,6 +184,7 @@
     <None Include="Resources\main_menu_wallpaper_merged.jpg" />
     <None Include="Resources\title_picture_fhd.png" />
     <None Include="Resources\options_wallpaper.jpg" />
+    <Content Include="Resources\play_form_wallpaper.jpg" />
     <Content Include="Resources\Unit_Images\Air_Units\SOV_AtkHeli_Gen1.png" />
     <Content Include="Resources\Unit_Images\Air_Units\SOV_AtkHeli_Gen2.png" />
     <Content Include="Resources\Unit_Images\Air_Units\SOV_AtkHeli_Gen3.png" />

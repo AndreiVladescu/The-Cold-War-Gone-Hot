@@ -303,6 +303,16 @@ namespace Wargame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play_form_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("play_form_wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap river_icon {
             get {
                 object obj = ResourceManager.GetObject("river_icon", resourceCulture);
