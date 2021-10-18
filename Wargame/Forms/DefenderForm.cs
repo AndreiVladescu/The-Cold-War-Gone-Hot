@@ -30,6 +30,9 @@ namespace Wargame.Forms
         int legUnitNameCounter = 0;
         int mobUnitNameCounter = 0;
         int airUnitNameCounter = 0;
+
+        int legUnitCounter = 0;
+
         public DefenderForm()
         {
             InitializeComponent();
@@ -138,6 +141,12 @@ namespace Wargame.Forms
             if (airUnitNameCounter < 0)
                 airUnitNameCounter = airUnitNames.Count() - 1;
             PictureAir.Image = Image.FromFile(UpdateUnitPicture(airUnitNames, airUnitNameCounter, airGen, true));
+        }
+
+        private void BtnAddLeg_Click(object sender, EventArgs e)
+        {
+            legUnitCounter ++;
+            LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
         }
     }
 }

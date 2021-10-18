@@ -113,5 +113,22 @@ namespace Ter_Units_NS
 
             return public_details;
         }
+        public void SetHp(float hp)
+        {
+            _hp = hp;
+        }
+        public void SetSoftAttack(float s_atk)
+        {
+            _s_atk = s_atk;
+        }
+        public void SetHardAttack(float h_atk)
+        {
+            _h_atk = h_atk;
+        }
+        public float[] GetBaseStats()
+        {
+            float[] baseStats = new float[] { _hp, _s_atk, _h_atk };
+            return baseStats;
+        }
     }
 }

@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Threading;
 
 using Battlefield_NS;
-
 using Wargame.Forms;
 
 namespace Wargame
@@ -29,6 +28,7 @@ namespace Wargame
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
+            
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
@@ -37,8 +37,10 @@ namespace Wargame
             childForm.Dock = DockStyle.Fill;
             this.PanelMiniDesktop.Controls.Add(childForm);
             this.PanelMiniDesktop.Tag = childForm;
+            childForm.SuspendLayout();
             childForm.BringToFront();
             childForm.Show();
+            this.ResumeLayout();
         }
         private void BtnCloseApp(object sender, EventArgs e)
         {
@@ -63,6 +65,9 @@ namespace Wargame
         private void BtnDefConfig_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.DefenderForm(), sender);
+            //this.Hide();
+            //DefenderForm defForm = new Forms.DefenderForm();
+            //defForm.Show();
         }
 
         private void BtnPlay_Click(object sender, EventArgs e)

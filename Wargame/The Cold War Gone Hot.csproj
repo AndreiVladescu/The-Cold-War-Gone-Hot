@@ -101,7 +101,6 @@
     </Compile>
     <Compile Include="User_Defined\Air\Air_Unit_Class.cs" />
     <Compile Include="User_Defined\Battlefield\Battlefield_Class.cs" />
-    <Compile Include="User_Defined\Battlefield\Battlefield_Instance.cs" />
     <Compile Include="User_Defined\Battlefield\Front_Class.cs" />
     <Compile Include="User_Defined\Commander\Commander_Class.cs" />
     <Compile Include="User_Defined\Doctrine\Doctrine_Class.cs" />

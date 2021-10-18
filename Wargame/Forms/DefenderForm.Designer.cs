@@ -275,6 +275,7 @@ namespace Wargame.Forms
             this.BtnAddLeg.TabIndex = 1;
             this.BtnAddLeg.Text = "+";
             this.BtnAddLeg.UseVisualStyleBackColor = true;
+            this.BtnAddLeg.Click += new System.EventHandler(this.BtnAddLeg_Click);
             // 
             // PictureLeg
             // 

@@ -30,5 +30,13 @@ namespace Commander_NS
         {
             return _name;
         }
+        public void SetLevel(int level)
+        {
+            _level = level;
+        }
+        public void SetName(string name)
+        {
+            _name = name;
+        }
     }
 }

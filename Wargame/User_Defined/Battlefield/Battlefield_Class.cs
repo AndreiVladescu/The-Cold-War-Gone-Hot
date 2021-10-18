@@ -69,5 +69,53 @@ namespace Battlefield_NS
         {
             return _season;
         }
+        public void SetTime(int time)
+        {
+            _time = time;
+        }
+        public void SetFortLevel(int fort_level)
+        {
+            _fort_level = fort_level;
+        }
+        public void SetRiver(River_Enum river)
+        {
+            _river = river;
+        }
+        public void SetSeason(Season_Enum season)
+        {
+            _season = season;
+        }
+        public void SetTerrain(Terrain_Enum terrain)
+        {
+            _terrain = terrain;
+        }
+        public void SetWeather(Weather_Enum weather)
+        {
+            _weather = weather;
+        }
+        public int ComputeTurn()
+        {
+            _time++;
+            if (_time > 23)
+                _time = 0;
+            _atk.DamageHp(_def.GetBaseStats()[1]);
+            _def.DamageHp(_atk.GetBaseStats()[1]);
+            if (_atk.GetBaseStats()[0] <= 0)
+                return 1; // Defender team won
+            else if (_def.GetBaseStats()[0] <= 0)
+                return 2; // Attacker team won
+            else
+                return 0; // The battle continues
+        }
+        public List<float> ReturnAttackerStats()
+        {
+            List<float> attackerList = new List<float> {1, 2};
+            return attackerList;
+        }
+        public List<float> ReturnDefenderStats()
+        {
+            List<float> defenderList = new List<float> { 1, 2 };
+            return defenderList;
+        }
     }
 }
