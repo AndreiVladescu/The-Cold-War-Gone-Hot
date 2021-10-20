@@ -16,6 +16,8 @@ namespace Wargame.Forms
     {
         string dirName = Directory.GetCurrentDirectory();
 
+        Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
+
         List<string> legUnitNames = new List<string> { "Inf_Eq", "Art", "L_Art", "H_Art", "AAG", "AT" };
         List<string> mobUnitNames = new List<string> { "Mot","L_Mech", "H_Mech", "MBT", "L_Tank", "SPArt", "SPL_Art", "SPH_Art", "SPAAG", "SPAT", "SPRArt" };
         List<string> airUnitNames = new List<string> { "MultiRole_Jet", "CAS", "Interd", "AtkHeli", "L_AtkHeli" };
@@ -32,7 +34,8 @@ namespace Wargame.Forms
         int airUnitNameCounter = 0;
 
         int legUnitCounter = 0;
-
+        int mobUnitCounter = 0;
+        int airUnitCounter = 0;
         public DefenderForm()
         {
             InitializeComponent();
@@ -145,8 +148,47 @@ namespace Wargame.Forms
 
         private void BtnAddLeg_Click(object sender, EventArgs e)
         {
-            legUnitCounter ++;
+            battlefieldInstance.AddDefTerUnit(new float[]{ 50, 50, 50 });
+            legUnitCounter = battlefieldInstance.DefReturnNumbers();
             LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
+            
+
+           
+        }
+
+        private void BtnSubLeg_Click(object sender, EventArgs e)
+        {
+            battlefieldInstance.SubDefTerUnit();
+            legUnitCounter = battlefieldInstance.DefReturnNumbers();
+            LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
+        }
+
+        private void BtnAddMob_Click(object sender, EventArgs e)
+        {
+            mobUnitCounter++;
+            LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
+        }
+
+        private void BtnSubMob_Click(object sender, EventArgs e)
+        {
+            mobUnitCounter--;
+            if (mobUnitCounter < 0)
+                mobUnitCounter = 0;
+            LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
+        }
+
+        private void BtnSubAir_Click(object sender, EventArgs e)
+        {
+            airUnitCounter--;
+            if (airUnitCounter < 0)
+                airUnitCounter = 0;
+            LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
+        }
+
+        private void BtnAddAir_Click(object sender, EventArgs e)
+        {
+            airUnitCounter++;
+            LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
         }
     }
 }

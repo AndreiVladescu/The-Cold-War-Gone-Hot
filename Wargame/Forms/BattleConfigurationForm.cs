@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Battlefield_NS;
+
 namespace Wargame.Forms
 {
     public partial class BattleConfigurationForm : Form
     {
+        Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
         public BattleConfigurationForm()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace Wargame.Forms
         private void TrackBarFortLevel_ValueChanged(object sender, EventArgs e)
         {
             int fortLevel = TrackBarFortLevel.Value;
+            this.battlefieldInstance._fort_level = fortLevel;
             LblFortShow.Text = "Level: " + Convert.ToString(fortLevel);
         }
         private void TrackBarTime_ValueChanged(object sender, EventArgs e)
@@ -30,6 +34,7 @@ namespace Wargame.Forms
                 PictureTime.Show();
             else
                 PictureTime.Hide();
+            battlefieldInstance._time = time;
         }
 
         private void plainsToolStripMenuItem_Click(object sender, EventArgs e)

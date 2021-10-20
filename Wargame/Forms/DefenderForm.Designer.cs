@@ -265,6 +265,7 @@ namespace Wargame.Forms
             this.BtnSubLeg.TabIndex = 2;
             this.BtnSubLeg.Text = "-";
             this.BtnSubLeg.UseVisualStyleBackColor = true;
+            this.BtnSubLeg.Click += new System.EventHandler(this.BtnSubLeg_Click);
             // 
             // BtnAddLeg
             // 
@@ -340,7 +341,7 @@ namespace Wargame.Forms
             this.LblMobStats3Values.Name = "LblMobStats3Values";
             this.LblMobStats3Values.Size = new System.Drawing.Size(27, 80);
             this.LblMobStats3Values.TabIndex = 11;
-            this.LblMobStats3Values.Text = "40\r\n0\r\n15\r\n10";
+            this.LblMobStats3Values.Text = "50\r\n5\r\n15\r\n10";
             // 
             // LblMobStats3
             // 
@@ -360,7 +361,7 @@ namespace Wargame.Forms
             this.LblMobStats2Values.Name = "LblMobStats2Values";
             this.LblMobStats2Values.Size = new System.Drawing.Size(36, 100);
             this.LblMobStats2Values.TabIndex = 9;
-            this.LblMobStats2Values.Text = "100\r\n0\r\n100\r\n40\r\n20";
+            this.LblMobStats2Values.Text = "130\r\n35\r\n90\r\n45\r\n0";
             // 
             // LblMobStats2
             // 
@@ -378,9 +379,9 @@ namespace Wargame.Forms
             this.LblMobStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMobStats1Values.Location = new System.Drawing.Point(458, 13);
             this.LblMobStats1Values.Name = "LblMobStats1Values";
-            this.LblMobStats1Values.Size = new System.Drawing.Size(45, 100);
+            this.LblMobStats1Values.Size = new System.Drawing.Size(36, 100);
             this.LblMobStats1Values.TabIndex = 7;
-            this.LblMobStats1Values.Text = "1000\r\n50\r\n20\r\n40\r\n0";
+            this.LblMobStats1Values.Text = "800\r\n75\r\n25\r\n30\r\n5";
             // 
             // LblMobStats1
             // 
@@ -433,6 +434,7 @@ namespace Wargame.Forms
             this.BtnSubMob.TabIndex = 2;
             this.BtnSubMob.Text = "-";
             this.BtnSubMob.UseVisualStyleBackColor = true;
+            this.BtnSubMob.Click += new System.EventHandler(this.BtnSubMob_Click);
             // 
             // BtnAddMob
             // 
@@ -443,6 +445,7 @@ namespace Wargame.Forms
             this.BtnAddMob.TabIndex = 1;
             this.BtnAddMob.Text = "+";
             this.BtnAddMob.UseVisualStyleBackColor = true;
+            this.BtnAddMob.Click += new System.EventHandler(this.BtnAddMob_Click);
             // 
             // PictureMob
             // 
@@ -501,9 +504,9 @@ namespace Wargame.Forms
             this.LblAirStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAirStats1Values.Location = new System.Drawing.Point(484, 13);
             this.LblAirStats1Values.Name = "LblAirStats1Values";
-            this.LblAirStats1Values.Size = new System.Drawing.Size(45, 100);
+            this.LblAirStats1Values.Size = new System.Drawing.Size(27, 100);
             this.LblAirStats1Values.TabIndex = 7;
-            this.LblAirStats1Values.Text = "1000\r\n50\r\n20\r\n40\r\n0";
+            this.LblAirStats1Values.Text = "80\r\n50\r\n20\r\n30\r\n5";
             // 
             // LblAirStats1
             // 
@@ -556,6 +559,7 @@ namespace Wargame.Forms
             this.BtnSubAir.TabIndex = 2;
             this.BtnSubAir.Text = "-";
             this.BtnSubAir.UseVisualStyleBackColor = true;
+            this.BtnSubAir.Click += new System.EventHandler(this.BtnSubAir_Click);
             // 
             // BtnAddAir
             // 
@@ -566,6 +570,7 @@ namespace Wargame.Forms
             this.BtnAddAir.TabIndex = 1;
             this.BtnAddAir.Text = "+";
             this.BtnAddAir.UseVisualStyleBackColor = true;
+            this.BtnAddAir.Click += new System.EventHandler(this.BtnAddAir_Click);
             // 
             // PictureAir
             // 

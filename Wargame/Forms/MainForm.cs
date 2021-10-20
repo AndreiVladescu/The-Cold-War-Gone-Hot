@@ -16,15 +16,14 @@ namespace Wargame
 {
     public partial class MainForm : Form
     {
-        static Battlefield battlefieldInstance = new Battlefield();
+        //static Battlefield battlefieldInstance = new Battlefield();
 
         private Form activeForm;
+        Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
 
         public MainForm()
         {
             InitializeComponent();
-            
-
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -37,10 +36,10 @@ namespace Wargame
             childForm.Dock = DockStyle.Fill;
             this.PanelMiniDesktop.Controls.Add(childForm);
             this.PanelMiniDesktop.Tag = childForm;
-            childForm.SuspendLayout();
+            //childForm.SuspendLayout();
             childForm.BringToFront();
             childForm.Show();
-            this.ResumeLayout();
+            //this.ResumeLayout();
         }
         private void BtnCloseApp(object sender, EventArgs e)
         {

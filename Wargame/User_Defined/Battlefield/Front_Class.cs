@@ -15,10 +15,10 @@ namespace Front_NS
     {
         Factions_Enum _faction;
         // TODO Faction Image
-        List<Ter_Unit> _gnd;
-        List<Air_Unit> _air;
+        List<Ter_Unit> _gnd = new List<Ter_Unit>();
+        List<Air_Unit> _air = new List<Air_Unit>();
         Commander _commander;
-        List<float> _stats;
+        List<float> _stats = new List<float>();
         float _hp,
         _s_attack,
         _h_attack;
@@ -68,6 +68,15 @@ namespace Front_NS
         public void DamageHp(float hp)
         {
             _hp -= hp;
+        }
+        public int ReturnNumbers()
+        {
+            return _gnd.Count() + _air.Count();
+        }
+        public void SubTerUnit()
+        {
+            int lastElement = _gnd.Count() - 1;
+            _gnd.RemoveAt(lastElement);
         }
     }
 }
