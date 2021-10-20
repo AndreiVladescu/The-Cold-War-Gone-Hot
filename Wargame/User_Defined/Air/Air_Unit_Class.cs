@@ -28,6 +28,9 @@ namespace Air_Units_NS
         }
         public Air_Unit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
+            _gen = gen;
+            _unit_type = unit_type;
+            _unit_exp = unit_exp;
             // TODO automatic add from xml file
         }
         public Air_Unit(string name,

@@ -177,6 +177,10 @@ namespace Front_NS
         {
             terStruct._hp -= hp;
         }
+        public void DamageAirHp(float hp)
+        {
+            airStruct._hp -= hp;
+        }
         public int GetTerUnitNumber()
         {
             return _gnd.Count();
@@ -216,6 +220,18 @@ namespace Front_NS
                     nmbr++;
             }
             return nmbr;
+        }
+        public bool IsTerDefeated()
+        {
+            if (terStruct._hp > 0)
+                return false;
+            return true;
+        }
+        public bool IsAirDefeated()
+        {
+            if (airStruct._hp > 0)
+                return false;
+            return true;
         }
     }
 }

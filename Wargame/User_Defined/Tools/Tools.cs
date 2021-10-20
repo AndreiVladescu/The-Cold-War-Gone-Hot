@@ -33,5 +33,38 @@ namespace Wargame.User_Defined.Tools
 
             return newDir;
         }
+        public static float ReturnCombatWidthEffectiveness(int combatWidth)
+        {
+            float effectiveness = new float();
+
+            if (combatWidth <= 90)
+            {
+                effectiveness = (float)1;
+            }
+            else if (combatWidth <= 120)
+            {
+                effectiveness = (float)(-2 / 3 * combatWidth + 160) / 100;
+            }
+            else if (combatWidth <= 140)
+            {
+                effectiveness = (float)(-3 / 2 * combatWidth + 260) / 100;
+            }
+            else if (combatWidth <= 160)
+            {
+                effectiveness = (float)(-2 * combatWidth + 330) / 100;
+            }
+            else
+                effectiveness = (float)0.1;
+
+            return effectiveness;
+        }
     }
+    //public class Parser
+    //{
+    //    public struct Unit
+    //    {
+    //        public Unit(string name,
+    //            float hp,)
+    //    }
+    //}
 }

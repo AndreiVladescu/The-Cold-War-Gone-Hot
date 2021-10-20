@@ -129,7 +129,7 @@ namespace Wargame.Forms
         private void TrackbarAALevel_Scroll(object sender, EventArgs e)
         {
             int aaLevel = TrackbarAALevel.Value;
-            this.battlefieldInstance._air_gun = aaLevel;
+            this.battlefieldInstance._air_gun_level = aaLevel;
             LblAAShow.Text = "Level: " + Convert.ToString(aaLevel);
         }
     }
