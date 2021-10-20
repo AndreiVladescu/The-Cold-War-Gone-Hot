@@ -29,6 +29,7 @@ namespace Wargame.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DefenderForm));
             this.PictureFlagDefender = new System.Windows.Forms.PictureBox();
             this.PanelDefenderStats = new System.Windows.Forms.Panel();
             this.LblDefArmyStats = new System.Windows.Forms.Label();
@@ -63,6 +64,8 @@ namespace Wargame.Forms
             this.BtnAddMob = new System.Windows.Forms.Button();
             this.PictureMob = new System.Windows.Forms.PictureBox();
             this.PanelAir = new System.Windows.Forms.Panel();
+            this.LblAirExp = new System.Windows.Forms.Label();
+            this.PictureAirExp = new System.Windows.Forms.PictureBox();
             this.BtnPrevAir = new System.Windows.Forms.Button();
             this.BtnNextAir = new System.Windows.Forms.Button();
             this.LblAirStats1Values = new System.Windows.Forms.Label();
@@ -73,6 +76,7 @@ namespace Wargame.Forms
             this.BtnSubAir = new System.Windows.Forms.Button();
             this.BtnAddAir = new System.Windows.Forms.Button();
             this.PictureAir = new System.Windows.Forms.PictureBox();
+            this.PictureCommander = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureFlagDefender)).BeginInit();
             this.PanelDefenderStats.SuspendLayout();
             this.PanelLeg.SuspendLayout();
@@ -82,8 +86,10 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.PictureMobGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMob)).BeginInit();
             this.PanelAir.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAirExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAirGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureCommander)).BeginInit();
             this.SuspendLayout();
             // 
             // PictureFlagDefender
@@ -100,7 +106,7 @@ namespace Wargame.Forms
             // 
             // PanelDefenderStats
             // 
-            this.PanelDefenderStats.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x1132;
+            this.PanelDefenderStats.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.PanelDefenderStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelDefenderStats.Controls.Add(this.LblDefArmyStats);
             this.PanelDefenderStats.Location = new System.Drawing.Point(165, 12);
@@ -227,7 +233,7 @@ namespace Wargame.Forms
             // PictureLegGen
             // 
             this.PictureLegGen.BackColor = System.Drawing.Color.Transparent;
-            this.PictureLegGen.Image = global::Wargame.Properties.Resources.gen_1;
+            this.PictureLegGen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureLegGen.BackgroundImage")));
             this.PictureLegGen.Location = new System.Drawing.Point(267, 16);
             this.PictureLegGen.Name = "PictureLegGen";
             this.PictureLegGen.Size = new System.Drawing.Size(35, 35);
@@ -239,7 +245,7 @@ namespace Wargame.Forms
             // 
             this.LblLegCounter.AutoSize = true;
             this.LblLegCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegCounter.Location = new System.Drawing.Point(205, 99);
+            this.LblLegCounter.Location = new System.Drawing.Point(205, 69);
             this.LblLegCounter.Name = "LblLegCounter";
             this.LblLegCounter.Size = new System.Drawing.Size(71, 24);
             this.LblLegCounter.TabIndex = 4;
@@ -280,7 +286,7 @@ namespace Wargame.Forms
             // 
             // PictureLeg
             // 
-            this.PictureLeg.Image = global::Wargame.Properties.Resources.SUA_Inf_Eq_Gen1;
+            this.PictureLeg.Image = ((System.Drawing.Image)(resources.GetObject("PictureLeg.Image")));
             this.PictureLeg.Location = new System.Drawing.Point(17, 13);
             this.PictureLeg.Name = "PictureLeg";
             this.PictureLeg.Size = new System.Drawing.Size(180, 80);
@@ -408,7 +414,7 @@ namespace Wargame.Forms
             // 
             this.LblMobCounter.AutoSize = true;
             this.LblMobCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobCounter.Location = new System.Drawing.Point(205, 99);
+            this.LblMobCounter.Location = new System.Drawing.Point(205, 69);
             this.LblMobCounter.Name = "LblMobCounter";
             this.LblMobCounter.Size = new System.Drawing.Size(71, 24);
             this.LblMobCounter.TabIndex = 4;
@@ -449,7 +455,7 @@ namespace Wargame.Forms
             // 
             // PictureMob
             // 
-            this.PictureMob.Image = global::Wargame.Properties.Resources.SUA_Mot_Gen1;
+            this.PictureMob.Image = ((System.Drawing.Image)(resources.GetObject("PictureMob.Image")));
             this.PictureMob.Location = new System.Drawing.Point(17, 13);
             this.PictureMob.Name = "PictureMob";
             this.PictureMob.Size = new System.Drawing.Size(179, 80);
@@ -461,6 +467,8 @@ namespace Wargame.Forms
             // 
             this.PanelAir.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.PanelAir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelAir.Controls.Add(this.LblAirExp);
+            this.PanelAir.Controls.Add(this.PictureAirExp);
             this.PanelAir.Controls.Add(this.BtnPrevAir);
             this.PanelAir.Controls.Add(this.BtnNextAir);
             this.PanelAir.Controls.Add(this.LblAirStats1Values);
@@ -475,6 +483,27 @@ namespace Wargame.Forms
             this.PanelAir.Name = "PanelAir";
             this.PanelAir.Size = new System.Drawing.Size(1127, 139);
             this.PanelAir.TabIndex = 15;
+            // 
+            // LblAirExp
+            // 
+            this.LblAirExp.AutoSize = true;
+            this.LblAirExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirExp.Location = new System.Drawing.Point(263, 104);
+            this.LblAirExp.Name = "LblAirExp";
+            this.LblAirExp.Size = new System.Drawing.Size(65, 20);
+            this.LblAirExp.TabIndex = 15;
+            this.LblAirExp.Text = "Regular";
+            // 
+            // PictureAirExp
+            // 
+            this.PictureAirExp.Image = global::Wargame.Properties.Resources.unit_level_2;
+            this.PictureAirExp.Location = new System.Drawing.Point(220, 104);
+            this.PictureAirExp.Name = "PictureAirExp";
+            this.PictureAirExp.Size = new System.Drawing.Size(17, 22);
+            this.PictureAirExp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureAirExp.TabIndex = 14;
+            this.PictureAirExp.TabStop = false;
+            this.PictureAirExp.Click += new System.EventHandler(this.PictureAirExp_Click);
             // 
             // BtnPrevAir
             // 
@@ -502,7 +531,7 @@ namespace Wargame.Forms
             // 
             this.LblAirStats1Values.AutoSize = true;
             this.LblAirStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAirStats1Values.Location = new System.Drawing.Point(484, 13);
+            this.LblAirStats1Values.Location = new System.Drawing.Point(547, 13);
             this.LblAirStats1Values.Name = "LblAirStats1Values";
             this.LblAirStats1Values.Size = new System.Drawing.Size(27, 100);
             this.LblAirStats1Values.TabIndex = 7;
@@ -512,7 +541,7 @@ namespace Wargame.Forms
             // 
             this.LblAirStats1.AutoSize = true;
             this.LblAirStats1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAirStats1.Location = new System.Drawing.Point(338, 13);
+            this.LblAirStats1.Location = new System.Drawing.Point(363, 13);
             this.LblAirStats1.Name = "LblAirStats1";
             this.LblAirStats1.Size = new System.Drawing.Size(140, 100);
             this.LblAirStats1.TabIndex = 6;
@@ -521,7 +550,7 @@ namespace Wargame.Forms
             // PictureAirGen
             // 
             this.PictureAirGen.BackColor = System.Drawing.Color.Transparent;
-            this.PictureAirGen.Image = global::Wargame.Properties.Resources.gen_1;
+            this.PictureAirGen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureAirGen.BackgroundImage")));
             this.PictureAirGen.Location = new System.Drawing.Point(267, 16);
             this.PictureAirGen.Name = "PictureAirGen";
             this.PictureAirGen.Size = new System.Drawing.Size(35, 35);
@@ -533,7 +562,7 @@ namespace Wargame.Forms
             // 
             this.LblAirCounter.AutoSize = true;
             this.LblAirCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAirCounter.Location = new System.Drawing.Point(205, 99);
+            this.LblAirCounter.Location = new System.Drawing.Point(205, 69);
             this.LblAirCounter.Name = "LblAirCounter";
             this.LblAirCounter.Size = new System.Drawing.Size(71, 24);
             this.LblAirCounter.TabIndex = 4;
@@ -574,13 +603,23 @@ namespace Wargame.Forms
             // 
             // PictureAir
             // 
-            this.PictureAir.Image = global::Wargame.Properties.Resources.SUA_MultiRole_Jet_Gen1;
+            this.PictureAir.Image = ((System.Drawing.Image)(resources.GetObject("PictureAir.Image")));
             this.PictureAir.Location = new System.Drawing.Point(17, 13);
             this.PictureAir.Name = "PictureAir";
             this.PictureAir.Size = new System.Drawing.Size(180, 80);
             this.PictureAir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PictureAir.TabIndex = 0;
             this.PictureAir.TabStop = false;
+            // 
+            // PictureCommander
+            // 
+            this.PictureCommander.Image = global::Wargame.Properties.Resources.macarthur;
+            this.PictureCommander.Location = new System.Drawing.Point(12, 136);
+            this.PictureCommander.Name = "PictureCommander";
+            this.PictureCommander.Size = new System.Drawing.Size(147, 182);
+            this.PictureCommander.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureCommander.TabIndex = 16;
+            this.PictureCommander.TabStop = false;
             // 
             // DefenderForm
             // 
@@ -589,6 +628,7 @@ namespace Wargame.Forms
             this.BackgroundImage = global::Wargame.Properties.Resources.defender_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1554, 1041);
+            this.Controls.Add(this.PictureCommander);
             this.Controls.Add(this.PanelAir);
             this.Controls.Add(this.PanelMob);
             this.Controls.Add(this.PanelLeg);
@@ -610,8 +650,10 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.PictureMob)).EndInit();
             this.PanelAir.ResumeLayout(false);
             this.PanelAir.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAirExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAirGen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureCommander)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -662,5 +704,8 @@ namespace Wargame.Forms
         private System.Windows.Forms.Button BtnSubAir;
         private System.Windows.Forms.Button BtnAddAir;
         private System.Windows.Forms.PictureBox PictureAir;
+        private System.Windows.Forms.PictureBox PictureCommander;
+        private System.Windows.Forms.Label LblAirExp;
+        private System.Windows.Forms.PictureBox PictureAirExp;
     }
 }

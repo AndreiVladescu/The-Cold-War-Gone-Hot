@@ -102,6 +102,6 @@
         // Defense
         Elastic_Defense = 11,
         Overwhelming_Fire = 12,
-        Backhand_Bloww = 13
+        Backhand_Blow = 13
     }
 }

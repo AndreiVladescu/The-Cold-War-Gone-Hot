@@ -121,6 +121,7 @@
     <Compile Include="User_Defined\Doctrine\Doctrine_Class.cs" />
     <Compile Include="User_Defined\Enum\Enums.cs" />
     <Compile Include="User_Defined\Ter\Ter_Unit_Class.cs" />
+    <Compile Include="User_Defined\Tools\Tools.cs" />
     <EmbeddedResource Include="Forms\AttackerForm.resx">
       <DependentUpon>AttackerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +177,17 @@
     <None Include="Resources\battlefield_config_wallpaper1.jpg" />
     <None Include="Resources\attacker_wallpaper.jpg" />
     <None Include="Resources\defender_wallpaper.jpg" />
+    <Content Include="Resources\Commanders\bradley.jpg" />
+    <Content Include="Resources\Commanders\konev.jpg" />
+    <Content Include="Resources\Commanders\macarthur.jpg" />
+    <Content Include="Resources\Commanders\zhukov.jpg" />
+    <Content Include="Resources\Doctrines\backhand_blow.jpg" />
+    <Content Include="Resources\Doctrines\breakthrough.jpg" />
+    <Content Include="Resources\Doctrines\elastic_defence.jpg" />
+    <Content Include="Resources\Doctrines\overwhelming_fire.jpg" />
+    <Content Include="Resources\Doctrines\planned_attack.jpg" />
+    <Content Include="Resources\Doctrines\relentless_assault.jpg" />
+    <None Include="Resources\Icons\aa_icon.jpg" />
     <Content Include="Resources\Icons\air_experience_icon.png" />
     <Content Include="Resources\Icons\army_experience_icon.png" />
     <Content Include="Resources\Icons\Button Icons\exit_button_icon.png" />
@@ -200,6 +212,11 @@
     <Content Include="Resources\Icons\terrain_mountain.png" />
     <Content Include="Resources\Icons\terrain_plains.png" />
     <Content Include="Resources\Icons\terrain_urban.png" />
+    <Content Include="Resources\Icons\unit_level_1.jpg" />
+    <Content Include="Resources\Icons\unit_level_2.jpg" />
+    <Content Include="Resources\Icons\unit_level_3.jpg" />
+    <Content Include="Resources\Icons\unit_level_4.jpg" />
+    <Content Include="Resources\Icons\unit_level_5.jpg" />
     <Content Include="Resources\Icons\weather_clear.png" />
     <Content Include="Resources\Icons\weather_heavy_rain.png" />
     <Content Include="Resources\Icons\weather_light_rain.png" />
@@ -342,7 +359,9 @@
     <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPRArt_Gen1.PNG" />
     <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPRArt_Gen2.PNG" />
     <Content Include="Resources\Unit_Images\Ter_Units\SUA_SPRArt_Gen3.PNG" />
+    <None Include="Resources\unit_level_1.png" />
     <Content Include="Resources\wallpaper.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

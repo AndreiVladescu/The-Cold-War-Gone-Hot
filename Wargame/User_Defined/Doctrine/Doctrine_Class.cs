@@ -10,8 +10,8 @@ namespace Doctrine_NS
 {
     public class Doctrine
     {
-        string _name;
-        // TODO Image
+        public string _name { get; set; }
+        // TODO Modifiers
         public Doctrine()
         {
 

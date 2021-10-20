@@ -31,6 +31,10 @@ namespace Wargame.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BattleConfigurationForm));
             this.PanelBattlefield = new System.Windows.Forms.Panel();
+            this.LblAAShow = new System.Windows.Forms.Label();
+            this.PictureAA = new System.Windows.Forms.PictureBox();
+            this.LblAA = new System.Windows.Forms.Label();
+            this.TrackbarAALevel = new System.Windows.Forms.TrackBar();
             this.PictureFort = new System.Windows.Forms.PictureBox();
             this.LblSeasonShow = new System.Windows.Forms.Label();
             this.LblWeatherShow = new System.Windows.Forms.Label();
@@ -73,6 +77,8 @@ namespace Wargame.Forms
             this.LblTerrain = new System.Windows.Forms.Label();
             this.PictureTerrain = new System.Windows.Forms.PictureBox();
             this.PanelBattlefield.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrackbarAALevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureFort)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarFortLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarTime)).BeginInit();
@@ -89,6 +95,11 @@ namespace Wargame.Forms
             // PanelBattlefield
             // 
             this.PanelBattlefield.BackgroundImage = global::Wargame.Properties.Resources.battlefield_config_wallpaper1;
+            this.PanelBattlefield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PanelBattlefield.Controls.Add(this.LblAAShow);
+            this.PanelBattlefield.Controls.Add(this.PictureAA);
+            this.PanelBattlefield.Controls.Add(this.LblAA);
+            this.PanelBattlefield.Controls.Add(this.TrackbarAALevel);
             this.PanelBattlefield.Controls.Add(this.PictureFort);
             this.PanelBattlefield.Controls.Add(this.LblSeasonShow);
             this.PanelBattlefield.Controls.Add(this.LblWeatherShow);
@@ -116,10 +127,56 @@ namespace Wargame.Forms
             this.PanelBattlefield.Size = new System.Drawing.Size(1554, 1041);
             this.PanelBattlefield.TabIndex = 0;
             // 
+            // LblAAShow
+            // 
+            this.LblAAShow.AutoSize = true;
+            this.LblAAShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.LblAAShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAAShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.LblAAShow.Image = ((System.Drawing.Image)(resources.GetObject("LblAAShow.Image")));
+            this.LblAAShow.Location = new System.Drawing.Point(358, 846);
+            this.LblAAShow.Name = "LblAAShow";
+            this.LblAAShow.Size = new System.Drawing.Size(80, 24);
+            this.LblAAShow.TabIndex = 26;
+            this.LblAAShow.Text = "Level : 1";
+            // 
+            // PictureAA
+            // 
+            this.PictureAA.Image = global::Wargame.Properties.Resources.aa_icon;
+            this.PictureAA.Location = new System.Drawing.Point(444, 846);
+            this.PictureAA.Name = "PictureAA";
+            this.PictureAA.Size = new System.Drawing.Size(38, 34);
+            this.PictureAA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureAA.TabIndex = 25;
+            this.PictureAA.TabStop = false;
+            // 
+            // LblAA
+            // 
+            this.LblAA.AutoSize = true;
+            this.LblAA.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.LblAA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAA.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.LblAA.Image = ((System.Drawing.Image)(resources.GetObject("LblAA.Image")));
+            this.LblAA.Location = new System.Drawing.Point(12, 784);
+            this.LblAA.Name = "LblAA";
+            this.LblAA.Size = new System.Drawing.Size(301, 25);
+            this.LblAA.TabIndex = 24;
+            this.LblAA.Text = "Anti-Aircraft Cannons Level";
+            // 
+            // TrackbarAALevel
+            // 
+            this.TrackbarAALevel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.TrackbarAALevel.Location = new System.Drawing.Point(17, 825);
+            this.TrackbarAALevel.Maximum = 6;
+            this.TrackbarAALevel.Name = "TrackbarAALevel";
+            this.TrackbarAALevel.Size = new System.Drawing.Size(309, 45);
+            this.TrackbarAALevel.TabIndex = 23;
+            this.TrackbarAALevel.Scroll += new System.EventHandler(this.TrackbarAALevel_Scroll);
+            // 
             // PictureFort
             // 
             this.PictureFort.Image = global::Wargame.Properties.Resources.fort_icon;
-            this.PictureFort.Location = new System.Drawing.Point(444, 724);
+            this.PictureFort.Location = new System.Drawing.Point(444, 734);
             this.PictureFort.Name = "PictureFort";
             this.PictureFort.Size = new System.Drawing.Size(38, 34);
             this.PictureFort.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -131,6 +188,7 @@ namespace Wargame.Forms
             this.LblSeasonShow.AutoSize = true;
             this.LblSeasonShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblSeasonShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeasonShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblSeasonShow.Image = ((System.Drawing.Image)(resources.GetObject("LblSeasonShow.Image")));
             this.LblSeasonShow.Location = new System.Drawing.Point(173, 427);
             this.LblSeasonShow.Name = "LblSeasonShow";
@@ -143,6 +201,7 @@ namespace Wargame.Forms
             this.LblWeatherShow.AutoSize = true;
             this.LblWeatherShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblWeatherShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblWeatherShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblWeatherShow.Image = ((System.Drawing.Image)(resources.GetObject("LblWeatherShow.Image")));
             this.LblWeatherShow.Location = new System.Drawing.Point(1064, 245);
             this.LblWeatherShow.Name = "LblWeatherShow";
@@ -155,6 +214,7 @@ namespace Wargame.Forms
             this.LblRiverShow.AutoSize = true;
             this.LblRiverShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblRiverShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRiverShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblRiverShow.Image = ((System.Drawing.Image)(resources.GetObject("LblRiverShow.Image")));
             this.LblRiverShow.Location = new System.Drawing.Point(173, 357);
             this.LblRiverShow.Name = "LblRiverShow";
@@ -167,6 +227,7 @@ namespace Wargame.Forms
             this.LblTerrainShow.AutoSize = true;
             this.LblTerrainShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblTerrainShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTerrainShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblTerrainShow.Image = ((System.Drawing.Image)(resources.GetObject("LblTerrainShow.Image")));
             this.LblTerrainShow.Location = new System.Drawing.Point(1064, 82);
             this.LblTerrainShow.Name = "LblTerrainShow";
@@ -179,6 +240,7 @@ namespace Wargame.Forms
             this.LblFortShow.AutoSize = true;
             this.LblFortShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblFortShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFortShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblFortShow.Image = ((System.Drawing.Image)(resources.GetObject("LblFortShow.Image")));
             this.LblFortShow.Location = new System.Drawing.Point(358, 734);
             this.LblFortShow.Name = "LblFortShow";
@@ -223,6 +285,7 @@ namespace Wargame.Forms
             this.LblFort.AutoSize = true;
             this.LblFort.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblFort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFort.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblFort.Image = ((System.Drawing.Image)(resources.GetObject("LblFort.Image")));
             this.LblFort.Location = new System.Drawing.Point(12, 670);
             this.LblFort.Name = "LblFort";
@@ -281,6 +344,7 @@ namespace Wargame.Forms
             this.mountainToolStripMenuItem,
             this.cityToolStripMenuItem});
             this.terrainToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.terrainToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.terrainToolStripMenuItem.Name = "terrainToolStripMenuItem";
             this.terrainToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.terrainToolStripMenuItem.Text = "Terrain";
@@ -328,6 +392,7 @@ namespace Wargame.Forms
             this.summerToolStripMenuItem,
             this.winterToolStripMenuItem});
             this.weatherToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weatherToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.weatherToolStripMenuItem.Name = "weatherToolStripMenuItem";
             this.weatherToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.weatherToolStripMenuItem.Text = "Season";
@@ -367,6 +432,7 @@ namespace Wargame.Forms
             this.riverToolStripMenuItem1,
             this.largeRiverToolStripMenuItem});
             this.riverToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riverToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.riverToolStripMenuItem.Name = "riverToolStripMenuItem";
             this.riverToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.riverToolStripMenuItem.Text = "River";
@@ -399,6 +465,7 @@ namespace Wargame.Forms
             this.windyToolStripMenuItem,
             this.stormyToolStripMenuItem});
             this.seasonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seasonToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.seasonToolStripMenuItem.Name = "seasonToolStripMenuItem";
             this.seasonToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.seasonToolStripMenuItem.Text = "Weather";
@@ -440,6 +507,7 @@ namespace Wargame.Forms
             this.LblTime.AutoSize = true;
             this.LblTime.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTime.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblTime.Image = global::Wargame.Properties.Resources.generic_bg_307x1131;
             this.LblTime.Location = new System.Drawing.Point(12, 526);
             this.LblTime.Name = "LblTime";
@@ -463,6 +531,7 @@ namespace Wargame.Forms
             this.LblSeason.AutoSize = true;
             this.LblSeason.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblSeason.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeason.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblSeason.Image = global::Wargame.Properties.Resources.generic_bg_307x1132;
             this.LblSeason.Location = new System.Drawing.Point(12, 427);
             this.LblSeason.Name = "LblSeason";
@@ -486,6 +555,7 @@ namespace Wargame.Forms
             this.LblRiver.AutoSize = true;
             this.LblRiver.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.LblRiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRiver.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblRiver.Image = global::Wargame.Properties.Resources.generic_bg_307x1131;
             this.LblRiver.Location = new System.Drawing.Point(12, 352);
             this.LblRiver.Name = "LblRiver";
@@ -508,6 +578,7 @@ namespace Wargame.Forms
             this.LblWeather.AutoSize = true;
             this.LblWeather.BackColor = System.Drawing.SystemColors.ControlDark;
             this.LblWeather.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblWeather.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblWeather.Image = ((System.Drawing.Image)(resources.GetObject("LblWeather.Image")));
             this.LblWeather.Location = new System.Drawing.Point(1063, 209);
             this.LblWeather.Name = "LblWeather";
@@ -520,6 +591,7 @@ namespace Wargame.Forms
             this.LblTerrain.AutoSize = true;
             this.LblTerrain.BackColor = System.Drawing.SystemColors.ControlDark;
             this.LblTerrain.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTerrain.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblTerrain.Image = ((System.Drawing.Image)(resources.GetObject("LblTerrain.Image")));
             this.LblTerrain.Location = new System.Drawing.Point(1225, 62);
             this.LblTerrain.Name = "LblTerrain";
@@ -550,6 +622,8 @@ namespace Wargame.Forms
             this.Text = "BattleConfigurationForm";
             this.PanelBattlefield.ResumeLayout(false);
             this.PanelBattlefield.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureAA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TrackbarAALevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureFort)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarFortLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarTime)).EndInit();
@@ -612,5 +686,9 @@ namespace Wargame.Forms
         private System.Windows.Forms.Label LblWeatherShow;
         private System.Windows.Forms.Label LblSeasonShow;
         private System.Windows.Forms.PictureBox PictureFort;
+        private System.Windows.Forms.Label LblAAShow;
+        private System.Windows.Forms.PictureBox PictureAA;
+        private System.Windows.Forms.Label LblAA;
+        private System.Windows.Forms.TrackBar TrackbarAALevel;
     }
 }

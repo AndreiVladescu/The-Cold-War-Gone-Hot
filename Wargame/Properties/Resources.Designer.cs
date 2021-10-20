@@ -63,6 +63,26 @@ namespace Wargame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aa_icon {
+            get {
+                object obj = ResourceManager.GetObject("aa_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_experience_icon {
+            get {
+                object obj = ResourceManager.GetObject("air_experience_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap attacker_wallpaper {
             get {
                 object obj = ResourceManager.GetObject("attacker_wallpaper", resourceCulture);
@@ -153,6 +173,16 @@ namespace Wargame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gen_11 {
+            get {
+                object obj = ResourceManager.GetObject("gen_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gen_2 {
             get {
                 object obj = ResourceManager.GetObject("gen_2", resourceCulture);
@@ -196,6 +226,16 @@ namespace Wargame.Properties {
         internal static System.Drawing.Bitmap generic_bg_307x1132 {
             get {
                 object obj = ResourceManager.GetObject("generic_bg_307x1132", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap macarthur {
+            get {
+                object obj = ResourceManager.GetObject("macarthur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -436,6 +476,66 @@ namespace Wargame.Properties {
         internal static System.Drawing.Bitmap title_picture_fhd {
             get {
                 object obj = ResourceManager.GetObject("title_picture_fhd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unit_level_1 {
+            get {
+                object obj = ResourceManager.GetObject("unit_level_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unit_level_11 {
+            get {
+                object obj = ResourceManager.GetObject("unit_level_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unit_level_2 {
+            get {
+                object obj = ResourceManager.GetObject("unit_level_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unit_level_3 {
+            get {
+                object obj = ResourceManager.GetObject("unit_level_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unit_level_4 {
+            get {
+                object obj = ResourceManager.GetObject("unit_level_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unit_level_5 {
+            get {
+                object obj = ResourceManager.GetObject("unit_level_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

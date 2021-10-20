@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Battlefield_NS;
+using Wargame.User_Defined.Tools;
 
 namespace Wargame.Forms
 {
     public partial class DefenderForm : Form
     {
-        string dirName = Directory.GetCurrentDirectory();
-
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
 
         List<string> legUnitNames = new List<string> { "Inf_Eq", "Art", "L_Art", "H_Art", "AAG", "AT" };
@@ -39,7 +38,6 @@ namespace Wargame.Forms
         public DefenderForm()
         {
             InitializeComponent();
-            dirName = dirName.Remove(dirName.Length - 9); // Removes /bin/DEBUG from folder name
         }
         private string GetUnitPicturePath(List<string> unitNames, int unitCounter, ref int gen, bool isAir = false)
         {
@@ -50,7 +48,7 @@ namespace Wargame.Forms
         }
         private string GetGenPicturePath(int gen)
         {
-            string picName = dirName + "\\Resources\\Icons\\gen_" + Convert.ToString(gen) + ".png";
+            string picName = Tools.dirPath + "\\Resources\\Icons\\gen_" + Convert.ToString(gen) + ".png";
             return picName;
         }
         private void PictureFlagDefender_Click(object sender, EventArgs e)
@@ -84,7 +82,7 @@ namespace Wargame.Forms
                 folderName = "Air_Units\\";
             else
                 folderName = "Ter_Units\\";
-            string picName = dirName + "Resources\\Unit_Images\\" + folderName + flagNames[flagCounter] + "_" + unitNames[unitCounter] + "_Gen" + Convert.ToString(gen) + ".png";
+            string picName = Tools.dirPath + "Resources\\Unit_Images\\" + folderName + flagNames[flagCounter] + "_" + unitNames[unitCounter] + "_Gen" + Convert.ToString(gen) + ".png";
             return picName;
         }
         private void BtnLegGen_Click(object sender, EventArgs e)
@@ -148,19 +146,20 @@ namespace Wargame.Forms
 
         private void BtnAddLeg_Click(object sender, EventArgs e)
         {
-            battlefieldInstance.AddDefTerUnit(new float[]{ 50, 50, 50 });
-            legUnitCounter = battlefieldInstance.DefReturnNumbers();
-            LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
-            
-
-           
+            //battlefieldInstance.AddDefTerUnit(new float[]{ 50, 50, 50 });
+            //legUnitCounter = battlefieldInstance.DefReturnNumbers();
+            //LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
+            int unit_type;
+            int unit_gen;
+            int unit_xp;
+            //battlefieldInstance.AddDefTerUnit()
         }
 
         private void BtnSubLeg_Click(object sender, EventArgs e)
         {
-            battlefieldInstance.SubDefTerUnit();
-            legUnitCounter = battlefieldInstance.DefReturnNumbers();
-            LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
+            //battlefieldInstance.SubDefTerUnit();
+            //legUnitCounter = battlefieldInstance.DefReturnNumbers();
+            //LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
         }
 
         private void BtnAddMob_Click(object sender, EventArgs e)
@@ -189,6 +188,11 @@ namespace Wargame.Forms
         {
             airUnitCounter++;
             LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
+        }
+
+        private void PictureAirExp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

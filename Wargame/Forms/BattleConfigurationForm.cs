@@ -126,5 +126,12 @@ namespace Wargame.Forms
             LblSeasonShow.Text = "Winter";
             PictureSeason.Visible = true;
         }
+
+        private void TrackbarAALevel_Scroll(object sender, EventArgs e)
+        {
+            int aaLevel = TrackbarAALevel.Value;
+            this.battlefieldInstance._air_gun = aaLevel;
+            LblAAShow.Text = "Level: " + Convert.ToString(aaLevel);
+        }
     }
 }

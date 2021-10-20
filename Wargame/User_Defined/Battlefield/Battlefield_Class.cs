@@ -14,6 +14,7 @@ namespace Battlefield_NS
         public static Battlefield battlefieldInstance = new Battlefield();
         public int _time { get; set; }
         public int _fort_level { get; set; }
+        public int _air_gun { get; set; }
         public Weather_Enum _weather { get; set; }
         public River_Enum _river { get; set; }
         public Terrain_Enum _terrain { get; set; }
@@ -21,12 +22,6 @@ namespace Battlefield_NS
 
         Front _atk = new Front(), 
             _def = new Front();
-
-        // Image to_do for 
-        // Weather - a little indicator 
-        // Terrain - like  hoi4 background image
-        // River - maybe a little identifier https://duckduckgo.com/?q=river+icon&t=ffab&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fbanner2.kisspng.com%2F20180331%2Ffcw%2Fkisspng-river-computer-icons-symbol-clip-art-river-5abf53bacbfbb3.0075292915224882508355.jpg
-        // Season - like https://duckduckgo.com/?q=snowflake+icon&t=ffab&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fwww.clipartmax.com%2Fpng%2Fmiddle%2F156-1563013_snowflake-icon.png
 
         private Battlefield()
         {
@@ -48,52 +43,41 @@ namespace Battlefield_NS
         }
         public int ComputeTurn()
         {
-            _time++;
-            if (_time > 23)
-                _time = 0;
-            _atk.DamageHp(_def.GetBaseStats()[1]);
-            _def.DamageHp(_atk.GetBaseStats()[1]);
-            if (_atk.GetBaseStats()[0] <= 0)
-                return 1; // Defender team won
-            else if (_def.GetBaseStats()[0] <= 0)
-                return 2; // Attacker team won
-            else
-                return 0; // The battle continues
+            return 0;
         }
-        public List<float> ReturnAttackerStats()
+        public void AddDefAirUnit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
-            List<float> attackerList = new List<float> {1, 2};
-            return attackerList;
+            _def.AddAirUnit(gen, unit_type, unit_exp);
         }
-        public List<float> ReturnDefenderStats()
+        public void AddAtkAirUnit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
-            List<float> defenderList = new List<float> { 1, 2 };
-            return defenderList;
+            _atk.AddAirUnit(gen, unit_type, unit_exp);
         }
-        public void AddDefTerUnit(float[] unitStats)
+        public void SubDefAirUnit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
-            if (unitStats.Length < 3)
-                return;
-            List<float> stats = new List<float> { unitStats[0], unitStats[1], unitStats[2] };
-            _def.AddTerUnit(stats);
+            _def.SubAirUnit(gen, unit_type, unit_exp);
         }
-        public void AddAtkTerUnit(float[] unitStats)
+        public void SubAtkAirUnit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
-            if (unitStats.Length < 3)
-                return;
-            List<float> stats = new List<float> { unitStats[0], unitStats[1], unitStats[2] };
-            _atk.AddAirUnit(stats);
+            _atk.SubAirUnit(gen, unit_type, unit_exp);
+
         }
-        public void SubDefTerUnit()
+        public void AddDefTerUnit(Gen_Enum gen, Ter_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
-            if (_def.ReturnNumbers() != 0)
-            {
-                _def.SubTerUnit();
-            }
+            _def.AddTerUnit(gen, unit_type, unit_exp);
         }
-        public int DefReturnNumbers()
+        public void AddAtkTerUnit(Gen_Enum gen, Ter_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
-            return _def.ReturnNumbers();
+            _atk.AddTerUnit(gen, unit_type, unit_exp);
         }
+        public void SubDefTerUnit(Gen_Enum gen, Ter_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
+        {
+            _def.SubTerUnit(gen, unit_type, unit_exp);
+        }
+        public void SubAtkTerUnit(Gen_Enum gen, Ter_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
+        {
+            _atk.SubTerUnit(gen, unit_type, unit_exp);
+        }
+
     }
 }

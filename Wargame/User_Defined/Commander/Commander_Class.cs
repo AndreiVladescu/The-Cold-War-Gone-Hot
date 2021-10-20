@@ -8,9 +8,8 @@ namespace Commander_NS
 {
     public class Commander
     {
-        int _level;
-        string _name;
-        // TODO Image
+        public int _level { get; set; }
+        public string _name { get; set; }
         public Commander()
         {
 
@@ -19,23 +18,6 @@ namespace Commander_NS
             string name)
         {
             _level = level;
-            _name = name;
-        }
-        // Getters
-        public int GetLevel()
-        {
-            return _level;
-        }
-        public string GetName()
-        {
-            return _name;
-        }
-        public void SetLevel(int level)
-        {
-            _level = level;
-        }
-        public void SetName(string name)
-        {
             _name = name;
         }
     }
