@@ -31,6 +31,5 @@ C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Fo
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Properties.Resources.resources
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.GenerateResource.cache
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
-C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.CopyComplete
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.exe
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.pdb

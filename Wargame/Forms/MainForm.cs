@@ -8,16 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
 using Battlefield_NS;
 using Wargame.Forms;
+using Wargame.User_Defined.Tools;
 
 namespace Wargame
 {
     public partial class MainForm : Form
     {
-        //static Battlefield battlefieldInstance = new Battlefield();
-
         private Form activeForm;
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
 
@@ -36,13 +34,12 @@ namespace Wargame
             childForm.Dock = DockStyle.Fill;
             this.PanelMiniDesktop.Controls.Add(childForm);
             this.PanelMiniDesktop.Tag = childForm;
-            //childForm.SuspendLayout();
             childForm.BringToFront();
             childForm.Show();
-            //this.ResumeLayout();
         }
         private void BtnCloseApp(object sender, EventArgs e)
         {
+            Tools.UpdateMouseValue(Tools.pvParam);
             System.Environment.Exit(1);
         }
 
@@ -64,14 +61,16 @@ namespace Wargame
         private void BtnDefConfig_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.DefenderForm(), sender);
-            //this.Hide();
-            //DefenderForm defForm = new Forms.DefenderForm();
-            //defForm.Show();
         }
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.PlayForm(), sender);
+        }
+
+        private void BtnCredits_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.CreditsForm(), sender);
         }
     }
 }

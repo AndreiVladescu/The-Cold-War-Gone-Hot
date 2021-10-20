@@ -4,12 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Wargame.User_Defined.Tools
 {
-    public class Tools
+    static public class Tools
     {
         public static string dirPath = GetTrueDirectory(Directory.GetCurrentDirectory());
+        public const UInt32 SPI_SETMOUSESPEED = 0x0071;
+        public const UInt32 SPI_GETMOUSESPEED = 0x0070;
+        public static UInt32 systemMouseSpeed = 10;
+        public static UInt32 pvParam = 10;
+
+        [DllImport("User32.dll")]
+        public static extern Boolean SystemParametersInfo(
+           UInt32 uiAction,
+           UInt32 uiParam,
+           UInt32 pvParam,
+           UInt32 fWinIni);
+
         public static string GetTrueDirectory(string dir)
         {
             string newDir = "";
@@ -58,6 +71,23 @@ namespace Wargame.User_Defined.Tools
 
             return effectiveness;
         }
+        public static void UpdateMouseValue(UInt32 mouseSpeed)
+        {
+           SystemParametersInfo(
+           SPI_SETMOUSESPEED,
+           0,
+           mouseSpeed,
+           0);
+        }
+        public static void SaveMouseValue()
+        {
+            SystemParametersInfo(
+           SPI_GETMOUSESPEED,
+           0,
+           pvParam,
+           0);
+        }
+
     }
     //public class Parser
     //{

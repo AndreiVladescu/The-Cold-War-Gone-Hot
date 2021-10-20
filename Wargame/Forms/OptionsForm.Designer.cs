@@ -40,24 +40,31 @@ namespace Wargame.Forms
             // TrackBarVolume
             // 
             this.TrackBarVolume.AutoSize = false;
+            this.TrackBarVolume.BackColor = System.Drawing.SystemColors.GrayText;
             this.TrackBarVolume.Location = new System.Drawing.Point(409, 493);
             this.TrackBarVolume.Maximum = 40;
             this.TrackBarVolume.Name = "TrackBarVolume";
             this.TrackBarVolume.Size = new System.Drawing.Size(776, 27);
             this.TrackBarVolume.TabIndex = 2;
             this.TrackBarVolume.Tag = "Mouse Sensitivity";
+            this.TrackBarVolume.Value = 40;
             // 
             // TrackBarSensitivity
             // 
             this.TrackBarSensitivity.AccessibleDescription = "Description";
             this.TrackBarSensitivity.AccessibleName = "Mouse Sensitivity";
             this.TrackBarSensitivity.AutoSize = false;
+            this.TrackBarSensitivity.BackColor = System.Drawing.SystemColors.GrayText;
             this.TrackBarSensitivity.Location = new System.Drawing.Point(409, 580);
-            this.TrackBarSensitivity.Maximum = 40;
+            this.TrackBarSensitivity.Maximum = 20;
+            this.TrackBarSensitivity.Minimum = 1;
             this.TrackBarSensitivity.Name = "TrackBarSensitivity";
             this.TrackBarSensitivity.Size = new System.Drawing.Size(776, 27);
             this.TrackBarSensitivity.TabIndex = 3;
             this.TrackBarSensitivity.Tag = "Volume";
+            this.TrackBarSensitivity.Value = 10;
+            this.TrackBarSensitivity.Scroll += new System.EventHandler(this.TrackBarSensitivity_Scroll);
+            this.TrackBarSensitivity.MouseHover += new System.EventHandler(this.TrackBarSensitivity_MouseHover);
             // 
             // PictureOptions
             // 
@@ -80,6 +87,7 @@ namespace Wargame.Forms
             this.Controls.Add(this.TrackBarSensitivity);
             this.Controls.Add(this.TrackBarVolume);
             this.Controls.Add(this.PictureOptions);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(350, 0);
             this.Name = "OptionsForm";
             this.Text = "OptionsForm";

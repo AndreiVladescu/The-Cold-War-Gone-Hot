@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Wargame.Forms;
+using Wargame.User_Defined.Tools;
+using System.Runtime.InteropServices;
 
 namespace Wargame
 {
@@ -15,8 +17,10 @@ namespace Wargame
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            Tools.SaveMouseValue();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SplashScreenForm());

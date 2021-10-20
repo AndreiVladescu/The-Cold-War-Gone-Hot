@@ -77,6 +77,12 @@
     <Compile Include="Forms\BattleConfigurationForm.Designer.cs">
       <DependentUpon>BattleConfigurationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreditsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreditsForm.Designer.cs">
+      <DependentUpon>CreditsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DefenderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BattleConfigurationForm.resx">
       <DependentUpon>BattleConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreditsForm.resx">
+      <DependentUpon>CreditsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DefenderForm.resx">
       <DependentUpon>DefenderForm.cs</DependentUpon>
@@ -362,6 +371,8 @@
     <None Include="Resources\unit_level_1.png" />
     <Content Include="Resources\wallpaper.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\XML_Files\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
