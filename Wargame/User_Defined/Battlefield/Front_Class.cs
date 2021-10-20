@@ -145,7 +145,6 @@ namespace Front_NS
                     _gnd.RemoveAt(index);
                     break;
                 }
-
             }
         }
         public void SubAirUnit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
@@ -198,6 +197,25 @@ namespace Front_NS
         {
             return _commander._level;
         }
-
+        public int GetLegUnitNumber()
+        {
+            int nmbr = 0;
+            for (int index =0;index < _gnd.Count(); index++)
+            {
+                if ((int)_gnd[index]._unit_type > 200)
+                    nmbr++;
+            }
+            return nmbr;
+        }
+        public int GetMobUnitNumber()
+        {
+            int nmbr = 0;
+            for (int index = 0; index < _gnd.Count(); index++)
+            {
+                if ((int)_gnd[index]._unit_type < 200)
+                    nmbr++;
+            }
+            return nmbr;
+        }
     }
 }

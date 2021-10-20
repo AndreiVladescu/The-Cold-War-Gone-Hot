@@ -35,6 +35,9 @@ namespace Ter_Units_NS
         }
         public Ter_Unit(Gen_Enum gen, Ter_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
+            _gen = gen;
+            _unit_type = unit_type;
+            _unit_exp = unit_exp;
             // TODO automatic adding from file
         }
         public Ter_Unit(string name,

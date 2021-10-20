@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using Battlefield_NS;
 using Wargame.User_Defined.Tools;
+using Enums_NS;
 
 namespace Wargame.Forms
 {
@@ -20,6 +21,8 @@ namespace Wargame.Forms
         List<string> legUnitNames = new List<string> { "Inf_Eq", "Art", "L_Art", "H_Art", "AAG", "AT" };
         List<string> mobUnitNames = new List<string> { "Mot","L_Mech", "H_Mech", "MBT", "L_Tank", "SPArt", "SPL_Art", "SPH_Art", "SPAAG", "SPAT", "SPRArt" };
         List<string> airUnitNames = new List<string> { "MultiRole_Jet", "CAS", "Interd", "AtkHeli", "L_AtkHeli" };
+
+        List<string> expNames = new List<string> { "Green", "Trained", "Experienced", "Veteran", "Elite" };
 
         List<string> flagNames = new List<string> { "SUA", "SOV" };
 
@@ -35,6 +38,11 @@ namespace Wargame.Forms
         int legUnitCounter = 0;
         int mobUnitCounter = 0;
         int airUnitCounter = 0;
+
+        int legExp = 1;
+        int mobExp = 1;
+        int airExp = 1;
+        
         public DefenderForm()
         {
             InitializeComponent();
@@ -146,53 +154,85 @@ namespace Wargame.Forms
 
         private void BtnAddLeg_Click(object sender, EventArgs e)
         {
-            //battlefieldInstance.AddDefTerUnit(new float[]{ 50, 50, 50 });
-            //legUnitCounter = battlefieldInstance.DefReturnNumbers();
-            //LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
-            int unit_type;
-            int unit_gen;
-            int unit_xp;
-            //battlefieldInstance.AddDefTerUnit()
+            Ter_Units_Enum unit_type = (Ter_Units_Enum)(legUnitNameCounter + 201);
+            Gen_Enum unit_gen = (Gen_Enum)(legGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(legExp - 1);
+            battlefieldInstance.AddDefTerUnit(unit_gen, unit_type, unit_xp);
+            legUnitCounter = battlefieldInstance.GetDefLegUnitNumber();
+            LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
         }
 
         private void BtnSubLeg_Click(object sender, EventArgs e)
         {
-            //battlefieldInstance.SubDefTerUnit();
-            //legUnitCounter = battlefieldInstance.DefReturnNumbers();
-            //LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
+            Ter_Units_Enum unit_type = (Ter_Units_Enum)(legUnitNameCounter + 201);
+            Gen_Enum unit_gen = (Gen_Enum)(legGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(legExp - 1);
+            battlefieldInstance.SubDefTerUnit(unit_gen, unit_type, unit_xp);
+            legUnitCounter = battlefieldInstance.GetDefLegUnitNumber();
+            LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
         }
 
         private void BtnAddMob_Click(object sender, EventArgs e)
         {
-            mobUnitCounter++;
+            Ter_Units_Enum unit_type = (Ter_Units_Enum)(mobUnitNameCounter + 101);
+            Gen_Enum unit_gen = (Gen_Enum)(mobGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(mobExp - 1);
+            battlefieldInstance.AddDefTerUnit(unit_gen, unit_type, unit_xp);
+            mobUnitCounter = battlefieldInstance.GetDefMobUnitNumber();
             LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
         }
 
         private void BtnSubMob_Click(object sender, EventArgs e)
         {
-            mobUnitCounter--;
-            if (mobUnitCounter < 0)
-                mobUnitCounter = 0;
+            Ter_Units_Enum unit_type = (Ter_Units_Enum)(mobUnitNameCounter + 101);
+            Gen_Enum unit_gen = (Gen_Enum)(mobGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(mobExp - 1);
+            battlefieldInstance.SubDefTerUnit(unit_gen, unit_type, unit_xp);
+            mobUnitCounter = battlefieldInstance.GetDefMobUnitNumber();
             LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
         }
 
         private void BtnSubAir_Click(object sender, EventArgs e)
         {
-            airUnitCounter--;
-            if (airUnitCounter < 0)
-                airUnitCounter = 0;
+            Air_Units_Enum unit_type = (Air_Units_Enum)(airUnitNameCounter + 301);
+            Gen_Enum unit_gen = (Gen_Enum)(airGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(airExp - 1);
+            battlefieldInstance.SubDefAirUnit(unit_gen, unit_type, unit_xp);
+            airUnitCounter = battlefieldInstance.GetDefAirUnitNumber();
             LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
         }
 
         private void BtnAddAir_Click(object sender, EventArgs e)
         {
-            airUnitCounter++;
+            Air_Units_Enum unit_type = (Air_Units_Enum)(airUnitNameCounter + 301);
+            Gen_Enum unit_gen = (Gen_Enum)(airGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(airExp - 1);
+            battlefieldInstance.AddDefAirUnit(unit_gen, unit_type, unit_xp);
+            airUnitCounter = battlefieldInstance.GetDefAirUnitNumber();
             LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
         }
 
+        private void PictureLegExp_Click(object sender, EventArgs e)
+        {
+            legExp++;
+            legExp %= 5;
+            PictureLegExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(legExp + 1) + ".jpg");
+            LblLegExp.Text = expNames[legExp];
+        }
+        private void PictureMobExp_Click(object sender, EventArgs e)
+        {
+            mobExp++;
+            mobExp %= 5;
+            PictureMobExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(mobExp + 1) + ".jpg");
+            LblMobExp.Text = expNames[mobExp];
+        }
         private void PictureAirExp_Click(object sender, EventArgs e)
         {
-
+            airExp++;
+            airExp %= 5;
+            PictureAirExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(airExp + 1) + ".jpg");
+            LblAirExp.Text = expNames[airExp];
         }
+
     }
 }

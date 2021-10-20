@@ -78,6 +78,29 @@ namespace Battlefield_NS
         {
             _atk.SubTerUnit(gen, unit_type, unit_exp);
         }
-
+        public int GetDefLegUnitNumber()
+        {
+            return _def.GetLegUnitNumber();
+        }
+        public int GetAtkLegUnitNumber()
+        {
+            return _atk.GetLegUnitNumber();
+        }
+        public int GetDefMobUnitNumber()
+        {
+            return _def.GetMobUnitNumber();
+        }
+        public int GetAtkMobUnitNumber()
+        {
+            return _atk.GetMobUnitNumber();
+        }
+        public int GetDefAirUnitNumber()
+        {
+            return _def.GetAirUnitNumber();
+        }
+        public int GetAtkAirUnitNumber()
+        {
+            return _atk.GetAirUnitNumber();
+        }
     }
 }
