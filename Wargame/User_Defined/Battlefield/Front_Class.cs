@@ -93,7 +93,6 @@ namespace Front_NS
     public class Front
     {
         Factions_Enum _faction;
-        // TODO Faction Image
         List<Ter_Unit> _gnd = new List<Ter_Unit>();
         List<Air_Unit> _air = new List<Air_Unit>();
 

@@ -58,7 +58,7 @@ namespace Battlefield_NS
             UpdateModifiers();
             UpdateEnvironment();
 
-            DefenderDealDamagge();
+            DefenderDealDamage();
             AttackerDealDamage();
 
             return DetermineWinner();
@@ -76,7 +76,7 @@ namespace Battlefield_NS
             else
                 return 0;
         }
-        private void DefenderDealDamagge()
+        private void DefenderDealDamage()
         {
             float gnd_damage = new float();
             float air_damage = new float();
@@ -96,7 +96,20 @@ namespace Battlefield_NS
         }
         private void AttackerDealDamage()
         {
+            float gnd_damage = new float();
+            float air_damage = new float();
 
+            TerStruct terStruct = _atk.GetTerStruct();
+            int numberOfTerUnits = _atk.GetTerUnitNumber();
+            float actualHardness = terStruct._hardness / numberOfTerUnits;
+
+            gnd_damage = (actualHardness * terStruct._h_atk + (1 - actualHardness) * terStruct._s_atk); // Phase one
+            gnd_damage += gnd_damage * _terrain_modifier_atk; // Phase two
+
+            air_damage = terStruct._air_atk; // Phase one
+
+            _def.DamageTerHp(gnd_damage);
+            _def.DamageAirHp(air_damage);
         }
         private void UpdateModifiers()
         {

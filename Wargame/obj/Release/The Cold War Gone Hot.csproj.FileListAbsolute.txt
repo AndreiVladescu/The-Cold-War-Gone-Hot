@@ -16,3 +16,21 @@ C:\Users\Admin\source\repos\Wargame\Wargame\obj\Release\The Cold War Gone Hot.cs
 C:\Users\Admin\source\repos\Wargame\Wargame\obj\Release\The Cold War Gone Hot.csproj.CopyComplete
 C:\Users\Admin\source\repos\Wargame\Wargame\obj\Release\Wargame.exe
 C:\Users\Admin\source\repos\Wargame\Wargame\obj\Release\Wargame.pdb
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Release\Wargame.exe.config
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Release\Wargame.exe
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Release\Wargame.pdb
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Release\System.Numerics.Vectors.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Forms.AttackerForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Forms.BattleConfigurationForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Forms.DefenderForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.MainForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Forms.OptionsForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Forms.PlayForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Forms.SplashScreenForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Properties.Resources.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.CopyComplete
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.exe
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.pdb
