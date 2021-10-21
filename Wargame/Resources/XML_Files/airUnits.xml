@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<allUnits>
+  <unit id="301">
+    <HP>100</HP>
+    <Air_Atk>100</Air_Atk>
+    <Gnd_Atk>100</Gnd_Atk>
+    <Strat_Bmb>100</Strat_Bmb>
+    <Air_Sup>100</Air_Sup>
+  </unit>
+  <unit id="302">
+    <HP>100</HP>
+    <Air_Atk>100</Air_Atk>
+    <Gnd_Atk>100</Gnd_Atk>
+    <Strat_Bmb>100</Strat_Bmb>
+    <Air_Sup>100</Air_Sup>
+  </unit>
+  <unit id="303">
+    <HP>100</HP>
+    <Air_Atk>100</Air_Atk>
+    <Gnd_Atk>100</Gnd_Atk>
+    <Strat_Bmb>100</Strat_Bmb>
+    <Air_Sup>100</Air_Sup>
+  </unit>
+  <unit id="401">
+    <HP>100</HP>
+    <Air_Atk>100</Air_Atk>
+    <Gnd_Atk>100</Gnd_Atk>
+    <Strat_Bmb>100</Strat_Bmb>
+    <Air_Sup>100</Air_Sup>
+  </unit>
+  <unit id="402">
+    <HP>100</HP>
+    <Air_Atk>100</Air_Atk>
+    <Gnd_Atk>100</Gnd_Atk>
+    <Strat_Bmb>100</Strat_Bmb>
+    <Air_Sup>100</Air_Sup>
+  </unit>
+</allUnits>

@@ -126,6 +126,8 @@
     <Compile Include="User_Defined\Commander\Commander_Class.cs" />
     <Compile Include="User_Defined\Doctrine\Doctrine_Class.cs" />
     <Compile Include="User_Defined\Enum\Enums.cs" />
+    <Compile Include="User_Defined\Parser\Init.cs" />
+    <Compile Include="User_Defined\Parser\Units.cs" />
     <Compile Include="User_Defined\Ter\Ter_Unit_Class.cs" />
     <Compile Include="User_Defined\Tools\Tools.cs" />
     <EmbeddedResource Include="Forms\AttackerForm.resx">
@@ -183,6 +185,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\XML_Files\airUnits.xml" />
+    <Content Include="Resources\XML_Files\groundUnits.xml" />
     <None Include="Resources\battlefield_config_wallpaper1.jpg" />
     <None Include="Resources\attacker_wallpaper.jpg" />
     <None Include="Resources\defender_wallpaper.jpg" />
@@ -371,8 +375,6 @@
     <None Include="Resources\unit_level_1.png" />
     <Content Include="Resources\wallpaper.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\XML_Files\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

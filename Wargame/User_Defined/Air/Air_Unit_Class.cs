@@ -31,7 +31,29 @@ namespace Air_Units_NS
             _gen = gen;
             _unit_type = unit_type;
             _unit_exp = unit_exp;
-            // TODO automatic add from xml file
+
+            float unitGenModifier = (float)gen * (float)0.15; // 15% per tech level
+            float unitExpModifier = (float)unit_exp * (float)0.25; // 25% per xp level
+
+            List<float> Attr = Parser.Units.GetUnitField((int)unit_type);
+
+            float hp = Attr[0];
+            float air_atk = Attr[1];
+            float gnd_atk = Attr[2];
+            float strat_bmb = Attr[3];
+            float air_sup = Attr[4];
+
+            hp += unitGenModifier * hp;
+            air_atk += unitGenModifier * air_atk;
+            gnd_atk += unitGenModifier * gnd_atk;
+            strat_bmb += unitGenModifier * strat_bmb;
+            air_sup += unitGenModifier * air_sup;
+
+            _hp = hp + unitExpModifier * hp;
+            _air_atk = air_atk + unitExpModifier * air_atk;
+            _gnd_atk = gnd_atk + unitExpModifier * gnd_atk;
+            _strat_bmb = strat_bmb + unitExpModifier * strat_bmb;
+            _air_sup = air_sup + unitExpModifier * air_sup;
         }
         public Air_Unit(string name,
         Gen_Enum gen,

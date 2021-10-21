@@ -10,6 +10,7 @@ namespace Wargame.User_Defined.Tools
 {
     static public class Tools
     {
+
         public static string dirPath = GetTrueDirectory(Directory.GetCurrentDirectory());
         public const UInt32 SPI_SETMOUSESPEED = 0x0071;
         public const UInt32 SPI_GETMOUSESPEED = 0x0070;
@@ -22,7 +23,7 @@ namespace Wargame.User_Defined.Tools
            UInt32 uiParam,
            UInt32 pvParam,
            UInt32 fWinIni);
-
+        
         public static string GetTrueDirectory(string dir)
         {
             string newDir = "";
@@ -87,14 +88,5 @@ namespace Wargame.User_Defined.Tools
            pvParam,
            0);
         }
-
     }
-    //public class Parser
-    //{
-    //    public struct Unit
-    //    {
-    //        public Unit(string name,
-    //            float hp,)
-    //    }
-    //}
 }

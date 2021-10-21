@@ -13,13 +13,14 @@ namespace Wargame
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        static public List<Parser.Units.Ter_Unit> allTerUnits = new List<Parser.Units.Ter_Unit>();
+        static public List<Parser.Units.Air_Unit> allAirUnits = new List<Parser.Units.Air_Unit>();
+
         [STAThread]
         static void Main(string[] args)
         {
-            Tools.SaveMouseValue();
+            Parser.Init.TerUnits();
+            Parser.Init.AirUnits();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

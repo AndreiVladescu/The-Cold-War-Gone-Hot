@@ -242,7 +242,6 @@ namespace Battlefield_NS
         public void SubAtkAirUnit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
             _atk.SubAirUnit(gen, unit_type, unit_exp);
-
         }
         public void AddDefTerUnit(Gen_Enum gen, Ter_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
