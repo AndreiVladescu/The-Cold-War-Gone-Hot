@@ -46,22 +46,22 @@ namespace Front_NS
             _combat_width += terUnitStats[12];
             _hardness += terUnitStats[13];
         }
-        public void DisolveRegiment(float[] terUnitStats)
+        public void DisolveRegiment(Ter_Unit unit)
         {
-            _hp -= terUnitStats[0];
-            _s_atk -= terUnitStats[1];
-            _h_atk -= terUnitStats[2];
-            _def -= terUnitStats[3];
-            _armor -= terUnitStats[4];
-            _pierce -= terUnitStats[5];
-            _breakt -= terUnitStats[6];
-            _fuel -= terUnitStats[7];
-            _reliab -= terUnitStats[8];
-            _organ -= terUnitStats[9];
-            _air_atk -= terUnitStats[10];
-            _entrench -= terUnitStats[11];
-            _combat_width -= terUnitStats[12];
-            _hardness -= terUnitStats[13];
+            _hp -= unit._hp;
+            _s_atk -= unit._s_atk;
+            _h_atk -= unit._h_atk;
+            _def -= unit._def;
+            _armor -= unit._armor;
+            _pierce -= unit._pierce;
+            _breakt -= unit._breakt;
+            _fuel -= unit._fuel;
+            _reliab -= unit._reliab;
+            _organ -= unit._organ;
+            _air_atk -= unit._air_atk;
+            _entrench -= unit._entrench;
+            _combat_width -= unit._combat_width;
+            _hardness -= unit._hardness;
         }
     }
     public struct AirStruct
@@ -81,13 +81,13 @@ namespace Front_NS
             _air_sup += airUnitStats[4];
         }
 
-        public void DisolveSquadron(float[] airUnitStats)
+        public void DisolveSquadron(Air_Unit unit)
         {
-            _hp -= airUnitStats[0];
-            _air_atk -= airUnitStats[1];
-            _gnd_atk -= airUnitStats[2];
-            _strat_bmb -= airUnitStats[3];
-            _air_sup -= airUnitStats[4];
+            _hp -= unit._hp;
+            _air_atk -= unit._air_atk;
+            _gnd_atk -= unit._gnd_atk;
+            _strat_bmb -= unit._strat_bmb;
+            _air_sup -= unit._air_sup;
         }
     }
     public class Front
@@ -141,6 +141,7 @@ namespace Front_NS
                 Ter_Unit unit = _gnd[index];
                 if (unit._gen == gen && unit._unit_exp == unit_exp && unit._unit_type == unit_type)
                 {
+                    terStruct.DisolveRegiment(unit);
                     _gnd.RemoveAt(index);
                     break;
                 }
@@ -153,6 +154,7 @@ namespace Front_NS
                 Air_Unit unit = _air[index];
                 if (unit._gen == gen && unit._unit_exp == unit_exp && unit._unit_type == unit_type)
                 {
+                    airStruct.DisolveSquadron(unit);
                     _air.RemoveAt(index);
                     break;
                 }

@@ -53,6 +53,7 @@ namespace Battlefield_NS
             _terrain = terrain;
             _season = season;
         }
+        #region Computing 
         public int ComputeTurn()
         {
             UpdateModifiers();
@@ -80,13 +81,23 @@ namespace Battlefield_NS
         {
             float gnd_damage = new float();
             float air_damage = new float();
-
             TerStruct terStruct = _def.GetTerStruct();
+            TerStruct otherPartyterStruct = _atk.GetTerStruct();
             int numberOfTerUnits = _def.GetTerUnitNumber();
-            float actualHardness = terStruct._hardness / numberOfTerUnits;
+            int otherPartynumberOfTerUnits = _atk.GetTerUnitNumber();
 
-            gnd_damage = (actualHardness * terStruct._h_atk + (1 - actualHardness) * terStruct._s_atk); // Phase one
+
+            float atk_modifier_armor_pierce = 0;
+            float atk_modifier_def_brkt = 1;
+
+            atk_modifier_def_brkt += (float)Math.Round((otherPartyterStruct._breakt - terStruct._def) / 5);
+            atk_modifier_armor_pierce = (float)(terStruct._pierce/numberOfTerUnits) / (otherPartyterStruct._armor / otherPartynumberOfTerUnits);
+
+            float actualHardness = otherPartyterStruct._hardness / otherPartynumberOfTerUnits;
+
+            gnd_damage = (actualHardness * terStruct._h_atk + (1 - actualHardness) * terStruct._s_atk) * atk_modifier_def_brkt * atk_modifier_armor_pierce; // Phase one
             gnd_damage += gnd_damage * _terrain_modifier_def; // Phase two
+
 
             air_damage = terStruct._air_atk; // Phase one
 
@@ -98,12 +109,20 @@ namespace Battlefield_NS
         {
             float gnd_damage = new float();
             float air_damage = new float();
-
             TerStruct terStruct = _atk.GetTerStruct();
+            TerStruct otherPartyterStruct = _def.GetTerStruct();
             int numberOfTerUnits = _atk.GetTerUnitNumber();
-            float actualHardness = terStruct._hardness / numberOfTerUnits;
+            int otherPartynumberOfTerUnits = _def.GetTerUnitNumber();
 
-            gnd_damage = (actualHardness * terStruct._h_atk + (1 - actualHardness) * terStruct._s_atk); // Phase one
+            float atk_modifier_armor_pierce = 0;
+            float atk_modifier_def_brkt = 1;
+
+            atk_modifier_def_brkt += (float)Math.Round((terStruct._breakt - otherPartyterStruct._def) / 5);
+            atk_modifier_armor_pierce = (float)(terStruct._pierce / numberOfTerUnits) / (otherPartyterStruct._armor / otherPartynumberOfTerUnits);
+
+            float actualHardness = otherPartyterStruct._hardness / otherPartynumberOfTerUnits;
+
+            gnd_damage = (actualHardness * terStruct._h_atk + (1 - actualHardness) * terStruct._s_atk) * atk_modifier_def_brkt * atk_modifier_armor_pierce; // Phase one
             gnd_damage += gnd_damage * _terrain_modifier_atk; // Phase two
 
             air_damage = terStruct._air_atk; // Phase one
@@ -227,6 +246,8 @@ namespace Battlefield_NS
             _time++;
 
         }
+        #endregion
+        #region Unit Adding/Subtracting
         public void AddDefAirUnit(Gen_Enum gen, Air_Units_Enum unit_type, Regiment_Exp_Enum unit_exp)
         {
             _def.AddAirUnit(gen, unit_type, unit_exp);
@@ -259,6 +280,8 @@ namespace Battlefield_NS
         {
             _atk.SubTerUnit(gen, unit_type, unit_exp);
         }
+        #endregion
+        #region Getters
         public int GetDefLegUnitNumber()
         {
             return _def.GetLegUnitNumber();
@@ -270,6 +293,14 @@ namespace Battlefield_NS
         public int GetDefMobUnitNumber()
         {
             return _def.GetMobUnitNumber();
+        }
+        public int GetDefUnitNumber()
+        {
+            return GetDefLegUnitNumber() + GetDefMobUnitNumber();
+        }
+        public int GetAtkUnitNumber()
+        {
+            return GetAtkLegUnitNumber() + GetAtkMobUnitNumber();
         }
         public int GetAtkMobUnitNumber()
         {
@@ -283,5 +314,22 @@ namespace Battlefield_NS
         {
             return _atk.GetAirUnitNumber();
         }
+        public TerStruct GetAtkTerStats()
+        {
+            return _atk.GetTerStruct();
+        }
+        public AirStruct GetAtkAirStats()
+        {
+            return _atk.GetAirStruct();
+        }
+        public TerStruct GetDefTerStats()
+        {
+            return _def.GetTerStruct();
+        }
+        public AirStruct GetDefAirStats()
+        {
+            return _def.GetAirStruct();
+        }
+        #endregion
     }
 }

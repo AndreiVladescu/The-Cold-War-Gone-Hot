@@ -32,7 +32,6 @@ namespace Wargame
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.PanelDesktopPanel = new System.Windows.Forms.Panel();
             this.PanelSideMainMenu = new System.Windows.Forms.Panel();
-            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.BtnCredits = new System.Windows.Forms.Button();
             this.BtnDefConfig = new System.Windows.Forms.Button();
             this.BtnAtkConfig = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@ namespace Wargame
             this.BtnPlay = new System.Windows.Forms.Button();
             this.BtnOptions = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
+            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.PictureMainMenuWallpaper = new System.Windows.Forms.PictureBox();
             this.PanelDesktopPanel.SuspendLayout();
             this.PanelSideMainMenu.SuspendLayout();
@@ -55,7 +55,7 @@ namespace Wargame
             this.PanelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDesktopPanel.Location = new System.Drawing.Point(0, 0);
             this.PanelDesktopPanel.Name = "PanelDesktopPanel";
-            this.PanelDesktopPanel.Size = new System.Drawing.Size(1920, 1080);
+            this.PanelDesktopPanel.Size = new System.Drawing.Size(1556, 884);
             this.PanelDesktopPanel.TabIndex = 10;
             // 
             // PanelSideMainMenu
@@ -74,14 +74,6 @@ namespace Wargame
             this.PanelSideMainMenu.Name = "PanelSideMainMenu";
             this.PanelSideMainMenu.Size = new System.Drawing.Size(248, 1080);
             this.PanelSideMainMenu.TabIndex = 1;
-            // 
-            // PanelMiniDesktop
-            // 
-            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
-            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
-            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
-            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
-            this.PanelMiniDesktop.TabIndex = 2;
             // 
             // BtnCredits
             // 
@@ -181,6 +173,14 @@ namespace Wargame
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnCloseApp);
             // 
+            // PanelMiniDesktop
+            // 
+            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
+            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
+            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
+            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
+            this.PanelMiniDesktop.TabIndex = 2;
+            // 
             // PictureMainMenuWallpaper
             // 
             this.PictureMainMenuWallpaper.BackColor = System.Drawing.Color.Transparent;
@@ -197,7 +197,7 @@ namespace Wargame
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.PanelDesktopPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

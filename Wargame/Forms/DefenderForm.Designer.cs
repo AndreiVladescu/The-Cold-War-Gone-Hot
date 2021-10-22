@@ -27,14 +27,18 @@ namespace Wargame.Forms
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+    private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DefenderForm));
             this.PictureFlagDefender = new System.Windows.Forms.PictureBox();
             this.PanelDefenderStats = new System.Windows.Forms.Panel();
+            this.LblAirStats = new System.Windows.Forms.Label();
+            this.LblTerStats = new System.Windows.Forms.Label();
             this.LblDefArmyStats = new System.Windows.Forms.Label();
             this.PanelLeg = new System.Windows.Forms.Panel();
+            this.LblLegExp = new System.Windows.Forms.Label();
             this.BtnPrevLeg = new System.Windows.Forms.Button();
+            this.PictureLegExp = new System.Windows.Forms.PictureBox();
             this.BtnNextLeg = new System.Windows.Forms.Button();
             this.LblLegStats3Values = new System.Windows.Forms.Label();
             this.LblLegStats3 = new System.Windows.Forms.Label();
@@ -49,7 +53,9 @@ namespace Wargame.Forms
             this.BtnAddLeg = new System.Windows.Forms.Button();
             this.PictureLeg = new System.Windows.Forms.PictureBox();
             this.PanelMob = new System.Windows.Forms.Panel();
+            this.LblMobExp = new System.Windows.Forms.Label();
             this.BtnPrevMob = new System.Windows.Forms.Button();
+            this.PictureMobExp = new System.Windows.Forms.PictureBox();
             this.BtnNextMob = new System.Windows.Forms.Button();
             this.LblMobStats3Values = new System.Windows.Forms.Label();
             this.LblMobStats3 = new System.Windows.Forms.Label();
@@ -77,16 +83,14 @@ namespace Wargame.Forms
             this.BtnAddAir = new System.Windows.Forms.Button();
             this.PictureAir = new System.Windows.Forms.PictureBox();
             this.PictureCommander = new System.Windows.Forms.PictureBox();
-            this.LblMobExp = new System.Windows.Forms.Label();
-            this.PictureMobExp = new System.Windows.Forms.PictureBox();
-            this.LblLegExp = new System.Windows.Forms.Label();
-            this.PictureLegExp = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureFlagDefender)).BeginInit();
             this.PanelDefenderStats.SuspendLayout();
             this.PanelLeg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureLegExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLegGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLeg)).BeginInit();
             this.PanelMob.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMobExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMobGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMob)).BeginInit();
             this.PanelAir.SuspendLayout();
@@ -94,8 +98,6 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.PictureAirGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureCommander)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMobExp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureLegExp)).BeginInit();
             this.SuspendLayout();
             // 
             // PictureFlagDefender
@@ -103,9 +105,10 @@ namespace Wargame.Forms
             this.PictureFlagDefender.BackColor = System.Drawing.Color.Transparent;
             this.PictureFlagDefender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.PictureFlagDefender.Image = global::Wargame.Properties.Resources.USA_flag;
-            this.PictureFlagDefender.Location = new System.Drawing.Point(12, 12);
+            this.PictureFlagDefender.Location = new System.Drawing.Point(16, 15);
+            this.PictureFlagDefender.Margin = new System.Windows.Forms.Padding(4);
             this.PictureFlagDefender.Name = "PictureFlagDefender";
-            this.PictureFlagDefender.Size = new System.Drawing.Size(123, 82);
+            this.PictureFlagDefender.Size = new System.Drawing.Size(164, 101);
             this.PictureFlagDefender.TabIndex = 0;
             this.PictureFlagDefender.TabStop = false;
             this.PictureFlagDefender.Click += new System.EventHandler(this.PictureFlagDefender_Click);
@@ -114,20 +117,44 @@ namespace Wargame.Forms
             // 
             this.PanelDefenderStats.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.PanelDefenderStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelDefenderStats.Controls.Add(this.LblAirStats);
+            this.PanelDefenderStats.Controls.Add(this.LblTerStats);
             this.PanelDefenderStats.Controls.Add(this.LblDefArmyStats);
-            this.PanelDefenderStats.Location = new System.Drawing.Point(165, 12);
+            this.PanelDefenderStats.Location = new System.Drawing.Point(220, 15);
+            this.PanelDefenderStats.Margin = new System.Windows.Forms.Padding(4);
             this.PanelDefenderStats.Name = "PanelDefenderStats";
-            this.PanelDefenderStats.Size = new System.Drawing.Size(1127, 105);
+            this.PanelDefenderStats.Size = new System.Drawing.Size(1503, 172);
             this.PanelDefenderStats.TabIndex = 1;
+            // 
+            // LblAirStats
+            // 
+            this.LblAirStats.AutoSize = true;
+            this.LblAirStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirStats.Location = new System.Drawing.Point(933, 16);
+            this.LblAirStats.Name = "LblAirStats";
+            this.LblAirStats.Size = new System.Drawing.Size(135, 25);
+            this.LblAirStats.TabIndex = 2;
+            this.LblAirStats.Text = "Airforce Stats:";
+            // 
+            // LblTerStats
+            // 
+            this.LblTerStats.AutoSize = true;
+            this.LblTerStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTerStats.Location = new System.Drawing.Point(207, 16);
+            this.LblTerStats.Name = "LblTerStats";
+            this.LblTerStats.Size = new System.Drawing.Size(184, 25);
+            this.LblTerStats.TabIndex = 1;
+            this.LblTerStats.Text = "Ground Army Stats:";
             // 
             // LblDefArmyStats
             // 
             this.LblDefArmyStats.AutoSize = true;
             this.LblDefArmyStats.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.LblDefArmyStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDefArmyStats.Location = new System.Drawing.Point(4, 4);
+            this.LblDefArmyStats.Location = new System.Drawing.Point(5, 5);
+            this.LblDefArmyStats.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDefArmyStats.Name = "LblDefArmyStats";
-            this.LblDefArmyStats.Size = new System.Drawing.Size(136, 20);
+            this.LblDefArmyStats.Size = new System.Drawing.Size(168, 25);
             this.LblDefArmyStats.TabIndex = 0;
             this.LblDefArmyStats.Text = "USA Stat Screen:";
             // 
@@ -151,28 +178,54 @@ namespace Wargame.Forms
             this.PanelLeg.Controls.Add(this.BtnSubLeg);
             this.PanelLeg.Controls.Add(this.BtnAddLeg);
             this.PanelLeg.Controls.Add(this.PictureLeg);
-            this.PanelLeg.Location = new System.Drawing.Point(165, 179);
+            this.PanelLeg.Location = new System.Drawing.Point(220, 220);
+            this.PanelLeg.Margin = new System.Windows.Forms.Padding(4);
             this.PanelLeg.Name = "PanelLeg";
-            this.PanelLeg.Size = new System.Drawing.Size(1127, 139);
+            this.PanelLeg.Size = new System.Drawing.Size(1503, 171);
             this.PanelLeg.TabIndex = 1;
+            // 
+            // LblLegExp
+            // 
+            this.LblLegExp.AutoSize = true;
+            this.LblLegExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegExp.Location = new System.Drawing.Point(312, 133);
+            this.LblLegExp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblLegExp.Name = "LblLegExp";
+            this.LblLegExp.Size = new System.Drawing.Size(79, 25);
+            this.LblLegExp.TabIndex = 19;
+            this.LblLegExp.Text = "Trained";
             // 
             // BtnPrevLeg
             // 
             this.BtnPrevLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrevLeg.Location = new System.Drawing.Point(1019, 13);
+            this.BtnPrevLeg.Location = new System.Drawing.Point(1359, 16);
+            this.BtnPrevLeg.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPrevLeg.Name = "BtnPrevLeg";
-            this.BtnPrevLeg.Size = new System.Drawing.Size(42, 110);
+            this.BtnPrevLeg.Size = new System.Drawing.Size(56, 135);
             this.BtnPrevLeg.TabIndex = 13;
             this.BtnPrevLeg.Text = "<";
             this.BtnPrevLeg.UseVisualStyleBackColor = true;
             this.BtnPrevLeg.Click += new System.EventHandler(this.BtnPrevLeg_Click);
             // 
+            // PictureLegExp
+            // 
+            this.PictureLegExp.Image = global::Wargame.Properties.Resources.unit_level_2;
+            this.PictureLegExp.Location = new System.Drawing.Point(271, 130);
+            this.PictureLegExp.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureLegExp.Name = "PictureLegExp";
+            this.PictureLegExp.Size = new System.Drawing.Size(17, 22);
+            this.PictureLegExp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureLegExp.TabIndex = 18;
+            this.PictureLegExp.TabStop = false;
+            this.PictureLegExp.Click += new System.EventHandler(this.PictureLegExp_Click);
+            // 
             // BtnNextLeg
             // 
             this.BtnNextLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNextLeg.Location = new System.Drawing.Point(1067, 13);
+            this.BtnNextLeg.Location = new System.Drawing.Point(1423, 16);
+            this.BtnNextLeg.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNextLeg.Name = "BtnNextLeg";
-            this.BtnNextLeg.Size = new System.Drawing.Size(42, 110);
+            this.BtnNextLeg.Size = new System.Drawing.Size(56, 135);
             this.BtnNextLeg.TabIndex = 12;
             this.BtnNextLeg.Text = ">";
             this.BtnNextLeg.UseVisualStyleBackColor = true;
@@ -182,9 +235,10 @@ namespace Wargame.Forms
             // 
             this.LblLegStats3Values.AutoSize = true;
             this.LblLegStats3Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegStats3Values.Location = new System.Drawing.Point(929, 13);
+            this.LblLegStats3Values.Location = new System.Drawing.Point(1239, 16);
+            this.LblLegStats3Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLegStats3Values.Name = "LblLegStats3Values";
-            this.LblLegStats3Values.Size = new System.Drawing.Size(27, 80);
+            this.LblLegStats3Values.Size = new System.Drawing.Size(34, 100);
             this.LblLegStats3Values.TabIndex = 11;
             this.LblLegStats3Values.Text = "40\r\n0\r\n15\r\n10";
             // 
@@ -192,9 +246,10 @@ namespace Wargame.Forms
             // 
             this.LblLegStats3.AutoSize = true;
             this.LblLegStats3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegStats3.Location = new System.Drawing.Point(799, 13);
+            this.LblLegStats3.Location = new System.Drawing.Point(1065, 16);
+            this.LblLegStats3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLegStats3.Name = "LblLegStats3";
-            this.LblLegStats3.Size = new System.Drawing.Size(110, 80);
+            this.LblLegStats3.Size = new System.Drawing.Size(137, 100);
             this.LblLegStats3.TabIndex = 10;
             this.LblLegStats3.Text = "Combat Width\r\nHardness\r\nAir Attack\r\nPiercing";
             // 
@@ -202,9 +257,10 @@ namespace Wargame.Forms
             // 
             this.LblLegStats2Values.AutoSize = true;
             this.LblLegStats2Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegStats2Values.Location = new System.Drawing.Point(700, 13);
+            this.LblLegStats2Values.Location = new System.Drawing.Point(933, 16);
+            this.LblLegStats2Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLegStats2Values.Name = "LblLegStats2Values";
-            this.LblLegStats2Values.Size = new System.Drawing.Size(36, 100);
+            this.LblLegStats2Values.Size = new System.Drawing.Size(45, 125);
             this.LblLegStats2Values.TabIndex = 9;
             this.LblLegStats2Values.Text = "100\r\n0\r\n100\r\n40\r\n20";
             // 
@@ -212,9 +268,10 @@ namespace Wargame.Forms
             // 
             this.LblLegStats2.AutoSize = true;
             this.LblLegStats2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegStats2.Location = new System.Drawing.Point(547, 13);
+            this.LblLegStats2.Location = new System.Drawing.Point(729, 16);
+            this.LblLegStats2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLegStats2.Name = "LblLegStats2";
-            this.LblLegStats2.Size = new System.Drawing.Size(138, 100);
+            this.LblLegStats2.Size = new System.Drawing.Size(171, 125);
             this.LblLegStats2.TabIndex = 8;
             this.LblLegStats2.Text = "Breakthrough\r\nFuel Consumption\r\nReliability\r\nOrganization\r\nEntrenchment\r\n";
             // 
@@ -222,9 +279,10 @@ namespace Wargame.Forms
             // 
             this.LblLegStats1Values.AutoSize = true;
             this.LblLegStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegStats1Values.Location = new System.Drawing.Point(458, 13);
+            this.LblLegStats1Values.Location = new System.Drawing.Point(611, 16);
+            this.LblLegStats1Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLegStats1Values.Name = "LblLegStats1Values";
-            this.LblLegStats1Values.Size = new System.Drawing.Size(45, 100);
+            this.LblLegStats1Values.Size = new System.Drawing.Size(56, 125);
             this.LblLegStats1Values.TabIndex = 7;
             this.LblLegStats1Values.Text = "1000\r\n50\r\n20\r\n40\r\n0";
             // 
@@ -232,9 +290,10 @@ namespace Wargame.Forms
             // 
             this.LblLegStats1.AutoSize = true;
             this.LblLegStats1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegStats1.Location = new System.Drawing.Point(338, 13);
+            this.LblLegStats1.Location = new System.Drawing.Point(451, 16);
+            this.LblLegStats1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLegStats1.Name = "LblLegStats1";
-            this.LblLegStats1.Size = new System.Drawing.Size(94, 100);
+            this.LblLegStats1.Size = new System.Drawing.Size(114, 125);
             this.LblLegStats1.TabIndex = 6;
             this.LblLegStats1.Text = "Manpower\r\nSoft Attack\r\nHard Attack\r\nDefence\r\nArmor";
             // 
@@ -242,7 +301,8 @@ namespace Wargame.Forms
             // 
             this.PictureLegGen.BackColor = System.Drawing.Color.Transparent;
             this.PictureLegGen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureLegGen.BackgroundImage")));
-            this.PictureLegGen.Location = new System.Drawing.Point(267, 16);
+            this.PictureLegGen.Location = new System.Drawing.Point(356, 20);
+            this.PictureLegGen.Margin = new System.Windows.Forms.Padding(4);
             this.PictureLegGen.Name = "PictureLegGen";
             this.PictureLegGen.Size = new System.Drawing.Size(35, 35);
             this.PictureLegGen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -253,18 +313,20 @@ namespace Wargame.Forms
             // 
             this.LblLegCounter.AutoSize = true;
             this.LblLegCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegCounter.Location = new System.Drawing.Point(205, 69);
+            this.LblLegCounter.Location = new System.Drawing.Point(273, 85);
+            this.LblLegCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLegCounter.Name = "LblLegCounter";
-            this.LblLegCounter.Size = new System.Drawing.Size(71, 24);
+            this.LblLegCounter.Size = new System.Drawing.Size(92, 29);
             this.LblLegCounter.TabIndex = 4;
             this.LblLegCounter.Text = "Units: 0";
             // 
             // BtnLegGen
             // 
             this.BtnLegGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLegGen.Location = new System.Drawing.Point(203, 13);
+            this.BtnLegGen.Location = new System.Drawing.Point(271, 16);
+            this.BtnLegGen.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLegGen.Name = "BtnLegGen";
-            this.BtnLegGen.Size = new System.Drawing.Size(58, 38);
+            this.BtnLegGen.Size = new System.Drawing.Size(77, 47);
             this.BtnLegGen.TabIndex = 3;
             this.BtnLegGen.Text = "Gen";
             this.BtnLegGen.UseVisualStyleBackColor = true;
@@ -273,9 +335,10 @@ namespace Wargame.Forms
             // BtnSubLeg
             // 
             this.BtnSubLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSubLeg.Location = new System.Drawing.Point(114, 99);
+            this.BtnSubLeg.Location = new System.Drawing.Point(152, 122);
+            this.BtnSubLeg.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSubLeg.Name = "BtnSubLeg";
-            this.BtnSubLeg.Size = new System.Drawing.Size(57, 29);
+            this.BtnSubLeg.Size = new System.Drawing.Size(76, 36);
             this.BtnSubLeg.TabIndex = 2;
             this.BtnSubLeg.Text = "-";
             this.BtnSubLeg.UseVisualStyleBackColor = true;
@@ -284,9 +347,10 @@ namespace Wargame.Forms
             // BtnAddLeg
             // 
             this.BtnAddLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddLeg.Location = new System.Drawing.Point(27, 99);
+            this.BtnAddLeg.Location = new System.Drawing.Point(36, 122);
+            this.BtnAddLeg.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAddLeg.Name = "BtnAddLeg";
-            this.BtnAddLeg.Size = new System.Drawing.Size(57, 29);
+            this.BtnAddLeg.Size = new System.Drawing.Size(76, 36);
             this.BtnAddLeg.TabIndex = 1;
             this.BtnAddLeg.Text = "+";
             this.BtnAddLeg.UseVisualStyleBackColor = true;
@@ -295,7 +359,8 @@ namespace Wargame.Forms
             // PictureLeg
             // 
             this.PictureLeg.Image = ((System.Drawing.Image)(resources.GetObject("PictureLeg.Image")));
-            this.PictureLeg.Location = new System.Drawing.Point(17, 13);
+            this.PictureLeg.Location = new System.Drawing.Point(23, 16);
+            this.PictureLeg.Margin = new System.Windows.Forms.Padding(4);
             this.PictureLeg.Name = "PictureLeg";
             this.PictureLeg.Size = new System.Drawing.Size(180, 80);
             this.PictureLeg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -322,28 +387,54 @@ namespace Wargame.Forms
             this.PanelMob.Controls.Add(this.BtnSubMob);
             this.PanelMob.Controls.Add(this.BtnAddMob);
             this.PanelMob.Controls.Add(this.PictureMob);
-            this.PanelMob.Location = new System.Drawing.Point(165, 381);
+            this.PanelMob.Location = new System.Drawing.Point(220, 469);
+            this.PanelMob.Margin = new System.Windows.Forms.Padding(4);
             this.PanelMob.Name = "PanelMob";
-            this.PanelMob.Size = new System.Drawing.Size(1127, 139);
+            this.PanelMob.Size = new System.Drawing.Size(1503, 171);
             this.PanelMob.TabIndex = 14;
+            // 
+            // LblMobExp
+            // 
+            this.LblMobExp.AutoSize = true;
+            this.LblMobExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobExp.Location = new System.Drawing.Point(312, 133);
+            this.LblMobExp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblMobExp.Name = "LblMobExp";
+            this.LblMobExp.Size = new System.Drawing.Size(79, 25);
+            this.LblMobExp.TabIndex = 17;
+            this.LblMobExp.Text = "Trained";
             // 
             // BtnPrevMob
             // 
             this.BtnPrevMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrevMob.Location = new System.Drawing.Point(1019, 13);
+            this.BtnPrevMob.Location = new System.Drawing.Point(1359, 16);
+            this.BtnPrevMob.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPrevMob.Name = "BtnPrevMob";
-            this.BtnPrevMob.Size = new System.Drawing.Size(42, 110);
+            this.BtnPrevMob.Size = new System.Drawing.Size(56, 135);
             this.BtnPrevMob.TabIndex = 13;
             this.BtnPrevMob.Text = "<";
             this.BtnPrevMob.UseVisualStyleBackColor = true;
             this.BtnPrevMob.Click += new System.EventHandler(this.BtnPrevMob_Click);
             // 
+            // PictureMobExp
+            // 
+            this.PictureMobExp.Image = global::Wargame.Properties.Resources.unit_level_2;
+            this.PictureMobExp.Location = new System.Drawing.Point(271, 130);
+            this.PictureMobExp.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureMobExp.Name = "PictureMobExp";
+            this.PictureMobExp.Size = new System.Drawing.Size(17, 22);
+            this.PictureMobExp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PictureMobExp.TabIndex = 16;
+            this.PictureMobExp.TabStop = false;
+            this.PictureMobExp.Click += new System.EventHandler(this.PictureMobExp_Click);
+            // 
             // BtnNextMob
             // 
             this.BtnNextMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNextMob.Location = new System.Drawing.Point(1067, 13);
+            this.BtnNextMob.Location = new System.Drawing.Point(1423, 16);
+            this.BtnNextMob.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNextMob.Name = "BtnNextMob";
-            this.BtnNextMob.Size = new System.Drawing.Size(42, 110);
+            this.BtnNextMob.Size = new System.Drawing.Size(56, 135);
             this.BtnNextMob.TabIndex = 12;
             this.BtnNextMob.Text = ">";
             this.BtnNextMob.UseVisualStyleBackColor = true;
@@ -353,9 +444,10 @@ namespace Wargame.Forms
             // 
             this.LblMobStats3Values.AutoSize = true;
             this.LblMobStats3Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobStats3Values.Location = new System.Drawing.Point(929, 13);
+            this.LblMobStats3Values.Location = new System.Drawing.Point(1239, 16);
+            this.LblMobStats3Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMobStats3Values.Name = "LblMobStats3Values";
-            this.LblMobStats3Values.Size = new System.Drawing.Size(27, 80);
+            this.LblMobStats3Values.Size = new System.Drawing.Size(34, 100);
             this.LblMobStats3Values.TabIndex = 11;
             this.LblMobStats3Values.Text = "50\r\n5\r\n15\r\n10";
             // 
@@ -363,9 +455,10 @@ namespace Wargame.Forms
             // 
             this.LblMobStats3.AutoSize = true;
             this.LblMobStats3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobStats3.Location = new System.Drawing.Point(799, 13);
+            this.LblMobStats3.Location = new System.Drawing.Point(1065, 16);
+            this.LblMobStats3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMobStats3.Name = "LblMobStats3";
-            this.LblMobStats3.Size = new System.Drawing.Size(110, 80);
+            this.LblMobStats3.Size = new System.Drawing.Size(137, 100);
             this.LblMobStats3.TabIndex = 10;
             this.LblMobStats3.Text = "Combat Width\r\nHardness\r\nAir Attack\r\nPiercing";
             // 
@@ -373,9 +466,10 @@ namespace Wargame.Forms
             // 
             this.LblMobStats2Values.AutoSize = true;
             this.LblMobStats2Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobStats2Values.Location = new System.Drawing.Point(700, 13);
+            this.LblMobStats2Values.Location = new System.Drawing.Point(933, 16);
+            this.LblMobStats2Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMobStats2Values.Name = "LblMobStats2Values";
-            this.LblMobStats2Values.Size = new System.Drawing.Size(36, 100);
+            this.LblMobStats2Values.Size = new System.Drawing.Size(45, 125);
             this.LblMobStats2Values.TabIndex = 9;
             this.LblMobStats2Values.Text = "130\r\n35\r\n90\r\n45\r\n0";
             // 
@@ -383,9 +477,10 @@ namespace Wargame.Forms
             // 
             this.LblMobStats2.AutoSize = true;
             this.LblMobStats2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobStats2.Location = new System.Drawing.Point(547, 13);
+            this.LblMobStats2.Location = new System.Drawing.Point(729, 16);
+            this.LblMobStats2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMobStats2.Name = "LblMobStats2";
-            this.LblMobStats2.Size = new System.Drawing.Size(138, 100);
+            this.LblMobStats2.Size = new System.Drawing.Size(171, 125);
             this.LblMobStats2.TabIndex = 8;
             this.LblMobStats2.Text = "Breakthrough\r\nFuel Consumption\r\nReliability\r\nOrganization\r\nEntrenchment\r\n";
             // 
@@ -393,9 +488,10 @@ namespace Wargame.Forms
             // 
             this.LblMobStats1Values.AutoSize = true;
             this.LblMobStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobStats1Values.Location = new System.Drawing.Point(458, 13);
+            this.LblMobStats1Values.Location = new System.Drawing.Point(611, 16);
+            this.LblMobStats1Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMobStats1Values.Name = "LblMobStats1Values";
-            this.LblMobStats1Values.Size = new System.Drawing.Size(36, 100);
+            this.LblMobStats1Values.Size = new System.Drawing.Size(45, 125);
             this.LblMobStats1Values.TabIndex = 7;
             this.LblMobStats1Values.Text = "800\r\n75\r\n25\r\n30\r\n5";
             // 
@@ -403,9 +499,10 @@ namespace Wargame.Forms
             // 
             this.LblMobStats1.AutoSize = true;
             this.LblMobStats1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobStats1.Location = new System.Drawing.Point(338, 13);
+            this.LblMobStats1.Location = new System.Drawing.Point(451, 16);
+            this.LblMobStats1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMobStats1.Name = "LblMobStats1";
-            this.LblMobStats1.Size = new System.Drawing.Size(94, 100);
+            this.LblMobStats1.Size = new System.Drawing.Size(114, 125);
             this.LblMobStats1.TabIndex = 6;
             this.LblMobStats1.Text = "Manpower\r\nSoft Attack\r\nHard Attack\r\nDefence\r\nArmor";
             // 
@@ -413,7 +510,8 @@ namespace Wargame.Forms
             // 
             this.PictureMobGen.BackColor = System.Drawing.Color.Transparent;
             this.PictureMobGen.Image = global::Wargame.Properties.Resources.gen_1;
-            this.PictureMobGen.Location = new System.Drawing.Point(267, 16);
+            this.PictureMobGen.Location = new System.Drawing.Point(356, 20);
+            this.PictureMobGen.Margin = new System.Windows.Forms.Padding(4);
             this.PictureMobGen.Name = "PictureMobGen";
             this.PictureMobGen.Size = new System.Drawing.Size(35, 35);
             this.PictureMobGen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -424,18 +522,20 @@ namespace Wargame.Forms
             // 
             this.LblMobCounter.AutoSize = true;
             this.LblMobCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobCounter.Location = new System.Drawing.Point(205, 69);
+            this.LblMobCounter.Location = new System.Drawing.Point(273, 85);
+            this.LblMobCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblMobCounter.Name = "LblMobCounter";
-            this.LblMobCounter.Size = new System.Drawing.Size(71, 24);
+            this.LblMobCounter.Size = new System.Drawing.Size(92, 29);
             this.LblMobCounter.TabIndex = 4;
             this.LblMobCounter.Text = "Units: 0";
             // 
             // BtnMobGen
             // 
             this.BtnMobGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMobGen.Location = new System.Drawing.Point(203, 13);
+            this.BtnMobGen.Location = new System.Drawing.Point(271, 16);
+            this.BtnMobGen.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMobGen.Name = "BtnMobGen";
-            this.BtnMobGen.Size = new System.Drawing.Size(58, 38);
+            this.BtnMobGen.Size = new System.Drawing.Size(77, 47);
             this.BtnMobGen.TabIndex = 3;
             this.BtnMobGen.Text = "Gen";
             this.BtnMobGen.UseVisualStyleBackColor = true;
@@ -444,9 +544,10 @@ namespace Wargame.Forms
             // BtnSubMob
             // 
             this.BtnSubMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSubMob.Location = new System.Drawing.Point(114, 99);
+            this.BtnSubMob.Location = new System.Drawing.Point(152, 122);
+            this.BtnSubMob.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSubMob.Name = "BtnSubMob";
-            this.BtnSubMob.Size = new System.Drawing.Size(57, 29);
+            this.BtnSubMob.Size = new System.Drawing.Size(76, 36);
             this.BtnSubMob.TabIndex = 2;
             this.BtnSubMob.Text = "-";
             this.BtnSubMob.UseVisualStyleBackColor = true;
@@ -455,9 +556,10 @@ namespace Wargame.Forms
             // BtnAddMob
             // 
             this.BtnAddMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddMob.Location = new System.Drawing.Point(27, 99);
+            this.BtnAddMob.Location = new System.Drawing.Point(36, 122);
+            this.BtnAddMob.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAddMob.Name = "BtnAddMob";
-            this.BtnAddMob.Size = new System.Drawing.Size(57, 29);
+            this.BtnAddMob.Size = new System.Drawing.Size(76, 36);
             this.BtnAddMob.TabIndex = 1;
             this.BtnAddMob.Text = "+";
             this.BtnAddMob.UseVisualStyleBackColor = true;
@@ -466,7 +568,8 @@ namespace Wargame.Forms
             // PictureMob
             // 
             this.PictureMob.Image = ((System.Drawing.Image)(resources.GetObject("PictureMob.Image")));
-            this.PictureMob.Location = new System.Drawing.Point(17, 13);
+            this.PictureMob.Location = new System.Drawing.Point(23, 16);
+            this.PictureMob.Margin = new System.Windows.Forms.Padding(4);
             this.PictureMob.Name = "PictureMob";
             this.PictureMob.Size = new System.Drawing.Size(179, 80);
             this.PictureMob.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -489,25 +592,28 @@ namespace Wargame.Forms
             this.PanelAir.Controls.Add(this.BtnSubAir);
             this.PanelAir.Controls.Add(this.BtnAddAir);
             this.PanelAir.Controls.Add(this.PictureAir);
-            this.PanelAir.Location = new System.Drawing.Point(165, 587);
+            this.PanelAir.Location = new System.Drawing.Point(220, 722);
+            this.PanelAir.Margin = new System.Windows.Forms.Padding(4);
             this.PanelAir.Name = "PanelAir";
-            this.PanelAir.Size = new System.Drawing.Size(1127, 139);
+            this.PanelAir.Size = new System.Drawing.Size(1503, 171);
             this.PanelAir.TabIndex = 15;
             // 
             // LblAirExp
             // 
             this.LblAirExp.AutoSize = true;
             this.LblAirExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAirExp.Location = new System.Drawing.Point(240, 106);
+            this.LblAirExp.Location = new System.Drawing.Point(320, 130);
+            this.LblAirExp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAirExp.Name = "LblAirExp";
-            this.LblAirExp.Size = new System.Drawing.Size(62, 20);
+            this.LblAirExp.Size = new System.Drawing.Size(79, 25);
             this.LblAirExp.TabIndex = 15;
             this.LblAirExp.Text = "Trained";
             // 
             // PictureAirExp
             // 
             this.PictureAirExp.Image = global::Wargame.Properties.Resources.unit_level_2;
-            this.PictureAirExp.Location = new System.Drawing.Point(209, 104);
+            this.PictureAirExp.Location = new System.Drawing.Point(279, 128);
+            this.PictureAirExp.Margin = new System.Windows.Forms.Padding(4);
             this.PictureAirExp.Name = "PictureAirExp";
             this.PictureAirExp.Size = new System.Drawing.Size(17, 22);
             this.PictureAirExp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -518,9 +624,10 @@ namespace Wargame.Forms
             // BtnPrevAir
             // 
             this.BtnPrevAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrevAir.Location = new System.Drawing.Point(1019, 13);
+            this.BtnPrevAir.Location = new System.Drawing.Point(1359, 16);
+            this.BtnPrevAir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPrevAir.Name = "BtnPrevAir";
-            this.BtnPrevAir.Size = new System.Drawing.Size(42, 110);
+            this.BtnPrevAir.Size = new System.Drawing.Size(56, 135);
             this.BtnPrevAir.TabIndex = 13;
             this.BtnPrevAir.Text = "<";
             this.BtnPrevAir.UseVisualStyleBackColor = true;
@@ -529,9 +636,10 @@ namespace Wargame.Forms
             // BtnNextAir
             // 
             this.BtnNextAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNextAir.Location = new System.Drawing.Point(1067, 13);
+            this.BtnNextAir.Location = new System.Drawing.Point(1423, 16);
+            this.BtnNextAir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNextAir.Name = "BtnNextAir";
-            this.BtnNextAir.Size = new System.Drawing.Size(42, 110);
+            this.BtnNextAir.Size = new System.Drawing.Size(56, 135);
             this.BtnNextAir.TabIndex = 12;
             this.BtnNextAir.Text = ">";
             this.BtnNextAir.UseVisualStyleBackColor = true;
@@ -541,9 +649,10 @@ namespace Wargame.Forms
             // 
             this.LblAirStats1Values.AutoSize = true;
             this.LblAirStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAirStats1Values.Location = new System.Drawing.Point(547, 13);
+            this.LblAirStats1Values.Location = new System.Drawing.Point(729, 16);
+            this.LblAirStats1Values.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAirStats1Values.Name = "LblAirStats1Values";
-            this.LblAirStats1Values.Size = new System.Drawing.Size(27, 100);
+            this.LblAirStats1Values.Size = new System.Drawing.Size(34, 125);
             this.LblAirStats1Values.TabIndex = 7;
             this.LblAirStats1Values.Text = "80\r\n50\r\n20\r\n30\r\n5";
             // 
@@ -551,9 +660,10 @@ namespace Wargame.Forms
             // 
             this.LblAirStats1.AutoSize = true;
             this.LblAirStats1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAirStats1.Location = new System.Drawing.Point(363, 13);
+            this.LblAirStats1.Location = new System.Drawing.Point(484, 16);
+            this.LblAirStats1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAirStats1.Name = "LblAirStats1";
-            this.LblAirStats1.Size = new System.Drawing.Size(140, 100);
+            this.LblAirStats1.Size = new System.Drawing.Size(171, 125);
             this.LblAirStats1.TabIndex = 6;
             this.LblAirStats1.Text = "Integrity\r\nAir Attack\r\nGround Attack\r\nAir Superiority\r\nStrategic Bombing";
             // 
@@ -561,7 +671,8 @@ namespace Wargame.Forms
             // 
             this.PictureAirGen.BackColor = System.Drawing.Color.Transparent;
             this.PictureAirGen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureAirGen.BackgroundImage")));
-            this.PictureAirGen.Location = new System.Drawing.Point(267, 16);
+            this.PictureAirGen.Location = new System.Drawing.Point(356, 20);
+            this.PictureAirGen.Margin = new System.Windows.Forms.Padding(4);
             this.PictureAirGen.Name = "PictureAirGen";
             this.PictureAirGen.Size = new System.Drawing.Size(35, 35);
             this.PictureAirGen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -572,18 +683,20 @@ namespace Wargame.Forms
             // 
             this.LblAirCounter.AutoSize = true;
             this.LblAirCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAirCounter.Location = new System.Drawing.Point(205, 69);
+            this.LblAirCounter.Location = new System.Drawing.Point(273, 85);
+            this.LblAirCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAirCounter.Name = "LblAirCounter";
-            this.LblAirCounter.Size = new System.Drawing.Size(71, 24);
+            this.LblAirCounter.Size = new System.Drawing.Size(92, 29);
             this.LblAirCounter.TabIndex = 4;
             this.LblAirCounter.Text = "Units: 0";
             // 
             // BtnAirGen
             // 
             this.BtnAirGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAirGen.Location = new System.Drawing.Point(203, 13);
+            this.BtnAirGen.Location = new System.Drawing.Point(271, 16);
+            this.BtnAirGen.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAirGen.Name = "BtnAirGen";
-            this.BtnAirGen.Size = new System.Drawing.Size(58, 38);
+            this.BtnAirGen.Size = new System.Drawing.Size(77, 47);
             this.BtnAirGen.TabIndex = 3;
             this.BtnAirGen.Text = "Gen";
             this.BtnAirGen.UseVisualStyleBackColor = true;
@@ -592,9 +705,10 @@ namespace Wargame.Forms
             // BtnSubAir
             // 
             this.BtnSubAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSubAir.Location = new System.Drawing.Point(114, 99);
+            this.BtnSubAir.Location = new System.Drawing.Point(152, 122);
+            this.BtnSubAir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSubAir.Name = "BtnSubAir";
-            this.BtnSubAir.Size = new System.Drawing.Size(57, 29);
+            this.BtnSubAir.Size = new System.Drawing.Size(76, 36);
             this.BtnSubAir.TabIndex = 2;
             this.BtnSubAir.Text = "-";
             this.BtnSubAir.UseVisualStyleBackColor = true;
@@ -603,9 +717,10 @@ namespace Wargame.Forms
             // BtnAddAir
             // 
             this.BtnAddAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddAir.Location = new System.Drawing.Point(27, 99);
+            this.BtnAddAir.Location = new System.Drawing.Point(36, 122);
+            this.BtnAddAir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAddAir.Name = "BtnAddAir";
-            this.BtnAddAir.Size = new System.Drawing.Size(57, 29);
+            this.BtnAddAir.Size = new System.Drawing.Size(76, 36);
             this.BtnAddAir.TabIndex = 1;
             this.BtnAddAir.Text = "+";
             this.BtnAddAir.UseVisualStyleBackColor = true;
@@ -614,7 +729,8 @@ namespace Wargame.Forms
             // PictureAir
             // 
             this.PictureAir.Image = ((System.Drawing.Image)(resources.GetObject("PictureAir.Image")));
-            this.PictureAir.Location = new System.Drawing.Point(17, 13);
+            this.PictureAir.Location = new System.Drawing.Point(23, 16);
+            this.PictureAir.Margin = new System.Windows.Forms.Padding(4);
             this.PictureAir.Name = "PictureAir";
             this.PictureAir.Size = new System.Drawing.Size(180, 80);
             this.PictureAir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -624,62 +740,21 @@ namespace Wargame.Forms
             // PictureCommander
             // 
             this.PictureCommander.Image = global::Wargame.Properties.Resources.macarthur;
-            this.PictureCommander.Location = new System.Drawing.Point(12, 136);
+            this.PictureCommander.Location = new System.Drawing.Point(16, 167);
+            this.PictureCommander.Margin = new System.Windows.Forms.Padding(4);
             this.PictureCommander.Name = "PictureCommander";
-            this.PictureCommander.Size = new System.Drawing.Size(147, 182);
+            this.PictureCommander.Size = new System.Drawing.Size(196, 224);
             this.PictureCommander.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureCommander.TabIndex = 16;
             this.PictureCommander.TabStop = false;
             // 
-            // LblMobExp
-            // 
-            this.LblMobExp.AutoSize = true;
-            this.LblMobExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMobExp.Location = new System.Drawing.Point(234, 108);
-            this.LblMobExp.Name = "LblMobExp";
-            this.LblMobExp.Size = new System.Drawing.Size(62, 20);
-            this.LblMobExp.TabIndex = 17;
-            this.LblMobExp.Text = "Trained";
-            // 
-            // PictureMobExp
-            // 
-            this.PictureMobExp.Image = global::Wargame.Properties.Resources.unit_level_2;
-            this.PictureMobExp.Location = new System.Drawing.Point(203, 106);
-            this.PictureMobExp.Name = "PictureMobExp";
-            this.PictureMobExp.Size = new System.Drawing.Size(17, 22);
-            this.PictureMobExp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PictureMobExp.TabIndex = 16;
-            this.PictureMobExp.TabStop = false;
-            this.PictureMobExp.Click += new System.EventHandler(this.PictureMobExp_Click);
-            // 
-            // LblLegExp
-            // 
-            this.LblLegExp.AutoSize = true;
-            this.LblLegExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLegExp.Location = new System.Drawing.Point(234, 108);
-            this.LblLegExp.Name = "LblLegExp";
-            this.LblLegExp.Size = new System.Drawing.Size(62, 20);
-            this.LblLegExp.TabIndex = 19;
-            this.LblLegExp.Text = "Trained";
-            // 
-            // PictureLegExp
-            // 
-            this.PictureLegExp.Image = global::Wargame.Properties.Resources.unit_level_2;
-            this.PictureLegExp.Location = new System.Drawing.Point(203, 106);
-            this.PictureLegExp.Name = "PictureLegExp";
-            this.PictureLegExp.Size = new System.Drawing.Size(17, 22);
-            this.PictureLegExp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PictureLegExp.TabIndex = 18;
-            this.PictureLegExp.TabStop = false;
-            this.PictureLegExp.Click += new System.EventHandler(this.PictureLegExp_Click);
-            // 
             // DefenderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Wargame.Properties.Resources.defender_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1554, 1041);
+            this.ClientSize = new System.Drawing.Size(1942, 1102);
             this.Controls.Add(this.PictureCommander);
             this.Controls.Add(this.PanelAir);
             this.Controls.Add(this.PanelMob);
@@ -687,6 +762,7 @@ namespace Wargame.Forms
             this.Controls.Add(this.PanelDefenderStats);
             this.Controls.Add(this.PictureFlagDefender);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DefenderForm";
             this.Text = "DefenderForm";
             ((System.ComponentModel.ISupportInitialize)(this.PictureFlagDefender)).EndInit();
@@ -694,10 +770,12 @@ namespace Wargame.Forms
             this.PanelDefenderStats.PerformLayout();
             this.PanelLeg.ResumeLayout(false);
             this.PanelLeg.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureLegExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLegGen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLeg)).EndInit();
             this.PanelMob.ResumeLayout(false);
             this.PanelMob.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMobExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMobGen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMob)).EndInit();
             this.PanelAir.ResumeLayout(false);
@@ -706,8 +784,6 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.PictureAirGen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureAir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureCommander)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMobExp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureLegExp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -765,5 +841,7 @@ namespace Wargame.Forms
         private System.Windows.Forms.PictureBox PictureLegExp;
         private System.Windows.Forms.Label LblMobExp;
         private System.Windows.Forms.PictureBox PictureMobExp;
+        private System.Windows.Forms.Label LblAirStats;
+        private System.Windows.Forms.Label LblTerStats;
     }
 }

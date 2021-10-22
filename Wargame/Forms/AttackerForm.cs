@@ -45,6 +45,29 @@ namespace Wargame.Forms
         public AttackerForm()
         {
             InitializeComponent();
+            UpdateStatPanelTer();
+            UpdateStatPanelAir();
+        }
+        private void UpdateStatPanelTer()
+        {
+            Front_NS.TerStruct terStruct = battlefieldInstance.GetAtkTerStats();
+
+            this.LblTerStats.Text = "Ground Army Stats:\n" +
+                "Manpower: " + terStruct._hp + "           Breakthrough: " + terStruct._breakt + "           Combat Width: " + terStruct._combat_width + "\n" +
+                "Soft Attack: " + terStruct._s_atk + "          Fuel Consumption: " + terStruct._fuel + "   Average Hardness: " + terStruct._hardness / (battlefieldInstance.GetAtkUnitNumber()) + "\n" +
+                "Hard Attack: " + terStruct._h_atk + "        Average Reliability: " + terStruct._reliab / battlefieldInstance.GetAtkUnitNumber() + "    Air Attack: " + terStruct._air_atk + "\n" +
+                "Defence: " + terStruct._def + "              Organization: " + terStruct._organ + "              Average Piercing: " + terStruct._pierce / battlefieldInstance.GetAtkUnitNumber() + "\n" +
+                "Average Armor: " + terStruct._armor / battlefieldInstance.GetAtkUnitNumber() + "   Entrenchment: " + terStruct._entrench;
+        }
+        private void UpdateStatPanelAir()
+        {
+            Front_NS.AirStruct airStruct = battlefieldInstance.GetAtkAirStats();
+            LblAirStats.Text = "Airfoce Stats:\n" +
+                "Integrity: " + airStruct._hp + "\n" +
+                "Air Attack: " + airStruct._air_atk + "\n" +
+                "Ground Attack: " + airStruct._gnd_atk + "\n" +
+                "Air Superiority: " + airStruct._air_sup + "\n" +
+                "Strategic Bombing: " + airStruct._strat_bmb;
         }
         private string GetUnitPicturePath(List<string> unitNames, int unitCounter, ref int gen, bool isAir = false)
         {
@@ -159,6 +182,8 @@ namespace Wargame.Forms
             battlefieldInstance.AddAtkTerUnit(unit_gen, unit_type, unit_xp);
             legUnitCounter = battlefieldInstance.GetAtkLegUnitNumber();
             LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
+
+            UpdateStatPanelTer();
         }
 
         private void BtnSubLeg_Click(object sender, EventArgs e)
@@ -169,6 +194,8 @@ namespace Wargame.Forms
             battlefieldInstance.SubAtkTerUnit(unit_gen, unit_type, unit_xp);
             legUnitCounter = battlefieldInstance.GetAtkLegUnitNumber();
             LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
+
+            UpdateStatPanelTer();
         }
 
         private void BtnAddMob_Click(object sender, EventArgs e)
@@ -179,6 +206,8 @@ namespace Wargame.Forms
             battlefieldInstance.AddAtkTerUnit(unit_gen, unit_type, unit_xp);
             mobUnitCounter = battlefieldInstance.GetAtkMobUnitNumber();
             LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
+
+            UpdateStatPanelTer();
         }
 
         private void BtnSubMob_Click(object sender, EventArgs e)
@@ -189,26 +218,36 @@ namespace Wargame.Forms
             battlefieldInstance.SubAtkTerUnit(unit_gen, unit_type, unit_xp);
             mobUnitCounter = battlefieldInstance.GetAtkMobUnitNumber();
             LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
+
+            UpdateStatPanelTer();
         }
 
         private void BtnSubAir_Click(object sender, EventArgs e)
         {
             Air_Units_Enum unit_type = (Air_Units_Enum)(airUnitNameCounter + 301);
+            if (airUnitNameCounter == 4 || airUnitNameCounter == 3)
+                unit_type += 97;
             Gen_Enum unit_gen = (Gen_Enum)(airGen - 1);
             Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(airExp - 1);
             battlefieldInstance.SubAtkAirUnit(unit_gen, unit_type, unit_xp);
             airUnitCounter = battlefieldInstance.GetAtkAirUnitNumber();
             LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
+
+            UpdateStatPanelAir();
         }
 
         private void BtnAddAir_Click(object sender, EventArgs e)
         {
             Air_Units_Enum unit_type = (Air_Units_Enum)(airUnitNameCounter + 301);
+            if (airUnitNameCounter == 4 || airUnitNameCounter == 3)
+                unit_type += 97;
             Gen_Enum unit_gen = (Gen_Enum)(airGen - 1);
             Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(airExp - 1);
             battlefieldInstance.AddAtkAirUnit(unit_gen, unit_type, unit_xp);
             airUnitCounter = battlefieldInstance.GetAtkAirUnitNumber();
             LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
+
+            UpdateStatPanelAir();
         }
 
         private void PictureLegExp_Click(object sender, EventArgs e)

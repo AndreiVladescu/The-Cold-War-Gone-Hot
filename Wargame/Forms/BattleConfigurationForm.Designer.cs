@@ -125,7 +125,7 @@ namespace Wargame.Forms
             this.PanelBattlefield.Location = new System.Drawing.Point(0, 0);
             this.PanelBattlefield.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelBattlefield.Name = "PanelBattlefield";
-            this.PanelBattlefield.Size = new System.Drawing.Size(1942, 1102);
+            this.PanelBattlefield.Size = new System.Drawing.Size(1556, 884);
             this.PanelBattlefield.TabIndex = 0;
             // 
             // LblAAShow
@@ -642,7 +642,7 @@ namespace Wargame.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.PanelBattlefield);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(500, 0);
