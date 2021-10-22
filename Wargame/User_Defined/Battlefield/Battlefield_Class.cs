@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Enums_NS;
 using Front_NS;
+using Ter_Units_NS;
+using Air_Units_NS;
 
 namespace Battlefield_NS
 {
@@ -329,6 +331,234 @@ namespace Battlefield_NS
         public AirStruct GetDefAirStats()
         {
             return _def.GetAirStruct();
+        }
+        public string ReturnTerGeneration(Ter_Unit unit)
+        {
+            string gen;
+
+            switch (unit._gen)
+            {
+                case Gen_Enum.Gen1:
+                    {
+                        gen = "Gen1";
+                        break;
+                    }
+                case Gen_Enum.Gen2:
+                    {
+                        gen = "Gen2";
+                        break;
+                    }
+                case Gen_Enum.Gen3:
+                    {
+                        gen = "Gen3";
+                        break;
+                    }
+                default:
+                    {
+                        gen = "Generation default error";
+                        break;
+                    }
+            }
+            return gen;
+        }
+        public string ReturnTerExperience(Ter_Unit unit)
+        {
+            string exp;
+            switch (unit._unit_exp)
+            {
+                case Regiment_Exp_Enum.Green:
+                    {
+                        exp = "Green";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Trained:
+                    {
+                        exp = "Trained";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Regular:
+                    {
+                        exp = "Regular";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Seasoned:
+                    {
+                        exp = "Seasoned";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Veteran:
+                    {
+                        exp = "Veteran";
+                        break;
+                    }
+                default:
+                    {
+                        exp = "Experience default error";
+                        break;
+                    }
+            }
+            return exp;
+        }
+        public string ReturnAirGeneration(Air_Unit unit)
+        {
+            string gen;
+
+            switch (unit._gen)
+            {
+                case Gen_Enum.Gen1:
+                    {
+                        gen = "Gen1";
+                        break;
+                    }
+                case Gen_Enum.Gen2:
+                    {
+                        gen = "Gen2";
+                        break;
+                    }
+                case Gen_Enum.Gen3:
+                    {
+                        gen = "Gen3";
+                        break;
+                    }
+                default:
+                    {
+                        gen = "Generation default error";
+                        break;
+                    }
+            }
+            return gen;
+        }
+        public string ReturnAirExperience(Air_Unit unit)
+        {
+            string exp;
+            switch (unit._unit_exp)
+            {
+                case Regiment_Exp_Enum.Green:
+                    {
+                        exp = "Green";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Trained:
+                    {
+                        exp = "Trained";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Regular:
+                    {
+                        exp = "Regular";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Seasoned:
+                    {
+                        exp = "Seasoned";
+                        break;
+                    }
+                case Regiment_Exp_Enum.Veteran:
+                    {
+                        exp = "Veteran";
+                        break;
+                    }
+                default:
+                    {
+                        exp = "Experience default error";
+                        break;
+                    }
+            }
+            return exp;
+        }
+
+        public string GetDefArmyComposition()
+        {
+            string returnString = "";
+
+            
+            List<Ter_Unit> ter_Units = _def.GetTerUnits();
+
+            ter_Units.Sort((x,y) =>
+                x._unit_type.CompareTo(y._unit_type));
+
+            for (int index = 0; index< ter_Units.Count(); index++)
+            {
+                switch (ter_Units[index]._unit_type)
+                {
+                    case Ter_Units_Enum.MBT:
+                        {
+                            returnString += "MBT " + ReturnTerGeneration(ter_Units[index]) + ReturnTerExperience(ter_Units[index]);
+                            break;
+                        }
+                    case Ter_Units_Enum.L_Tank:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.H_Mech:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.L_Mech:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.Mot:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.SPAAG:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.SPL_Art:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.SPArt:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.SPH_Art:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.SPAT:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.SPRArt:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.Inf_Eq:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.AAG:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.L_Art:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.Art:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.H_Art:
+                        {
+                            break;
+                        }
+                    case Ter_Units_Enum.AT:
+                        {
+                            break;
+                        }
+                    default:
+                        {
+                            returnString = "Default error";
+                            break;
+                        }
+                }
+            }
+
+            return returnString;
         }
         #endregion
     }

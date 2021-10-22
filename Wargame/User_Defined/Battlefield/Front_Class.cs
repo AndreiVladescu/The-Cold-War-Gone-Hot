@@ -234,5 +234,13 @@ namespace Front_NS
                 return false;
             return true;
         }
+        public List<Ter_Unit> GetTerUnits()
+        {
+            return _gnd;
+        }
+        public List<Air_Unit> GetAirUnits()
+        {
+            return _air;
+        }
     }
 }

@@ -187,7 +187,7 @@ namespace Wargame.Forms
             this.PanelAir.Controls.Add(this.BtnSubAir);
             this.PanelAir.Controls.Add(this.BtnAddAir);
             this.PanelAir.Controls.Add(this.PictureAir);
-            this.PanelAir.Location = new System.Drawing.Point(220, 720);
+            this.PanelAir.Location = new System.Drawing.Point(220, 689);
             this.PanelAir.Margin = new System.Windows.Forms.Padding(4);
             this.PanelAir.Name = "PanelAir";
             this.PanelAir.Size = new System.Drawing.Size(1503, 171);
@@ -352,7 +352,7 @@ namespace Wargame.Forms
             this.PanelMob.Controls.Add(this.BtnSubMob);
             this.PanelMob.Controls.Add(this.BtnAddMob);
             this.PanelMob.Controls.Add(this.PictureMob);
-            this.PanelMob.Location = new System.Drawing.Point(220, 466);
+            this.PanelMob.Location = new System.Drawing.Point(220, 447);
             this.PanelMob.Margin = new System.Windows.Forms.Padding(4);
             this.PanelMob.Name = "PanelMob";
             this.PanelMob.Size = new System.Drawing.Size(1503, 171);
@@ -756,7 +756,7 @@ namespace Wargame.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Wargame.Properties.Resources.attacker_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.ClientSize = new System.Drawing.Size(2068, 1194);
             this.Controls.Add(this.PictureCommander);
             this.Controls.Add(this.PanelAir);
             this.Controls.Add(this.PanelMob);

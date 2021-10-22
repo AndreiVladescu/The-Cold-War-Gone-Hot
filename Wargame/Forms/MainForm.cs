@@ -72,5 +72,10 @@ namespace Wargame
         {
             OpenChildForm(new Forms.CreditsForm(), sender);
         }
+
+        private void BtnMusicPlayer_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.MusicPlayerForm(), sender);
+        }
     }
 }
