@@ -33,4 +33,28 @@ C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.PlayForm.resources
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.CreditsForm.resources
-C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\Wargame.exe.config
+E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\Wargame.exe
+E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\Wargame.pdb
+E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\System.Numerics.Vectors.dll
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\The Cold War Gone Hot.csprojAssemblyReference.cache
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.AttackerForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.BattleConfigurationForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.CreditsForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.DefenderForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.MainForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.OptionsForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.PlayForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Forms.SplashScreenForm.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.Properties.Resources.resources
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\The Cold War Gone Hot.csproj.GenerateResource.cache
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.exe
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Wargame.pdb
+E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\Interop.WMPLib.dll
+E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\AxInterop.WMPLib.dll
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Interop.WMPLib.dll
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\AxInterop.WMPLib.dll
+E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
