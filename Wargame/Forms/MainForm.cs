@@ -18,10 +18,12 @@ namespace Wargame
     {
         private Form activeForm;
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
+        public MusicPlayerForm playerForm = new MusicPlayerForm();
 
         public MainForm()
         {
             InitializeComponent();
+            playerForm.Visible = false;
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -75,7 +77,10 @@ namespace Wargame
 
         private void BtnMusicPlayer_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.MusicPlayerForm(), sender);
+            if (playerForm.Visible == false)
+                playerForm.Visible = true;
+            else
+                playerForm.Visible = false;
         }
     }
 }
