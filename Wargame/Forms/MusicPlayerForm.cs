@@ -37,7 +37,7 @@ namespace Wargame.Forms
 
             for (int i = 0; i < files.Length; i++)
             {
-                listBoxSongs.Items.Add(files[i]);
+                listBoxSongs.Items.Add(Tools.GetFileName(files[i]));
                 propertyList = propertyList + listBoxSongs.Items[i] + "\n";
                 melodii.Add(i);
             }
@@ -115,7 +115,7 @@ namespace Wargame.Forms
         }
         private void btn_sunet_Click(object sender, EventArgs e)
         {
-           WindowsMediaPlayer2.URL = @Tools.dirPath + @"Resources\\Music\\DaVasile.mp3";
+           WindowsMediaPlayer2.URL = @Tools.dirPath + @"Resources\\SFX\\DaVasile.mp3";
            WindowsMediaPlayer2.Ctlcontrols.play();
         }
         private void trackBar1_Scroll_1(object sender, EventArgs e)

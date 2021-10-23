@@ -47,6 +47,32 @@ namespace Wargame.User_Defined.Tools
 
             return newDir;
         }
+        public static string GetFileName(string filePath)
+        {
+            int slash1 = 0, slash2 = 0;
+            string fileName = filePath;
+
+            for (int i = 0; i < fileName.Length; i++)
+            {
+                Console.WriteLine(fileName[i]);
+                char ch = fileName[i];
+                if (ch == '\\')
+                {
+                    if (slash1 == slash2) // Start of function
+                    {
+                        slash2 = i;
+                    }
+                    else
+                    {
+                        slash1 = slash2;
+                        slash2 = i;
+                    }
+                }
+            }
+
+            fileName = fileName.Remove(0, slash2 + 1);
+            return fileName;
+        }
         public static float ReturnCombatWidthEffectiveness(int combatWidth)
         {
             float effectiveness = new float();
