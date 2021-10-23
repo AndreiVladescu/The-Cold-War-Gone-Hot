@@ -58,3 +58,9 @@ E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\AxInterop.WMPLib.dll
 E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\Interop.WMPLib.dll
 E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\AxInterop.WMPLib.dll
 E:\The-Cold-War-Gone-Hot-main\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Interop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Interop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
