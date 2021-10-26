@@ -19,7 +19,7 @@ namespace Wargame.Forms
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
 
         List<string> legUnitNames = new List<string> { "Inf_Eq", "Art", "L_Art", "H_Art", "AAG", "AT" };
-        List<string> mobUnitNames = new List<string> { "Mot", "L_Mech", "H_Mech", "MBT", "L_Tank", "SPArt", "SPL_Art", "SPH_Art", "SPAAG", "SPAT", "SPRArt" };
+        List<string> mobUnitNames = new List<string> { "MBT", "L_Tank", "L_Mech", "H_Mech", "Mot", "SPAAG", "SPL_Art", "SPArt", "SPH_Art", "SPAT", "SPRArt" };
         List<string> airUnitNames = new List<string> { "MultiRole_Jet", "CAS", "Interd", "AtkHeli", "L_AtkHeli" };
 
         List<string> expNames = new List<string> { "Green", "Trained", "Experienced", "Veteran", "Elite" };
@@ -47,6 +47,14 @@ namespace Wargame.Forms
             InitializeComponent();
             UpdateStatPanelTer();
             UpdateStatPanelAir();
+            UpdateUnitCounters();
+        }
+        private void UpdateUnitCounters()
+        {
+            string buff = "Units: ";
+            LblLegCounter.Text = buff + battlefieldInstance.GetAtkLegUnitNumber().ToString();
+            LblMobCounter.Text = buff + battlefieldInstance.GetAtkMobUnitNumber().ToString();
+            LblAirCounter.Text = buff + battlefieldInstance.GetAtkAirUnitNumber().ToString();
         }
         private void UpdateStatPanelTer()
         {

@@ -115,8 +115,9 @@ namespace Wargame.Forms
         }
         private void btn_sunet_Click(object sender, EventArgs e)
         {
-           WindowsMediaPlayer2.URL = @Tools.dirPath + @"Resources\\SFX\\DaVasile.mp3";
-           WindowsMediaPlayer2.Ctlcontrols.play();
+            string sfxPath = Tools.dirPath + "Resources\\SFX\\DaVasile.mp3";
+            WindowsMediaPlayer2.URL = @sfxPath;
+            WindowsMediaPlayer2.Ctlcontrols.play();
         }
         private void trackBar1_Scroll_1(object sender, EventArgs e)
         {

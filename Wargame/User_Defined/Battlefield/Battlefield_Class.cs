@@ -8,6 +8,7 @@ using Enums_NS;
 using Front_NS;
 using Ter_Units_NS;
 using Air_Units_NS;
+using Wargame.User_Defined.Tools;
 
 namespace Battlefield_NS
 {
@@ -93,7 +94,7 @@ namespace Battlefield_NS
             float atk_modifier_def_brkt = 1;
 
             atk_modifier_def_brkt += (float)Math.Round((otherPartyterStruct._breakt - terStruct._def) / 5);
-            atk_modifier_armor_pierce = (float)(terStruct._pierce/numberOfTerUnits) / (otherPartyterStruct._armor / otherPartynumberOfTerUnits);
+            atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyterStruct._armor, terStruct._pierce);
 
             float actualHardness = otherPartyterStruct._hardness / otherPartynumberOfTerUnits;
 
@@ -120,7 +121,7 @@ namespace Battlefield_NS
             float atk_modifier_def_brkt = 1;
 
             atk_modifier_def_brkt += (float)Math.Round((terStruct._breakt - otherPartyterStruct._def) / 5);
-            atk_modifier_armor_pierce = (float)(terStruct._pierce / numberOfTerUnits) / (otherPartyterStruct._armor / otherPartynumberOfTerUnits);
+            atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyterStruct._armor, terStruct._pierce);
 
             float actualHardness = otherPartyterStruct._hardness / otherPartynumberOfTerUnits;
 
