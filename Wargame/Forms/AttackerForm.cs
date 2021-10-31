@@ -48,6 +48,19 @@ namespace Wargame.Forms
             UpdateStatPanelTer();
             UpdateStatPanelAir();
             UpdateUnitCounters();
+            UpdateArmyComposition();
+            UpdateAirforceComposition();
+        }
+        private void UpdateArmyComposition()
+        {
+            LblArmyComposition.Text = "Ground Army Composition\n" +
+                "Number of units: " + battlefieldInstance.GetAtkUnitNumber();
+
+        }
+        private void UpdateAirforceComposition()
+        {
+            LblAirforceComposition.Text = "Airforce Composition\n" +
+                "Number of units: " + battlefieldInstance.GetAtkAirUnitNumber();
         }
         private void UpdateUnitCounters()
         {
@@ -192,6 +205,7 @@ namespace Wargame.Forms
             LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
 
             UpdateStatPanelTer();
+            UpdateArmyComposition();
         }
 
         private void BtnSubLeg_Click(object sender, EventArgs e)
@@ -204,6 +218,7 @@ namespace Wargame.Forms
             LblLegCounter.Text = "Units: " + Convert.ToString(legUnitCounter);
 
             UpdateStatPanelTer();
+            UpdateArmyComposition();
         }
 
         private void BtnAddMob_Click(object sender, EventArgs e)
@@ -216,6 +231,7 @@ namespace Wargame.Forms
             LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
 
             UpdateStatPanelTer();
+            UpdateArmyComposition();
         }
 
         private void BtnSubMob_Click(object sender, EventArgs e)
@@ -228,6 +244,7 @@ namespace Wargame.Forms
             LblMobCounter.Text = "Units: " + Convert.ToString(mobUnitCounter);
 
             UpdateStatPanelTer();
+            UpdateArmyComposition();
         }
 
         private void BtnSubAir_Click(object sender, EventArgs e)
@@ -242,6 +259,7 @@ namespace Wargame.Forms
             LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
 
             UpdateStatPanelAir();
+            UpdateAirforceComposition();
         }
 
         private void BtnAddAir_Click(object sender, EventArgs e)
@@ -256,6 +274,7 @@ namespace Wargame.Forms
             LblAirCounter.Text = "Units: " + Convert.ToString(airUnitCounter);
 
             UpdateStatPanelAir();
+            UpdateAirforceComposition();
         }
 
         private void PictureLegExp_Click(object sender, EventArgs e)

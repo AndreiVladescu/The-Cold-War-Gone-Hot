@@ -132,5 +132,10 @@ namespace Wargame.Forms
             this.battlefieldInstance._air_gun_level = aaLevel;
             LblAAShow.Text = "Level: " + Convert.ToString(aaLevel);
         }
+
+        private void weatherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

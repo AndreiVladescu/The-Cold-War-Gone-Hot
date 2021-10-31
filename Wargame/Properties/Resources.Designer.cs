@@ -113,6 +113,16 @@ namespace Wargame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap breakthrough {
+            get {
+                object obj = ResourceManager.GetObject("breakthrough", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap defender_wallpaper {
             get {
                 object obj = ResourceManager.GetObject("defender_wallpaper", resourceCulture);
@@ -586,6 +596,16 @@ namespace Wargame.Properties {
         internal static System.Drawing.Bitmap winter_indicator {
             get {
                 object obj = ResourceManager.GetObject("winter_indicator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zhukov {
+            get {
+                object obj = ResourceManager.GetObject("zhukov", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

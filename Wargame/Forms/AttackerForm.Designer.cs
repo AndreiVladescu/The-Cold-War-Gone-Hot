@@ -85,6 +85,9 @@ namespace Wargame.Forms
             this.BtnSubLeg = new System.Windows.Forms.Button();
             this.BtnAddLeg = new System.Windows.Forms.Button();
             this.PictureLeg = new System.Windows.Forms.PictureBox();
+            this.PanelArmyComposition = new System.Windows.Forms.Panel();
+            this.LblAirforceComposition = new System.Windows.Forms.Label();
+            this.LblArmyComposition = new System.Windows.Forms.Label();
             this.PanelAttackerStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureFlagAttacker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureCommander)).BeginInit();
@@ -100,6 +103,7 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.PictureLegExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLegGen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLeg)).BeginInit();
+            this.PanelArmyComposition.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelAttackerStats
@@ -701,6 +705,40 @@ namespace Wargame.Forms
             this.PictureLeg.TabIndex = 0;
             this.PictureLeg.TabStop = false;
             // 
+            // PanelArmyComposition
+            // 
+            this.PanelArmyComposition.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelArmyComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelArmyComposition.Controls.Add(this.LblAirforceComposition);
+            this.PanelArmyComposition.Controls.Add(this.LblArmyComposition);
+            this.PanelArmyComposition.Location = new System.Drawing.Point(165, 756);
+            this.PanelArmyComposition.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelArmyComposition.Name = "PanelArmyComposition";
+            this.PanelArmyComposition.Size = new System.Drawing.Size(1127, 210);
+            this.PanelArmyComposition.TabIndex = 23;
+            // 
+            // LblAirforceComposition
+            // 
+            this.LblAirforceComposition.AutoSize = true;
+            this.LblAirforceComposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirforceComposition.Location = new System.Drawing.Point(728, 24);
+            this.LblAirforceComposition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblAirforceComposition.Name = "LblAirforceComposition";
+            this.LblAirforceComposition.Size = new System.Drawing.Size(156, 20);
+            this.LblAirforceComposition.TabIndex = 1;
+            this.LblAirforceComposition.Text = "Airforce Composition";
+            // 
+            // LblArmyComposition
+            // 
+            this.LblArmyComposition.AutoSize = true;
+            this.LblArmyComposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblArmyComposition.Location = new System.Drawing.Point(23, 24);
+            this.LblArmyComposition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblArmyComposition.Name = "LblArmyComposition";
+            this.LblArmyComposition.Size = new System.Drawing.Size(195, 20);
+            this.LblArmyComposition.TabIndex = 0;
+            this.LblArmyComposition.Text = "Ground Army Composition";
+            // 
             // AttackerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,6 +746,7 @@ namespace Wargame.Forms
             this.BackgroundImage = global::Wargame.Properties.Resources.attacker_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1551, 894);
+            this.Controls.Add(this.PanelArmyComposition);
             this.Controls.Add(this.PictureCommander);
             this.Controls.Add(this.PanelAir);
             this.Controls.Add(this.PanelMob);
@@ -736,6 +775,8 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.PictureLegExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLegGen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLeg)).EndInit();
+            this.PanelArmyComposition.ResumeLayout(false);
+            this.PanelArmyComposition.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -794,5 +835,8 @@ namespace Wargame.Forms
         private System.Windows.Forms.PictureBox PictureLeg;
         private System.Windows.Forms.Label LblAirStats;
         private System.Windows.Forms.Label LblTerStats;
+        private System.Windows.Forms.Panel PanelArmyComposition;
+        private System.Windows.Forms.Label LblAirforceComposition;
+        private System.Windows.Forms.Label LblArmyComposition;
     }
 }

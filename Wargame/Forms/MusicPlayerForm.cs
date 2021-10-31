@@ -133,34 +133,6 @@ namespace Wargame.Forms
         {
             this.Visible = false;
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void WindowsMediaPlayer_Enter_1(object sender, EventArgs e)
-        {
-
-        }
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void lbl_track_start_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void lbl_track_end_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             WindowsMediaPlayer.settings.volume = trackBar1.Value;

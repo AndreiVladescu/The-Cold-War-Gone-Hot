@@ -49,8 +49,8 @@ namespace Wargame.Forms
             UpdateStatPanelTer();
             UpdateStatPanelAir();
             UpdateUnitCounters();
-            //UpdateArmyComposition();
-            //UpdateAirforceComposition();
+            UpdateArmyComposition();
+            UpdateAirforceComposition();
         }
         private void UpdateUnitCounters()
         {
@@ -62,7 +62,7 @@ namespace Wargame.Forms
         private void UpdateArmyComposition()
         {
             LblArmyComposition.Text = "Ground Army Composition\n" +
-                "Number of units: " + battlefieldInstance.GetDefUnitNumber() + "\n" + battlefieldInstance.GetDefArmyComposition();
+                "Number of units: " + battlefieldInstance.GetDefUnitNumber();// + "\n" + battlefieldInstance.GetDefArmyComposition();
 
         }
         private void UpdateAirforceComposition()

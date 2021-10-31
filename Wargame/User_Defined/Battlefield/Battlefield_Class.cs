@@ -28,6 +28,10 @@ namespace Battlefield_NS
 
         bool _is_night = false;
 
+        public bool _atk_ter_attacks { get; set; }
+        public bool _atk_air_attacks { get; set; }
+        public bool _def_air_attacks { get; set; }
+
         float _fort_modifier,
             _air_gun_level_modifier,
             _river_crossing_modifier,
@@ -40,7 +44,16 @@ namespace Battlefield_NS
 
         private Battlefield()
         {
-
+            _time = 0;
+            _fort_level = 0;
+            _air_gun_level = 0;
+            _river = River_Enum.No;
+            _terrain = Terrain_Enum.Plain;
+            _season = Season_Enum.Spring;
+            _weather = Weather_Enum.Clear;
+            _atk_ter_attacks = true;
+            _atk_air_attacks = true;
+            _def_air_attacks = true;
         }
         private Battlefield(int time, 
             int fort_level,

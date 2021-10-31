@@ -71,6 +71,7 @@ namespace Wargame.User_Defined.Tools
             }
 
             fileName = fileName.Remove(0, slash2 + 1);
+            fileName = fileName.Remove(fileName.Length - 4, 4);
             return fileName;
         }
         public static float ReturnCombatWidthEffectiveness(int combatWidth)
