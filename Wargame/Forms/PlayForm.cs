@@ -16,10 +16,14 @@ namespace Wargame.Forms
 {
     public partial class PlayForm : Form
     {
+        int countHoursPassed = 0;
+
         List<string> atkDoctrineNames = new List<string> { "Breakthrough", "Well Planned Attack", "Relentless Assault" };
         List<string> defDoctrineNames = new List<string> { "Elastic Defense", "Overwhelming Fire", "Backhand Blow" };
+
         int atkDoctrineCount = 0;
         int defDoctrineCount = 0;
+
         Doctrine_Enum atkDoctrine = Doctrine_Enum.Breakthrough;
         Doctrine_Enum defDoctrine = Doctrine_Enum.Elastic_Defense;
 
@@ -36,6 +40,9 @@ namespace Wargame.Forms
 
         private void BtnSimulate_Click(object sender, EventArgs e)
         {
+            countHoursPassed++;
+            BtnSimulate.Text = "Hours Passed: " + countHoursPassed.ToString();
+
             int result = battlefieldInstance.ComputeTurn();
             if (result == 2)
                 LblStatus.Text = "Defenders Won";

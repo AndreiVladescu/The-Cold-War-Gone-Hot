@@ -101,9 +101,10 @@ namespace Front_NS
         TerStruct terStruct = new TerStruct();
         AirStruct airStruct = new AirStruct();
 
+        public bool isRetreating { get; set; }
         public Front()
         {
-
+            isRetreating = false;
         }
         // Getters
         public Factions_Enum GetFaction()
@@ -177,10 +178,22 @@ namespace Front_NS
         public void DamageTerHp(float hp)
         {
             terStruct._hp -= hp;
+            if (terStruct._hp < 0)
+                terStruct._hp = 0;
+
+            MoraleCheck();
+        }
+        private void MoraleCheck()
+        {
+            Random rand = new Random();
+            int chanceToRetreat = rand.Next(1,100);
+            // TODO organisation equation
         }
         public void DamageAirHp(float hp)
         {
             airStruct._hp -= hp;
+            if (airStruct._hp < 0)
+                airStruct._hp = 0;
         }
         public int GetTerUnitNumber()
         {

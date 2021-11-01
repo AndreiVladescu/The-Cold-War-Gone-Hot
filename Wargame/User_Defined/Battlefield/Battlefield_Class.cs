@@ -39,12 +39,13 @@ namespace Battlefield_NS
             _terrain_modifier_atk,
             _weather_modifier,
             _season_modifier_air,
-            _season_modifier_gnd;
+            _season_modifier_gnd,
+            _night_attack_modifier;
 
 
         private Battlefield()
         {
-            _time = 0;
+            _time = 12;
             _fort_level = 0;
             _air_gun_level = 0;
             _river = River_Enum.No;
@@ -75,10 +76,137 @@ namespace Battlefield_NS
             UpdateModifiers();
             UpdateEnvironment();
 
-            DefenderDealDamage();
-            AttackerDealDamage();
+            // Aerial attacks come first
+            if (_atk_air_attacks == true && _def_air_attacks == true)
+            {
+                MutualAeriaLAttack();
+            }
+            else if (_atk_air_attacks == true)
+            {
+                AttackerAerialAttack();
+            }
+            else if (_def_air_attacks == true)
+            {
+                DefenderAerialAttack();
+            }
+
+            if (_atk_ter_attacks == true)
+            {
+                DefenderGroundAttack(); // Defender starts first 
+                AttackerGroundAttack();
+            }
+
+            //DefenderDealDamage();
+            //AttackerDealDamage();
 
             return DetermineWinner();
+        }
+
+        private void AttackerGroundAttack()
+        {
+            float damage; // The damage which is to be modified
+
+            TerStruct thisPartyStruct = _atk.GetTerStruct();
+            TerStruct otherPartyStruct = _def.GetTerStruct();
+
+            int thisPartyNrOfUnits = _atk.GetTerUnitNumber();
+            int otherPartyNrOfUnits = _def.GetTerUnitNumber();
+
+            #region Attack_Modifiers
+            float atk_modifier_def_brkt = Tools.ReturnDefenseBreakthroughEffectiveness(thisPartyStruct._def, otherPartyStruct._breakt);
+            float atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyStruct._armor, thisPartyStruct._pierce);
+            float atk_modifier_combat_width = Tools.ReturnCombatWidthEffectiveness((int)thisPartyStruct._combat_width);
+            #endregion
+
+            #region Combat_Variables
+            float actualHardness = (otherPartyStruct._hardness / otherPartyNrOfUnits) / 100; // Gives a rough estimate of how armored the enemy is
+            float attackSegregated = actualHardness * thisPartyStruct._h_atk + (1 - actualHardness) * thisPartyStruct._s_atk;
+            #endregion
+
+            #region Battlefield_Variables
+
+            #endregion
+
+            // Apply combat related factors
+            damage = attackSegregated *
+                atk_modifier_armor_pierce *
+                atk_modifier_combat_width *
+                atk_modifier_def_brkt;
+
+            // Apply battlefield specific factors
+            damage *= (1 - _fort_modifier * _fort_level);
+
+            // Apply natural related factors
+            damage += damage * _terrain_modifier_atk;
+            damage = damage *
+                (1 - _season_modifier_gnd) *
+                _night_attack_modifier *
+                (1 - _river_crossing_modifier);
+
+            // TODO reliability losses
+            // TODO fuel usage
+            // TODO organisation loss
+
+            // Finally, dish the damage
+            _def.DamageTerHp(damage);
+        }
+        private void DefenderGroundAttack()
+        {
+            float damage; // The damage which is to be modified
+
+            TerStruct thisPartyStruct = _def.GetTerStruct();
+            TerStruct otherPartyStruct = _atk.GetTerStruct();
+
+            int thisPartyNrOfUnits = _def.GetTerUnitNumber();
+            int otherPartyNrOfUnits = _atk.GetTerUnitNumber();
+
+            #region Attack_Modifiers
+            float atk_modifier_def_brkt = Tools.ReturnDefenseBreakthroughEffectiveness(thisPartyStruct._def, otherPartyStruct._breakt);
+            float atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyStruct._armor, thisPartyStruct._pierce);
+            float atk_modifier_combat_width = Tools.ReturnCombatWidthEffectiveness((int)thisPartyStruct._combat_width);
+            #endregion
+
+            #region Combat_Variables
+            float actualHardness = (otherPartyStruct._hardness / otherPartyNrOfUnits) / 100; // Gives a rough estimate of how armored the enemy is
+            float attackSegregated = actualHardness * thisPartyStruct._h_atk + (1 - actualHardness) * thisPartyStruct._s_atk;
+            #endregion
+
+            #region Battlefield_Variables
+
+            #endregion
+
+            // Apply combat related factors
+            damage = attackSegregated *
+                atk_modifier_armor_pierce *
+                atk_modifier_combat_width *
+                atk_modifier_def_brkt;
+
+            // Apply natural related factors
+            damage += damage * _terrain_modifier_def;
+            damage = damage *
+                (1 - _season_modifier_gnd) *
+                _night_attack_modifier;
+
+            // TODO entrenchment
+            // TODO reliability losses
+            // TODO fuel usage
+            // TODO organisation loss
+
+            // Finally, dish the damage
+            _atk.DamageTerHp(damage);
+        }
+
+        private void MutualAeriaLAttack()
+        {
+
+        }
+        private void AttackerAerialAttack()
+        {
+
+        }
+        private void DefenderAerialAttack()
+        {
+
         }
         private int DetermineWinner()
         {
@@ -149,9 +277,15 @@ namespace Battlefield_NS
         private void UpdateModifiers()
         {
             if (_time < 22 && _time > 6)
+            {
                 _is_night = false;
-            else 
+                _night_attack_modifier = (float)1;
+            }
+            else
+            {
                 _is_night = true;
+                _night_attack_modifier = (float)0.5;
+            }
 
             _fort_modifier = _fort_level * (float)0.1;
 
@@ -159,6 +293,12 @@ namespace Battlefield_NS
 
             switch (_terrain)
             {
+                case Terrain_Enum.Plain:
+                    {
+                        _terrain_modifier_atk = (float)0;
+                        _terrain_modifier_def = (float)0;
+                        break;
+                    }
                 case Terrain_Enum.Forest:
                     {
                         _terrain_modifier_atk = -(float)0.2;

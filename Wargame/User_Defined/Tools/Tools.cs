@@ -102,10 +102,10 @@ namespace Wargame.User_Defined.Tools
         public static float ReturnArmorPiercingEffectiveness(float armor, float piercing)
         {
             float effectiveness = new float();
-            float rate = armor / piercing;
-            if (rate < 0.1)
+            float rate = piercing / armor;
+            if (rate < 0.2)
             {
-                effectiveness = (float)0.1;
+                effectiveness = (float)0.2;
             }
             else if (rate < 1)
             {
@@ -114,6 +114,24 @@ namespace Wargame.User_Defined.Tools
             else 
             {
                 effectiveness = (float)1.1;
+            }
+            return effectiveness;
+        }
+        public static float ReturnDefenseBreakthroughEffectiveness(float defence, float breakthrough)
+        {
+            float effectiveness = new float();
+            float rate = defence / breakthrough;
+            if (rate < 0.5)
+            {
+                effectiveness = (float)0.5;
+            }
+            else if (rate < 1)
+            {
+                effectiveness = rate;
+            }
+            else
+            {
+                effectiveness = (float)1.2;
             }
             return effectiveness;
         }

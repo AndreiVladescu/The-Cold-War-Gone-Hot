@@ -35,6 +35,7 @@ namespace Wargame.Forms
             this.TrackBarFortLevel = new System.Windows.Forms.TrackBar();
             this.LblFort = new System.Windows.Forms.Label();
             this.LblFortShow = new System.Windows.Forms.Label();
+            this.LblTimeShow = new System.Windows.Forms.Label();
             this.PictureFort = new System.Windows.Forms.PictureBox();
             this.LblAAShow = new System.Windows.Forms.Label();
             this.TrackbarAALevel = new System.Windows.Forms.TrackBar();
@@ -78,7 +79,6 @@ namespace Wargame.Forms
             this.PictureRiver = new System.Windows.Forms.PictureBox();
             this.LblSeason = new System.Windows.Forms.Label();
             this.LblRiverShow = new System.Windows.Forms.Label();
-            this.LblTimeShow = new System.Windows.Forms.Label();
             this.PanelBattlefield.SuspendLayout();
             this.PanelBattlefieldConfigSliders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarFortLevel)).BeginInit();
@@ -168,6 +168,19 @@ namespace Wargame.Forms
             this.LblFortShow.Size = new System.Drawing.Size(75, 24);
             this.LblFortShow.TabIndex = 17;
             this.LblFortShow.Text = "Level: 0";
+            // 
+            // LblTimeShow
+            // 
+            this.LblTimeShow.AutoSize = true;
+            this.LblTimeShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.LblTimeShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTimeShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.LblTimeShow.Image = ((System.Drawing.Image)(resources.GetObject("LblTimeShow.Image")));
+            this.LblTimeShow.Location = new System.Drawing.Point(164, 14);
+            this.LblTimeShow.Name = "LblTimeShow";
+            this.LblTimeShow.Size = new System.Drawing.Size(140, 24);
+            this.LblTimeShow.TabIndex = 15;
+            this.LblTimeShow.Text = "Time of Day: 12";
             // 
             // PictureFort
             // 
@@ -374,7 +387,7 @@ namespace Wargame.Forms
             this.ToolContainerTerrain.ContentPanel.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.ToolContainerTerrain.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ToolContainerTerrain.ContentPanel.Enabled = false;
-            this.ToolContainerTerrain.ContentPanel.Size = new System.Drawing.Size(20, 125);
+            this.ToolContainerTerrain.ContentPanel.Size = new System.Drawing.Size(0, 125);
             this.ToolContainerTerrain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // ToolContainerTerrain.LeftToolStripPanel
@@ -407,7 +420,7 @@ namespace Wargame.Forms
             this.seasonToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(103, 125);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 125);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -422,7 +435,7 @@ namespace Wargame.Forms
             this.terrainToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.terrainToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.terrainToolStripMenuItem.Name = "terrainToolStripMenuItem";
-            this.terrainToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
+            this.terrainToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
             this.terrainToolStripMenuItem.Text = "Terrain";
             // 
             // plainsToolStripMenuItem
@@ -483,14 +496,13 @@ namespace Wargame.Forms
             this.weatherToolStripMenuItem.Name = "weatherToolStripMenuItem";
             this.weatherToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
             this.weatherToolStripMenuItem.Text = "Season";
-            this.weatherToolStripMenuItem.Click += new System.EventHandler(this.weatherToolStripMenuItem_Click);
             // 
             // autumnToolStripMenuItem
             // 
             this.autumnToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.autumnToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.autumnToolStripMenuItem.Name = "autumnToolStripMenuItem";
-            this.autumnToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.autumnToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.autumnToolStripMenuItem.Text = "Autumn";
             this.autumnToolStripMenuItem.Click += new System.EventHandler(this.autumnToolStripMenuItem_Click);
             // 
@@ -499,7 +511,7 @@ namespace Wargame.Forms
             this.springToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.springToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.springToolStripMenuItem.Name = "springToolStripMenuItem";
-            this.springToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.springToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.springToolStripMenuItem.Text = "Spring";
             this.springToolStripMenuItem.Click += new System.EventHandler(this.springToolStripMenuItem_Click);
             // 
@@ -508,7 +520,7 @@ namespace Wargame.Forms
             this.summerToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.summerToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.summerToolStripMenuItem.Name = "summerToolStripMenuItem";
-            this.summerToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.summerToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.summerToolStripMenuItem.Text = "Summer";
             this.summerToolStripMenuItem.Click += new System.EventHandler(this.summerToolStripMenuItem_Click);
             // 
@@ -517,7 +529,7 @@ namespace Wargame.Forms
             this.winterToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.winterToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.winterToolStripMenuItem.Name = "winterToolStripMenuItem";
-            this.winterToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.winterToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.winterToolStripMenuItem.Text = "Winter";
             this.winterToolStripMenuItem.Click += new System.EventHandler(this.winterToolStripMenuItem_Click);
             // 
@@ -672,19 +684,6 @@ namespace Wargame.Forms
             this.LblRiverShow.Size = new System.Drawing.Size(83, 24);
             this.LblRiverShow.TabIndex = 19;
             this.LblRiverShow.Text = "No River";
-            // 
-            // LblTimeShow
-            // 
-            this.LblTimeShow.AutoSize = true;
-            this.LblTimeShow.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.LblTimeShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTimeShow.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.LblTimeShow.Image = ((System.Drawing.Image)(resources.GetObject("LblTimeShow.Image")));
-            this.LblTimeShow.Location = new System.Drawing.Point(164, 14);
-            this.LblTimeShow.Name = "LblTimeShow";
-            this.LblTimeShow.Size = new System.Drawing.Size(140, 24);
-            this.LblTimeShow.TabIndex = 15;
-            this.LblTimeShow.Text = "Time of Day: 12";
             // 
             // BattleConfigurationForm
             // 
