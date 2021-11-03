@@ -131,7 +131,9 @@ namespace Wargame.Forms
             // LblAirStats
             // 
             this.LblAirStats.AutoSize = true;
+            this.LblAirStats.BackColor = System.Drawing.Color.Transparent;
             this.LblAirStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirStats.ForeColor = System.Drawing.Color.LightGray;
             this.LblAirStats.Location = new System.Drawing.Point(700, 13);
             this.LblAirStats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblAirStats.Name = "LblAirStats";
@@ -142,7 +144,9 @@ namespace Wargame.Forms
             // LblTerStats
             // 
             this.LblTerStats.AutoSize = true;
+            this.LblTerStats.BackColor = System.Drawing.Color.Transparent;
             this.LblTerStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTerStats.ForeColor = System.Drawing.Color.LightGray;
             this.LblTerStats.Location = new System.Drawing.Point(155, 13);
             this.LblTerStats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTerStats.Name = "LblTerStats";
@@ -153,8 +157,9 @@ namespace Wargame.Forms
             // LblDefArmyStats
             // 
             this.LblDefArmyStats.AutoSize = true;
-            this.LblDefArmyStats.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.LblDefArmyStats.BackColor = System.Drawing.Color.Transparent;
             this.LblDefArmyStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefArmyStats.ForeColor = System.Drawing.Color.LightGray;
             this.LblDefArmyStats.Location = new System.Drawing.Point(4, 4);
             this.LblDefArmyStats.Name = "LblDefArmyStats";
             this.LblDefArmyStats.Size = new System.Drawing.Size(136, 20);
@@ -189,7 +194,9 @@ namespace Wargame.Forms
             // LblLegExp
             // 
             this.LblLegExp.AutoSize = true;
+            this.LblLegExp.BackColor = System.Drawing.Color.Transparent;
             this.LblLegExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegExp.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegExp.Location = new System.Drawing.Point(234, 108);
             this.LblLegExp.Name = "LblLegExp";
             this.LblLegExp.Size = new System.Drawing.Size(62, 20);
@@ -232,7 +239,9 @@ namespace Wargame.Forms
             // LblLegStats3Values
             // 
             this.LblLegStats3Values.AutoSize = true;
+            this.LblLegStats3Values.BackColor = System.Drawing.Color.Transparent;
             this.LblLegStats3Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegStats3Values.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegStats3Values.Location = new System.Drawing.Point(929, 13);
             this.LblLegStats3Values.Name = "LblLegStats3Values";
             this.LblLegStats3Values.Size = new System.Drawing.Size(27, 80);
@@ -242,7 +251,9 @@ namespace Wargame.Forms
             // LblLegStats3
             // 
             this.LblLegStats3.AutoSize = true;
+            this.LblLegStats3.BackColor = System.Drawing.Color.Transparent;
             this.LblLegStats3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegStats3.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegStats3.Location = new System.Drawing.Point(799, 13);
             this.LblLegStats3.Name = "LblLegStats3";
             this.LblLegStats3.Size = new System.Drawing.Size(110, 80);
@@ -252,7 +263,9 @@ namespace Wargame.Forms
             // LblLegStats2Values
             // 
             this.LblLegStats2Values.AutoSize = true;
+            this.LblLegStats2Values.BackColor = System.Drawing.Color.Transparent;
             this.LblLegStats2Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegStats2Values.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegStats2Values.Location = new System.Drawing.Point(700, 13);
             this.LblLegStats2Values.Name = "LblLegStats2Values";
             this.LblLegStats2Values.Size = new System.Drawing.Size(36, 100);
@@ -262,7 +275,9 @@ namespace Wargame.Forms
             // LblLegStats2
             // 
             this.LblLegStats2.AutoSize = true;
+            this.LblLegStats2.BackColor = System.Drawing.Color.Transparent;
             this.LblLegStats2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegStats2.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegStats2.Location = new System.Drawing.Point(547, 13);
             this.LblLegStats2.Name = "LblLegStats2";
             this.LblLegStats2.Size = new System.Drawing.Size(138, 100);
@@ -272,7 +287,9 @@ namespace Wargame.Forms
             // LblLegStats1Values
             // 
             this.LblLegStats1Values.AutoSize = true;
+            this.LblLegStats1Values.BackColor = System.Drawing.Color.Transparent;
             this.LblLegStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegStats1Values.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegStats1Values.Location = new System.Drawing.Point(458, 13);
             this.LblLegStats1Values.Name = "LblLegStats1Values";
             this.LblLegStats1Values.Size = new System.Drawing.Size(45, 100);
@@ -282,7 +299,9 @@ namespace Wargame.Forms
             // LblLegStats1
             // 
             this.LblLegStats1.AutoSize = true;
+            this.LblLegStats1.BackColor = System.Drawing.Color.Transparent;
             this.LblLegStats1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegStats1.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegStats1.Location = new System.Drawing.Point(338, 13);
             this.LblLegStats1.Name = "LblLegStats1";
             this.LblLegStats1.Size = new System.Drawing.Size(94, 100);
@@ -303,7 +322,9 @@ namespace Wargame.Forms
             // LblLegCounter
             // 
             this.LblLegCounter.AutoSize = true;
+            this.LblLegCounter.BackColor = System.Drawing.Color.Transparent;
             this.LblLegCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegCounter.ForeColor = System.Drawing.Color.LightGray;
             this.LblLegCounter.Location = new System.Drawing.Point(205, 69);
             this.LblLegCounter.Name = "LblLegCounter";
             this.LblLegCounter.Size = new System.Drawing.Size(71, 24);
@@ -381,7 +402,9 @@ namespace Wargame.Forms
             // LblMobExp
             // 
             this.LblMobExp.AutoSize = true;
+            this.LblMobExp.BackColor = System.Drawing.Color.Transparent;
             this.LblMobExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobExp.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobExp.Location = new System.Drawing.Point(234, 108);
             this.LblMobExp.Name = "LblMobExp";
             this.LblMobExp.Size = new System.Drawing.Size(62, 20);
@@ -424,7 +447,9 @@ namespace Wargame.Forms
             // LblMobStats3Values
             // 
             this.LblMobStats3Values.AutoSize = true;
+            this.LblMobStats3Values.BackColor = System.Drawing.Color.Transparent;
             this.LblMobStats3Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobStats3Values.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobStats3Values.Location = new System.Drawing.Point(929, 13);
             this.LblMobStats3Values.Name = "LblMobStats3Values";
             this.LblMobStats3Values.Size = new System.Drawing.Size(27, 80);
@@ -434,7 +459,9 @@ namespace Wargame.Forms
             // LblMobStats3
             // 
             this.LblMobStats3.AutoSize = true;
+            this.LblMobStats3.BackColor = System.Drawing.Color.Transparent;
             this.LblMobStats3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobStats3.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobStats3.Location = new System.Drawing.Point(799, 13);
             this.LblMobStats3.Name = "LblMobStats3";
             this.LblMobStats3.Size = new System.Drawing.Size(110, 80);
@@ -444,7 +471,9 @@ namespace Wargame.Forms
             // LblMobStats2Values
             // 
             this.LblMobStats2Values.AutoSize = true;
+            this.LblMobStats2Values.BackColor = System.Drawing.Color.Transparent;
             this.LblMobStats2Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobStats2Values.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobStats2Values.Location = new System.Drawing.Point(700, 13);
             this.LblMobStats2Values.Name = "LblMobStats2Values";
             this.LblMobStats2Values.Size = new System.Drawing.Size(36, 100);
@@ -454,7 +483,9 @@ namespace Wargame.Forms
             // LblMobStats2
             // 
             this.LblMobStats2.AutoSize = true;
+            this.LblMobStats2.BackColor = System.Drawing.Color.Transparent;
             this.LblMobStats2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobStats2.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobStats2.Location = new System.Drawing.Point(547, 13);
             this.LblMobStats2.Name = "LblMobStats2";
             this.LblMobStats2.Size = new System.Drawing.Size(138, 100);
@@ -464,7 +495,9 @@ namespace Wargame.Forms
             // LblMobStats1Values
             // 
             this.LblMobStats1Values.AutoSize = true;
+            this.LblMobStats1Values.BackColor = System.Drawing.Color.Transparent;
             this.LblMobStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobStats1Values.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobStats1Values.Location = new System.Drawing.Point(458, 13);
             this.LblMobStats1Values.Name = "LblMobStats1Values";
             this.LblMobStats1Values.Size = new System.Drawing.Size(36, 100);
@@ -474,7 +507,9 @@ namespace Wargame.Forms
             // LblMobStats1
             // 
             this.LblMobStats1.AutoSize = true;
+            this.LblMobStats1.BackColor = System.Drawing.Color.Transparent;
             this.LblMobStats1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobStats1.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobStats1.Location = new System.Drawing.Point(338, 13);
             this.LblMobStats1.Name = "LblMobStats1";
             this.LblMobStats1.Size = new System.Drawing.Size(94, 100);
@@ -495,7 +530,9 @@ namespace Wargame.Forms
             // LblMobCounter
             // 
             this.LblMobCounter.AutoSize = true;
+            this.LblMobCounter.BackColor = System.Drawing.Color.Transparent;
             this.LblMobCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMobCounter.ForeColor = System.Drawing.Color.LightGray;
             this.LblMobCounter.Location = new System.Drawing.Point(205, 69);
             this.LblMobCounter.Name = "LblMobCounter";
             this.LblMobCounter.Size = new System.Drawing.Size(71, 24);
@@ -569,7 +606,9 @@ namespace Wargame.Forms
             // LblAirExp
             // 
             this.LblAirExp.AutoSize = true;
+            this.LblAirExp.BackColor = System.Drawing.Color.Transparent;
             this.LblAirExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirExp.ForeColor = System.Drawing.Color.LightGray;
             this.LblAirExp.Location = new System.Drawing.Point(240, 106);
             this.LblAirExp.Name = "LblAirExp";
             this.LblAirExp.Size = new System.Drawing.Size(62, 20);
@@ -612,7 +651,9 @@ namespace Wargame.Forms
             // LblAirStats1Values
             // 
             this.LblAirStats1Values.AutoSize = true;
+            this.LblAirStats1Values.BackColor = System.Drawing.Color.Transparent;
             this.LblAirStats1Values.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirStats1Values.ForeColor = System.Drawing.Color.LightGray;
             this.LblAirStats1Values.Location = new System.Drawing.Point(547, 13);
             this.LblAirStats1Values.Name = "LblAirStats1Values";
             this.LblAirStats1Values.Size = new System.Drawing.Size(27, 100);
@@ -622,7 +663,9 @@ namespace Wargame.Forms
             // LblAirStats1
             // 
             this.LblAirStats1.AutoSize = true;
+            this.LblAirStats1.BackColor = System.Drawing.Color.Transparent;
             this.LblAirStats1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirStats1.ForeColor = System.Drawing.Color.LightGray;
             this.LblAirStats1.Location = new System.Drawing.Point(363, 13);
             this.LblAirStats1.Name = "LblAirStats1";
             this.LblAirStats1.Size = new System.Drawing.Size(140, 100);
@@ -643,7 +686,9 @@ namespace Wargame.Forms
             // LblAirCounter
             // 
             this.LblAirCounter.AutoSize = true;
+            this.LblAirCounter.BackColor = System.Drawing.Color.Transparent;
             this.LblAirCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirCounter.ForeColor = System.Drawing.Color.LightGray;
             this.LblAirCounter.Location = new System.Drawing.Point(205, 69);
             this.LblAirCounter.Name = "LblAirCounter";
             this.LblAirCounter.Size = new System.Drawing.Size(71, 24);
@@ -710,7 +755,7 @@ namespace Wargame.Forms
             this.PanelArmyComposition.Controls.Add(this.LblAirforceComposition);
             this.PanelArmyComposition.Controls.Add(this.LblArmyComposition);
             this.PanelArmyComposition.Location = new System.Drawing.Point(165, 769);
-            this.PanelArmyComposition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelArmyComposition.Margin = new System.Windows.Forms.Padding(2);
             this.PanelArmyComposition.Name = "PanelArmyComposition";
             this.PanelArmyComposition.Size = new System.Drawing.Size(1127, 210);
             this.PanelArmyComposition.TabIndex = 22;
@@ -718,7 +763,9 @@ namespace Wargame.Forms
             // LblAirforceComposition
             // 
             this.LblAirforceComposition.AutoSize = true;
+            this.LblAirforceComposition.BackColor = System.Drawing.Color.Transparent;
             this.LblAirforceComposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAirforceComposition.ForeColor = System.Drawing.Color.LightGray;
             this.LblAirforceComposition.Location = new System.Drawing.Point(728, 24);
             this.LblAirforceComposition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblAirforceComposition.Name = "LblAirforceComposition";
@@ -729,7 +776,9 @@ namespace Wargame.Forms
             // LblArmyComposition
             // 
             this.LblArmyComposition.AutoSize = true;
+            this.LblArmyComposition.BackColor = System.Drawing.Color.Transparent;
             this.LblArmyComposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblArmyComposition.ForeColor = System.Drawing.Color.LightGray;
             this.LblArmyComposition.Location = new System.Drawing.Point(23, 24);
             this.LblArmyComposition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblArmyComposition.Name = "LblArmyComposition";

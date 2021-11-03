@@ -133,6 +133,16 @@ namespace Wargame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap elastic_defence {
+            get {
+                object obj = ResourceManager.GetObject("elastic_defence", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit_button_icon {
             get {
                 object obj = ResourceManager.GetObject("exit_button_icon", resourceCulture);

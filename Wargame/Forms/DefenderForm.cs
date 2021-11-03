@@ -73,7 +73,6 @@ namespace Wargame.Forms
         private void UpdateStatPanelTer()
         {
             Front_NS.TerStruct terStruct = battlefieldInstance.GetDefTerStats();
-            Front_NS.AirStruct airStruct = battlefieldInstance.GetDefAirStats();
             this.LblTerStats.Text = "Ground Army Stats:\n" +
                 "Manpower: " + terStruct._hp + "           Breakthrough: " + terStruct._breakt + "           Combat Width: " + terStruct._combat_width + "\n" +
                 "Soft Attack: " + terStruct._s_atk + "          Fuel Consumption: " + terStruct._fuel + "   Average Hardness: " + terStruct._hardness / (battlefieldInstance.GetDefUnitNumber()) + "\n" +
