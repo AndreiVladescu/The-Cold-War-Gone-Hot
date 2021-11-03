@@ -33,6 +33,7 @@ namespace Wargame.Forms
             InitializeComponent();
             UpdateGndStats();
             UpdateAirStats();
+            UpdateCommanders();
         }
         private void UpdateDoctrinePictures()
         {
@@ -42,7 +43,7 @@ namespace Wargame.Forms
         {
             // Def
             Front_NS.AirStruct airStruct = battlefieldInstance.GetDefAirStats();
-            LblDefAirStats.Text = "Airfoce Stats:\n" +
+            LblDefAirStats.Text = "Airforce Stats:\n" +
                 "Integrity: " + airStruct._hp + "\n" +
                 "Air Attack: " + airStruct._air_atk + "\n" +
                 "Ground Attack: " + airStruct._gnd_atk + "\n" +
@@ -50,7 +51,7 @@ namespace Wargame.Forms
                 "Strategic Bombing: " + airStruct._strat_bmb;
             // Atk
             Front_NS.AirStruct airStructAtk = battlefieldInstance.GetAtkAirStats();
-            LblAtkAirStats.Text = "Airfoce Stats:\n" +
+            LblAtkAirStats.Text = "Airforce Stats:\n" +
                 "Integrity: " + airStructAtk._hp + "\n" +
                 "Air Attack: " + airStructAtk._air_atk + "\n" +
                 "Ground Attack: " + airStructAtk._gnd_atk + "\n" +
@@ -76,6 +77,29 @@ namespace Wargame.Forms
                 "Defence: " + terStructDef._def + "\nOrganization: " + terStructDef._organ + "\nAverage Piercing: " + terStructDef._pierce / battlefieldInstance.GetDefUnitNumber() + "\n" +
                 "Average Armor: " + terStructDef._armor / battlefieldInstance.GetDefUnitNumber() + "\nEntrenchment: " + terStructDef._entrench;
         }
+        private void UpdateCommanders()
+        {
+            string commander_name = battlefieldInstance.GetCommanderNameAtk();
+            if (commander_name == "Zhukov")
+            {
+                PictureAtkCommander.BackgroundImage = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\zhukov.jpg");
+            }
+            else if (commander_name == "MacArthur")
+            {
+                PictureAtkCommander.BackgroundImage = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\macarthur.jpg");
+            }
+
+            commander_name = battlefieldInstance.GetCommanderNameDef();
+            if (commander_name == "Zhukov")
+            {
+                PictureDefCommander.BackgroundImage = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\zhukov.jpg");
+            }
+            else if (commander_name == "MacArthur")
+            {
+                PictureDefCommander.BackgroundImage = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\macarthur.jpg");
+            }
+
+        }
         private void BtnSimulate_Click(object sender, EventArgs e)
         {
             countHoursPassed++;
@@ -86,9 +110,9 @@ namespace Wargame.Forms
             UpdateGndStats();
             UpdateAirStats();
 
-            if (result == 2)
+            if (result == 3)
                 LblStatus.Text = "Defenders Won";
-            else if (result == -2)
+            else if (result == -3)
                 LblStatus.Text = "Attackers Won";
         }
         private void PictureAtkDoctrine_Click(object sender, EventArgs e)

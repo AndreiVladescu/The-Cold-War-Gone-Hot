@@ -42,6 +42,11 @@ namespace Battlefield_NS
             _season_modifier_gnd,
             _night_attack_modifier;
 
+        float _AABattery_dmg,
+            _fort_dmg;
+
+        int _fort_dmg_threshold = 40;
+        int _AABattery_dmg_threshold = 35;
 
         private Battlefield()
         {
@@ -55,6 +60,13 @@ namespace Battlefield_NS
             _atk_ter_attacks = true;
             _atk_air_attacks = true;
             _def_air_attacks = true;
+
+            _AABattery_dmg = 0;
+            _fort_dmg = 0;
+
+            _atk.SetCommander(1, "Zhukov");
+            _def.SetCommander(1, "MacArthur");
+
         }
         private Battlefield(int time, 
             int fort_level,
@@ -77,6 +89,7 @@ namespace Battlefield_NS
             UpdateEnvironment();
 
             // Aerial attacks come first
+            // TODO add rng
             if (_atk_air_attacks == true && _def_air_attacks == true)
             {
                 MutualAeriaLAttack();
@@ -92,6 +105,7 @@ namespace Battlefield_NS
 
             if (_atk_ter_attacks == true)
             {
+                // TODO add rng
                 DefenderGroundAttack(); // Defender starts first 
                 AttackerGroundAttack();
             }
@@ -195,22 +209,112 @@ namespace Battlefield_NS
             // Finally, dish the damage
             _atk.DamageTerHp(damage);
         }
-
         private void MutualAeriaLAttack()
         {
+            Random rand = new Random();
+
+            AirStruct airStructAtk = _atk.GetAirStruct();
+            AirStruct airStructDef = _def.GetAirStruct();
+            TerStruct terStructAtk = _atk.GetTerStruct();
+            TerStruct terStructDef = _def.GetTerStruct();
+
+
+            float damage_done_atk = airStructAtk._air_atk + terStructAtk._air_atk;
+            float damage_done_def = airStructDef._air_atk + terStructDef._air_atk + _air_gun_level * 10;
+
+            #region Modifiers
+            float air_superiorty_modifier = Tools.ReturnAirSuperiorityEffectiveness(airStructAtk._air_sup, airStructDef._air_sup, _air_gun_level / 10);
+            #endregion
+
+            //  Ground Attack Part
+            #region Ground Attack
+            float damage_done_atk_gnd = airStructAtk._gnd_atk;
+            float damage_done_def_gnd = airStructDef._gnd_atk;
+
+            // RNG part
+            float rng = rand.Next(-5, 5);
+            _def.DamageTerHp((damage_done_atk_gnd * (1 + rng / 100)) * air_superiorty_modifier);
+            rng = rand.Next(-5, 5);
+            _atk.DamageTerHp((damage_done_def_gnd * (1 + rng / 100)) * ( 1 / air_superiorty_modifier));
+            #endregion
+
+            #region Air Attack
+            rng = rand.Next(-5, 5);
+            float actual_damage_done_atk = (damage_done_atk * (1 + rng / 100)) * air_superiorty_modifier;
+            rng = rand.Next(-5, 5);
+            float actual_damage_done_def = (damage_done_def * (1 + rng / 100)) * (1 / air_superiorty_modifier);
+
+            _def.DamageAirHp(actual_damage_done_atk);
+            _atk.DamageAirHp(actual_damage_done_def);
+            #endregion
+
+            #region Strategic Bombing
+            rng = rand.Next(-5, 5);
+            float strategic_bombing_dmg = (airStructAtk._strat_bmb * (1 + rng / 100)) * air_superiorty_modifier;
+
+            _fort_dmg += strategic_bombing_dmg;
+
+            int fort_levels_destroyed = (int)_fort_dmg / _fort_dmg_threshold;
+            _fort_dmg %= _fort_dmg_threshold;
+            _fort_level -= fort_levels_destroyed;
+
+            if (_fort_level < 0)
+                _fort_level = 0;
+
+            _AABattery_dmg += strategic_bombing_dmg;
+
+            int AABattery_levels_destroyed = (int)_AABattery_dmg / _AABattery_dmg_threshold;
+            _AABattery_dmg %= _AABattery_dmg_threshold;
+            _air_gun_level -= AABattery_levels_destroyed;
+
+            if (_air_gun_level < 0)
+                _air_gun_level = 0;
+
+            #endregion
 
         }
         private void AttackerAerialAttack()
         {
+            AirStruct airStructAtk = _atk.GetAirStruct();
+            TerStruct terStructDef = _def.GetTerStruct();
+
+            float damage_received = 0;
+            float damage_done = airStructAtk._air_atk;
+            //airStructAtk;
+
+           
+
 
         }
         private void DefenderAerialAttack()
         {
+            AirStruct airStructDef = _def.GetAirStruct();
 
+        }
+
+        public string GetCommanderNameDef()
+        {
+            return _def.GetCommanderName();
+        }
+        public string GetCommanderNameAtk()
+        {
+            return _atk.GetCommanderName();
+        }
+        public void SetCommanderNameAtk(string name)
+        {
+            _atk.SetCommanderName(name);
+        }
+        public void SetCommanderNameDef(string name)
+        {
+            _def.SetCommanderName(name);
         }
         private int DetermineWinner()
         {
-            if (_atk.IsTerDefeated())
+            if (_atk.IsTerDefeated() && _atk.IsAirDefeated())
+                return 3;
+            else if (_def.IsTerDefeated() && _def.IsAirDefeated())
+                return -3;
+            else if (_atk.IsTerDefeated())
                 return 2;
             else if (_def.IsTerDefeated())
                 return -2;

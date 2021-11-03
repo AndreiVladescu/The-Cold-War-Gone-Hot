@@ -76,9 +76,9 @@ namespace Wargame.Forms
             this.BtnSimulate.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.BtnSimulate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSimulate.ForeColor = System.Drawing.Color.LightGray;
-            this.BtnSimulate.Location = new System.Drawing.Point(791, 36);
+            this.BtnSimulate.Location = new System.Drawing.Point(780, 36);
             this.BtnSimulate.Name = "BtnSimulate";
-            this.BtnSimulate.Size = new System.Drawing.Size(126, 69);
+            this.BtnSimulate.Size = new System.Drawing.Size(142, 78);
             this.BtnSimulate.TabIndex = 0;
             this.BtnSimulate.Text = "Simulate Battle";
             this.BtnSimulate.UseVisualStyleBackColor = true;

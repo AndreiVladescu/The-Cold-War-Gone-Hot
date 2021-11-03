@@ -50,6 +50,7 @@ namespace Wargame.Forms
             UpdateUnitCounters();
             UpdateArmyComposition();
             UpdateAirforceComposition();
+            UpdateCommander();
         }
         private void UpdateArmyComposition()
         {
@@ -119,6 +120,7 @@ namespace Wargame.Forms
             }
 
             FlagUnitUpdates();
+            ChangeCommander();
         }
         private void FlagUnitUpdates()
         {
@@ -297,6 +299,33 @@ namespace Wargame.Forms
             airExp %= 5;
             PictureAirExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(airExp + 1) + ".jpg");
             LblAirExp.Text = expNames[airExp];
+        }
+        private void ChangeCommander()
+        {
+            string commander_name = battlefieldInstance.GetCommanderNameAtk();
+
+            if (commander_name == "Zhukov")
+            {
+                battlefieldInstance.SetCommanderNameAtk("MacArthur");
+            }
+            else if (commander_name == "MacArthur")
+            {
+                battlefieldInstance.SetCommanderNameAtk("Zhukov");
+            }
+
+            UpdateCommander();
+        }
+        private void UpdateCommander()
+        {
+            string commander_name = battlefieldInstance.GetCommanderNameAtk();
+            if (commander_name == "Zhukov")
+            {
+                PictureCommander.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\zhukov.jpg");
+            }
+            else if (commander_name == "MacArthur")
+            {
+                PictureCommander.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\macarthur.jpg");
+            }
         }
     }
 }

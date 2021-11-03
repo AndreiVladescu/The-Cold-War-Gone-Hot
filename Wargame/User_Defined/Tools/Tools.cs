@@ -76,7 +76,7 @@ namespace Wargame.User_Defined.Tools
         }
         public static float ReturnCombatWidthEffectiveness(int combatWidth)
         {
-            float effectiveness = new float();
+            float effectiveness;
 
             if (combatWidth <= 90)
             {
@@ -101,19 +101,37 @@ namespace Wargame.User_Defined.Tools
         }
         public static float ReturnArmorPiercingEffectiveness(float armor, float piercing)
         {
-            float effectiveness = new float();
+            float effectiveness;
             float rate = piercing / armor;
             if (rate < 0.2)
             {
                 effectiveness = (float)0.2;
             }
-            else if (rate < 1)
+            else if (rate <= 1)
             {
                 effectiveness = rate;
             }
             else 
             {
                 effectiveness = (float)1.1;
+            }
+            return effectiveness;
+        }
+        public static float ReturnAirSuperiorityEffectiveness(float airAtk, float airDef, float AABattery)
+        {
+            float effectiveness;
+            float rate = airAtk / (airDef + AABattery);
+            if (rate < 0.2)
+            {
+                effectiveness = (float)0.2;
+            }
+            else if (rate <= 1)
+            {
+                effectiveness = rate;
+            }
+            else
+            {
+                effectiveness = (float)1.2;
             }
             return effectiveness;
         }
@@ -125,7 +143,7 @@ namespace Wargame.User_Defined.Tools
             {
                 effectiveness = (float)0.5;
             }
-            else if (rate < 1)
+            else if (rate <= 1)
             {
                 effectiveness = rate;
             }

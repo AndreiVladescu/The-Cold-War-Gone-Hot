@@ -8,6 +8,7 @@ using Enums_NS;
 using Ter_Units_NS;
 using Air_Units_NS;
 using Commander_NS;
+using Doctrine_NS;
 
 namespace Front_NS
 {
@@ -97,6 +98,7 @@ namespace Front_NS
         List<Air_Unit> _air = new List<Air_Unit>();
 
         Commander _commander;
+        Doctrine _doctrine;
 
         TerStruct terStruct = new TerStruct();
         AirStruct airStruct = new AirStruct();
@@ -107,6 +109,14 @@ namespace Front_NS
             isRetreating = false;
         }
         // Getters
+        public string GetCommanderName()
+        {
+            return _commander._name;
+        }
+        public void SetCommanderName(string name)
+        {
+            _commander._name = name;
+        }
         public Factions_Enum GetFaction()
         {
             return _faction;

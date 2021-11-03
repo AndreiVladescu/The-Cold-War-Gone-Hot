@@ -51,6 +51,19 @@ namespace Wargame.Forms
             UpdateUnitCounters();
             UpdateArmyComposition();
             UpdateAirforceComposition();
+            UpdateCommander();
+        }
+        private void UpdateCommander()
+        {
+            string commander_name = battlefieldInstance.GetCommanderNameDef();
+            if (commander_name == "Zhukov")
+            {
+                PictureCommander.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\zhukov.jpg");
+            }
+            else if (commander_name == "MacArthur")
+            {
+                PictureCommander.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\macarthur.jpg");
+            }
         }
         private void UpdateUnitCounters()
         {
@@ -63,7 +76,6 @@ namespace Wargame.Forms
         {
             LblArmyComposition.Text = "Ground Army Composition\n" +
                 "Number of units: " + battlefieldInstance.GetDefUnitNumber();// + "\n" + battlefieldInstance.GetDefArmyComposition();
-
         }
         private void UpdateAirforceComposition()
         {
@@ -105,6 +117,7 @@ namespace Wargame.Forms
         private void PictureFlagDefender_Click(object sender, EventArgs e)
         {
             PictureFlagDefender.Image = null;
+            
             if (flagCounter == 0)
             {
                 PictureFlagDefender.Image = global::Wargame.Properties.Resources.SOV_flag;
@@ -118,6 +131,7 @@ namespace Wargame.Forms
                 LblDefArmyStats.Text = "USA Army Stats:";
             }
 
+            ChangeCommander();
             FlagUnitUpdates();
         }
         private void FlagUnitUpdates()
@@ -299,5 +313,21 @@ namespace Wargame.Forms
             LblAirExp.Text = expNames[airExp];
         }
 
+        private void ChangeCommander()
+        {
+            string commander_name = battlefieldInstance.GetCommanderNameDef();
+
+            if (commander_name == "Zhukov")
+            {
+                battlefieldInstance.SetCommanderNameDef("MacArthur");
+            }
+            else if (commander_name == "MacArthur")
+            {
+                battlefieldInstance.SetCommanderNameDef("Zhukov");
+            }
+
+            UpdateCommander();
+        }
+        
     }
 }
