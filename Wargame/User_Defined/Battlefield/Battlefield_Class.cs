@@ -115,9 +115,10 @@ namespace Battlefield_NS
 
             return DetermineWinner();
         }
-
         private void AttackerGroundAttack()
         {
+            if (_atk.IsTerDefeated())
+                return;
             float damage; // The damage which is to be modified
 
             TerStruct thisPartyStruct = _atk.GetTerStruct();
@@ -127,7 +128,8 @@ namespace Battlefield_NS
             int otherPartyNrOfUnits = _def.GetTerUnitNumber();
 
             #region Attack_Modifiers
-            float atk_modifier_def_brkt = Tools.ReturnDefenseBreakthroughEffectiveness(thisPartyStruct._def, otherPartyStruct._breakt);
+            float actual_defence_of_defender = otherPartyStruct._def * (1 + ((otherPartyStruct._entrench * 2) / otherPartyNrOfUnits) / 100);
+            float atk_modifier_def_brkt = Tools.ReturnDefenseBreakthroughEffectiveness(actual_defence_of_defender, thisPartyStruct._breakt);
             float atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyStruct._armor, thisPartyStruct._pierce);
             float atk_modifier_combat_width = Tools.ReturnCombatWidthEffectiveness((int)thisPartyStruct._combat_width);
             #endregion
@@ -157,15 +159,22 @@ namespace Battlefield_NS
                 _night_attack_modifier *
                 (1 - _river_crossing_modifier);
 
-            // TODO reliability losses
+            // TODO entrenchment - done
+            // TODO reliability losses - done
             // TODO fuel usage
             // TODO organisation loss
 
+            // Added reliability losses for the attacker side after his attack
+            float reliability_losses_for_attacker = Tools.ReturnCombatLossesThroughReliability(thisPartyStruct._reliab / thisPartyNrOfUnits, thisPartyStruct._hp);
+            _atk.DamageTerHp(reliability_losses_for_attacker);
+            
             // Finally, dish the damage
             _def.DamageTerHp(damage);
         }
         private void DefenderGroundAttack()
         {
+            if (_def.IsTerDefeated())
+                return;
             float damage; // The damage which is to be modified
 
             TerStruct thisPartyStruct = _def.GetTerStruct();
@@ -175,7 +184,7 @@ namespace Battlefield_NS
             int otherPartyNrOfUnits = _atk.GetTerUnitNumber();
 
             #region Attack_Modifiers
-            float atk_modifier_def_brkt = Tools.ReturnDefenseBreakthroughEffectiveness(thisPartyStruct._def, otherPartyStruct._breakt);
+            float atk_modifier_def_brkt = Tools.ReturnDefenseBreakthroughEffectiveness(otherPartyStruct._def, thisPartyStruct._breakt);
             float atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyStruct._armor, thisPartyStruct._pierce);
             float atk_modifier_combat_width = Tools.ReturnCombatWidthEffectiveness((int)thisPartyStruct._combat_width);
             #endregion
@@ -201,16 +210,23 @@ namespace Battlefield_NS
                 (1 - _season_modifier_gnd) *
                 _night_attack_modifier;
 
-            // TODO entrenchment
-            // TODO reliability losses
+            // TODO entrenchment - done
+            // TODO reliability losses - done
             // TODO fuel usage
             // TODO organisation loss
+
+            // Added reliability losses for the defender side after his attack
+            float reliability_losses_for_attacker = Tools.ReturnCombatLossesThroughReliability(thisPartyStruct._reliab / thisPartyNrOfUnits, thisPartyStruct._hp);
+            _def.DamageTerHp(reliability_losses_for_attacker);
 
             // Finally, dish the damage
             _atk.DamageTerHp(damage);
         }
         private void MutualAeriaLAttack()
         {
+            if (_atk.IsAirDefeated() && _def.IsAirDefeated())
+                return;
+
             Random rand = new Random();
 
             AirStruct airStructAtk = _atk.GetAirStruct();
@@ -233,9 +249,11 @@ namespace Battlefield_NS
 
             // RNG part
             float rng = rand.Next(-5, 5);
-            _def.DamageTerHp((damage_done_atk_gnd * (1 + rng / 100)) * air_superiorty_modifier);
+            if (!_def.IsAirDefeated())
+                _def.DamageTerHp((damage_done_atk_gnd * (1 + rng / 100)) * air_superiorty_modifier);
             rng = rand.Next(-5, 5);
-            _atk.DamageTerHp((damage_done_def_gnd * (1 + rng / 100)) * ( 1 / air_superiorty_modifier));
+            if (!_atk.IsAirDefeated())
+                _atk.DamageTerHp((damage_done_def_gnd * (1 + rng / 100)) * ( 1 / air_superiorty_modifier));
             #endregion
 
             #region Air Attack
@@ -244,11 +262,15 @@ namespace Battlefield_NS
             rng = rand.Next(-5, 5);
             float actual_damage_done_def = (damage_done_def * (1 + rng / 100)) * (1 / air_superiorty_modifier);
 
-            _def.DamageAirHp(actual_damage_done_atk);
-            _atk.DamageAirHp(actual_damage_done_def);
+            if (!_def.IsAirDefeated())
+                _def.DamageAirHp(actual_damage_done_atk);
+            if (!_atk.IsAirDefeated())
+                _atk.DamageAirHp(actual_damage_done_def);
             #endregion
 
             #region Strategic Bombing
+            if (_atk.IsAirDefeated())
+                return;
             rng = rand.Next(-5, 5);
             float strategic_bombing_dmg = (airStructAtk._strat_bmb * (1 + rng / 100)) * air_superiorty_modifier;
 
@@ -275,6 +297,8 @@ namespace Battlefield_NS
         }
         private void AttackerAerialAttack()
         {
+            if (_atk.IsAirDefeated())
+                return;
             AirStruct airStructAtk = _atk.GetAirStruct();
             TerStruct terStructDef = _def.GetTerStruct();
 
@@ -282,16 +306,14 @@ namespace Battlefield_NS
             float damage_done = airStructAtk._air_atk;
             //airStructAtk;
 
-           
-
-
         }
         private void DefenderAerialAttack()
         {
+            if (_def.IsAirDefeated())
+                return;
             AirStruct airStructDef = _def.GetAirStruct();
 
         }
-
         public string GetCommanderNameDef()
         {
             return _def.GetCommanderName();
@@ -724,7 +746,6 @@ namespace Battlefield_NS
             }
             return exp;
         }
-
         public string GetDefArmyComposition()
         {
             string returnString = "";

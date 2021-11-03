@@ -137,8 +137,8 @@ namespace Wargame.User_Defined.Tools
         }
         public static float ReturnDefenseBreakthroughEffectiveness(float defence, float breakthrough)
         {
-            float effectiveness = new float();
-            float rate = defence / breakthrough;
+            float effectiveness;
+            float rate = breakthrough / defence;
             if (rate < 0.5)
             {
                 effectiveness = (float)0.5;
@@ -152,6 +152,15 @@ namespace Wargame.User_Defined.Tools
                 effectiveness = (float)1.2;
             }
             return effectiveness;
+        }
+        public static float ReturnCombatLossesThroughReliability(float average_reliability, float manpower)
+        {
+            float losses;
+            Random rand = new Random();
+
+            losses = (rand.Next(100, 102) / 100) * (average_reliability / 100) * (manpower / 100);
+
+            return losses;
         }
         public static void UpdateMouseValue(UInt32 mouseSpeed)
         {

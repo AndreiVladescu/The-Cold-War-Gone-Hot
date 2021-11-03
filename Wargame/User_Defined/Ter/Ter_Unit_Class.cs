@@ -29,7 +29,7 @@ namespace Ter_Units_NS
             _combat_width,
             _hardness;
 
-        public Ter_Unit() // For testing reasons
+        private Ter_Unit() // For testing reasons
         {
 
         }
@@ -76,7 +76,7 @@ namespace Ter_Units_NS
             pierce += unitGenModifier * pierce;
             breakt += unitGenModifier * breakt;
             fuel += unitGenModifier * fuel;
-            reliab += unitGenModifier * reliab;
+            //reliab += unitGenModifier * reliab;
             organ += unitGenModifier * organ;
             air_atk += unitGenModifier * air_atk;
             //entrench += unitGenModifier * entrench;
@@ -91,7 +91,7 @@ namespace Ter_Units_NS
             _pierce = pierce + unitExpModifier * pierce;
             _breakt = breakt + unitExpModifier * breakt;
             _fuel = fuel; // + unitExpModifier * fuel;
-            _reliab = reliab + unitExpModifier * reliab;
+            _reliab = reliab; // + unitExpModifier * reliab;
             _organ = organ + unitExpModifier * organ;
             _air_atk = air_atk + unitExpModifier * air_atk;
             _entrench = entrench + unitExpModifier * entrench;

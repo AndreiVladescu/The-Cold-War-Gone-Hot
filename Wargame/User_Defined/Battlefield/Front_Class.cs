@@ -103,6 +103,7 @@ namespace Front_NS
         TerStruct terStruct = new TerStruct();
         AirStruct airStruct = new AirStruct();
 
+        public float _fuel_left { get; set; }
         public bool isRetreating { get; set; }
         public Front()
         {
@@ -120,12 +121,6 @@ namespace Front_NS
         public Factions_Enum GetFaction()
         {
             return _faction;
-        }
-        public void AddTerUnit(List<float> unitStats) // Don't use me
-        {
-            Ter_Unit newTerUnit = new Ter_Unit();
-            _gnd.Add(newTerUnit);
-            terStruct.IntegrateRegiment(unitStats.ToArray());
         }
         public void AddTerUnit(Gen_Enum gen, Ter_Units_Enum unit_type, Regiment_Exp_Enum unit_exp) // XML Parsing method
         {

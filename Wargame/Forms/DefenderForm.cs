@@ -11,6 +11,8 @@ using System.IO;
 using Battlefield_NS;
 using Wargame.User_Defined.Tools;
 using Enums_NS;
+using Ter_Units_NS;
+using Air_Units_NS;
 
 namespace Wargame.Forms
 {
@@ -52,6 +54,9 @@ namespace Wargame.Forms
             UpdateArmyComposition();
             UpdateAirforceComposition();
             UpdateCommander();
+            UpdateStatsLeg();
+            UpdateStatsMob();
+            UpdateStatsAir();
         }
         private void UpdateCommander()
         {
@@ -150,26 +155,101 @@ namespace Wargame.Forms
             string picName = Tools.dirPath + "Resources\\Unit_Images\\" + folderName + flagNames[flagCounter] + "_" + unitNames[unitCounter] + "_Gen" + Convert.ToString(gen) + ".png";
             return picName;
         }
+        private void UpdateStatsLeg()
+        {
+            Ter_Units_Enum unit_type = (Ter_Units_Enum)(legUnitNameCounter + 201);
+            Gen_Enum unit_gen = (Gen_Enum)(legGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(legExp - 1);
+
+            Ter_Unit ter_Unit = new Ter_Unit(unit_gen, unit_type, unit_xp);
+
+            LblLegStats1Values.Text = ter_Unit._hp.ToString() + "\n" +
+                ter_Unit._s_atk.ToString() + "\n" +
+                ter_Unit._h_atk.ToString() + "\n" +
+                ter_Unit._def.ToString() + "\n" +
+                ter_Unit._armor.ToString();
+
+            LblLegStats2Values.Text = ter_Unit._breakt.ToString() + "\n" +
+                ter_Unit._fuel.ToString() + "\n" +
+                ter_Unit._reliab.ToString() + "\n" +
+                ter_Unit._organ.ToString() + "\n" +
+                ter_Unit._entrench.ToString();
+
+            LblLegStats3Values.Text = ter_Unit._combat_width.ToString() + "\n" +
+                ter_Unit._hardness.ToString() + "\n" +
+                ter_Unit._air_atk.ToString() + "\n" +
+                ter_Unit._pierce.ToString();
+        }
+        private void UpdateStatsMob()
+        {
+            Ter_Units_Enum unit_type = (Ter_Units_Enum)(mobUnitNameCounter + 101);
+            Gen_Enum unit_gen = (Gen_Enum)(mobGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(mobExp - 1);
+
+            Ter_Unit ter_Unit = new Ter_Unit(unit_gen, unit_type, unit_xp);
+
+            LblMobStats1Values.Text = ter_Unit._hp.ToString() + "\n" +
+                ter_Unit._s_atk.ToString() + "\n" +
+                ter_Unit._h_atk.ToString() + "\n" +
+                ter_Unit._def.ToString() + "\n" +
+                ter_Unit._armor.ToString();
+
+            LblMobStats2Values.Text = ter_Unit._breakt.ToString() + "\n" +
+                ter_Unit._fuel.ToString() + "\n" +
+                ter_Unit._reliab.ToString() + "\n" +
+                ter_Unit._organ.ToString() + "\n" +
+                ter_Unit._entrench.ToString();
+
+            LblMobStats3Values.Text = ter_Unit._combat_width.ToString() + "\n" +
+                ter_Unit._hardness.ToString() + "\n" +
+                ter_Unit._air_atk.ToString() + "\n" +
+                ter_Unit._pierce.ToString();
+        }
+        private void UpdateStatsAir()
+        {
+            Air_Units_Enum unit_type = (Air_Units_Enum)(airUnitNameCounter + 301);
+            if (airUnitNameCounter == 4 || airUnitNameCounter == 3)
+                unit_type += 97;
+            Gen_Enum unit_gen = (Gen_Enum)(airGen - 1);
+            Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(airExp - 1);
+
+            Air_Unit air_Unit = new Air_Unit(unit_gen, unit_type, unit_xp);
+
+            LblAirStats1Values.Text = air_Unit._hp.ToString() + "\n" +
+                air_Unit._air_atk.ToString() + "\n" +
+                air_Unit._gnd_atk.ToString() + "\n" +
+                air_Unit._air_sup.ToString() + "\n" +
+                air_Unit._strat_bmb.ToString();
+
+        }
         private void BtnLegGen_Click(object sender, EventArgs e)
         {
             PictureLeg.Image = Image.FromFile(GetUnitPicturePath(legUnitNames, legUnitNameCounter, ref legGen));
             PictureLegGen.Image = Image.FromFile(GetGenPicturePath(legGen));
+
+            UpdateStatsLeg();
         }
         private void BtnMobGen_Click(object sender, EventArgs e)
         {
             PictureMob.Image = Image.FromFile(GetUnitPicturePath(mobUnitNames, mobUnitNameCounter, ref mobGen));
             PictureMobGen.Image = Image.FromFile(GetGenPicturePath(mobGen));
+
+            UpdateStatsMob();
         }
         private void BtnAirGen_Click(object sender, EventArgs e)
         {
             PictureAir.Image = Image.FromFile(GetUnitPicturePath(airUnitNames, airUnitNameCounter, ref airGen, true));
             PictureAirGen.Image = Image.FromFile(GetGenPicturePath(airGen));
+
+            UpdateStatsAir();
         }
         private void BtnNextLeg_Click(object sender, EventArgs e)
         {
             legUnitNameCounter++;
             legUnitNameCounter = legUnitNameCounter % legUnitNames.Count();  
             PictureLeg.Image = Image.FromFile(UpdateUnitPicture(legUnitNames, legUnitNameCounter, legGen));
+
+            UpdateStatsLeg();
         }
 
         private void BtnNextMob_Click(object sender, EventArgs e)
@@ -177,6 +257,8 @@ namespace Wargame.Forms
             mobUnitNameCounter++;
             mobUnitNameCounter = mobUnitNameCounter % mobUnitNames.Count();
             PictureMob.Image = Image.FromFile(UpdateUnitPicture(mobUnitNames, mobUnitNameCounter, mobGen));
+
+            UpdateStatsMob();
         }
 
         private void BtnNextAir_Click(object sender, EventArgs e)
@@ -184,6 +266,8 @@ namespace Wargame.Forms
             airUnitNameCounter++;
             airUnitNameCounter = airUnitNameCounter % airUnitNames.Count();
             PictureAir.Image = Image.FromFile(UpdateUnitPicture(airUnitNames, airUnitNameCounter, airGen, true));
+
+            UpdateStatsAir();
         }
         private void BtnPrevLeg_Click(object sender, EventArgs e)
         {
@@ -191,6 +275,8 @@ namespace Wargame.Forms
             if (legUnitNameCounter < 0)
                 legUnitNameCounter = legUnitNames.Count() - 1;
             PictureLeg.Image = Image.FromFile(UpdateUnitPicture(legUnitNames, legUnitNameCounter, legGen));
+
+            UpdateStatsLeg();
         }
 
         private void BtnPrevMob_Click(object sender, EventArgs e)
@@ -199,6 +285,8 @@ namespace Wargame.Forms
             if (mobUnitNameCounter < 0)
                 mobUnitNameCounter = mobUnitNames.Count() - 1;
             PictureMob.Image = Image.FromFile(UpdateUnitPicture(mobUnitNames, mobUnitNameCounter, mobGen));
+
+            UpdateStatsMob();
         }
 
         private void BtnPrevAir_Click(object sender, EventArgs e)
@@ -207,6 +295,8 @@ namespace Wargame.Forms
             if (airUnitNameCounter < 0)
                 airUnitNameCounter = airUnitNames.Count() - 1;
             PictureAir.Image = Image.FromFile(UpdateUnitPicture(airUnitNames, airUnitNameCounter, airGen, true));
+
+            UpdateStatsAir();
         }
 
         private void BtnAddLeg_Click(object sender, EventArgs e)
@@ -297,6 +387,8 @@ namespace Wargame.Forms
             legExp %= 5;
             PictureLegExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(legExp + 1) + ".jpg");
             LblLegExp.Text = expNames[legExp];
+
+            UpdateStatsLeg();
         }
         private void PictureMobExp_Click(object sender, EventArgs e)
         {
@@ -304,6 +396,8 @@ namespace Wargame.Forms
             mobExp %= 5;
             PictureMobExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(mobExp + 1) + ".jpg");
             LblMobExp.Text = expNames[mobExp];
+
+            UpdateStatsMob();
         }
         private void PictureAirExp_Click(object sender, EventArgs e)
         {
@@ -311,6 +405,8 @@ namespace Wargame.Forms
             airExp %= 5;
             PictureAirExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(airExp + 1) + ".jpg");
             LblAirExp.Text = expNames[airExp];
+
+            UpdateStatsAir();
         }
 
         private void ChangeCommander()
@@ -328,6 +424,10 @@ namespace Wargame.Forms
 
             UpdateCommander();
         }
-        
+
+        private void TrackBarFuel_Scroll(object sender, EventArgs e)
+        {
+
+        }
     }
 }
