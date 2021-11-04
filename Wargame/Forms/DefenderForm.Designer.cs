@@ -84,10 +84,10 @@ namespace Wargame.Forms
             this.PictureAir = new System.Windows.Forms.PictureBox();
             this.PictureCommander = new System.Windows.Forms.PictureBox();
             this.PanelArmyComposition = new System.Windows.Forms.Panel();
+            this.LblFuel = new System.Windows.Forms.Label();
+            this.TrackBarFuel = new System.Windows.Forms.TrackBar();
             this.LblAirforceComposition = new System.Windows.Forms.Label();
             this.LblArmyComposition = new System.Windows.Forms.Label();
-            this.TrackBarFuel = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureFlagDefender)).BeginInit();
             this.PanelDefenderStats.SuspendLayout();
             this.PanelLeg.SuspendLayout();
@@ -755,7 +755,7 @@ namespace Wargame.Forms
             // 
             this.PanelArmyComposition.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.PanelArmyComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelArmyComposition.Controls.Add(this.label1);
+            this.PanelArmyComposition.Controls.Add(this.LblFuel);
             this.PanelArmyComposition.Controls.Add(this.TrackBarFuel);
             this.PanelArmyComposition.Controls.Add(this.LblAirforceComposition);
             this.PanelArmyComposition.Controls.Add(this.LblArmyComposition);
@@ -764,6 +764,32 @@ namespace Wargame.Forms
             this.PanelArmyComposition.Name = "PanelArmyComposition";
             this.PanelArmyComposition.Size = new System.Drawing.Size(1127, 210);
             this.PanelArmyComposition.TabIndex = 22;
+            // 
+            // LblFuel
+            // 
+            this.LblFuel.AutoSize = true;
+            this.LblFuel.BackColor = System.Drawing.Color.Transparent;
+            this.LblFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFuel.ForeColor = System.Drawing.Color.LightGray;
+            this.LblFuel.Location = new System.Drawing.Point(23, 116);
+            this.LblFuel.Name = "LblFuel";
+            this.LblFuel.Size = new System.Drawing.Size(111, 20);
+            this.LblFuel.TabIndex = 3;
+            this.LblFuel.Text = "Fuel Available:";
+            this.LblFuel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // TrackBarFuel
+            // 
+            this.TrackBarFuel.AutoSize = false;
+            this.TrackBarFuel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TrackBarFuel.Location = new System.Drawing.Point(17, 152);
+            this.TrackBarFuel.Maximum = 5000;
+            this.TrackBarFuel.Name = "TrackBarFuel";
+            this.TrackBarFuel.Size = new System.Drawing.Size(1092, 45);
+            this.TrackBarFuel.TabIndex = 2;
+            this.TrackBarFuel.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.TrackBarFuel.Value = 1000;
+            this.TrackBarFuel.Scroll += new System.EventHandler(this.TrackBarFuel_Scroll);
             // 
             // LblAirforceComposition
             // 
@@ -790,31 +816,6 @@ namespace Wargame.Forms
             this.LblArmyComposition.Size = new System.Drawing.Size(195, 20);
             this.LblArmyComposition.TabIndex = 0;
             this.LblArmyComposition.Text = "Ground Army Composition";
-            // 
-            // TrackBarFuel
-            // 
-            this.TrackBarFuel.AutoSize = false;
-            this.TrackBarFuel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TrackBarFuel.Location = new System.Drawing.Point(17, 152);
-            this.TrackBarFuel.Maximum = 5000;
-            this.TrackBarFuel.Name = "TrackBarFuel";
-            this.TrackBarFuel.Size = new System.Drawing.Size(1092, 45);
-            this.TrackBarFuel.TabIndex = 2;
-            this.TrackBarFuel.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.TrackBarFuel.Value = 1000;
-            this.TrackBarFuel.Scroll += new System.EventHandler(this.TrackBarFuel_Scroll);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(23, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Fuel Available:";
             // 
             // DefenderForm
             // 
@@ -917,7 +918,7 @@ namespace Wargame.Forms
         private System.Windows.Forms.Panel PanelArmyComposition;
         private System.Windows.Forms.Label LblAirforceComposition;
         private System.Windows.Forms.Label LblArmyComposition;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblFuel;
         private System.Windows.Forms.TrackBar TrackBarFuel;
     }
 }

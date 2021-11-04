@@ -427,6 +427,12 @@ namespace Wargame.Forms
 
         private void TrackBarFuel_Scroll(object sender, EventArgs e)
         {
+            battlefieldInstance.SetFuelDef(TrackBarFuel.Value);
+            LblFuel.Text = "Fuel Available: " + TrackBarFuel.Value.ToString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -222,6 +222,14 @@ namespace Battlefield_NS
             // Finally, dish the damage
             _atk.DamageTerHp(damage);
         }
+        public void SetFuelAtk(float fuel)
+        {
+            _atk._fuel_left = fuel;
+        }
+        public void SetFuelDef(float fuel)
+        {
+            _def._fuel_left = fuel;
+        }
         private void MutualAeriaLAttack()
         {
             if (_atk.IsAirDefeated() && _def.IsAirDefeated())
@@ -302,16 +310,64 @@ namespace Battlefield_NS
             AirStruct airStructAtk = _atk.GetAirStruct();
             TerStruct terStructDef = _def.GetTerStruct();
 
-            float damage_received = 0;
-            float damage_done = airStructAtk._air_atk;
+            float damage_done = airStructAtk._gnd_atk;
             //airStructAtk;
+            Random rand = new Random();
+            float rng = rand.Next(-5, 5);
 
+            if (!_def.IsAirDefeated())
+                _def.DamageTerHp(damage_done * (1 + rng / 100));
+
+            // Damage to the airwings
+
+            if (!_def.IsTerDefeated())
+            {
+                _atk.DamageAirHp(terStructDef._air_atk + _air_gun_level * 10);
+            }
+
+            if (_atk.IsAirDefeated())
+                return;
+
+            // Strategic Bombing
+            rng = rand.Next(-5, 5);
+            float strategic_bombing_dmg = airStructAtk._strat_bmb * (1 + rng / 100);
+
+            _fort_dmg += strategic_bombing_dmg;
+
+            int fort_levels_destroyed = (int)_fort_dmg / _fort_dmg_threshold;
+            _fort_dmg %= _fort_dmg_threshold;
+            _fort_level -= fort_levels_destroyed;
+
+            if (_fort_level < 0)
+                _fort_level = 0;
+
+            _AABattery_dmg += strategic_bombing_dmg;
+
+            int AABattery_levels_destroyed = (int)_AABattery_dmg / _AABattery_dmg_threshold;
+            _AABattery_dmg %= _AABattery_dmg_threshold;
+            _air_gun_level -= AABattery_levels_destroyed;
+
+            if (_air_gun_level < 0)
+                _air_gun_level = 0;
         }
         private void DefenderAerialAttack()
         {
             if (_def.IsAirDefeated())
                 return;
             AirStruct airStructDef = _def.GetAirStruct();
+            TerStruct terStructAtk = _atk.GetTerStruct();
+
+            float damage_done = airStructDef._gnd_atk;
+
+            Random rand = new Random();
+            float rng = rand.Next(-5, 5);
+
+            _atk.DamageTerHp(damage_done * (1 + rng / 100));
+
+            if (_atk.IsTerDefeated())
+                return;
+
+            _def.DamageAirHp(terStructAtk._air_atk);
 
         }
         public string GetCommanderNameDef()

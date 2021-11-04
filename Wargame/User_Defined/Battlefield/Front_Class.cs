@@ -108,6 +108,7 @@ namespace Front_NS
         public Front()
         {
             isRetreating = false;
+            _fuel_left = 1000;
         }
         // Getters
         public string GetCommanderName()

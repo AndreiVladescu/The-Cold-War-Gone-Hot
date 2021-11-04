@@ -423,5 +423,11 @@ namespace Wargame.Forms
                 PictureCommander.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\macarthur.jpg");
             }
         }
+
+        private void TrackBarFuel_Scroll(object sender, EventArgs e)
+        {
+            battlefieldInstance.SetFuelAtk(TrackBarFuel.Value);
+            LblFuel.Text = "Fuel Available: " + TrackBarFuel.Value.ToString();
+        }
     }
 }
