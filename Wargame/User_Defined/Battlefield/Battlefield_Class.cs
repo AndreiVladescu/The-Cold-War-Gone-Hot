@@ -403,59 +403,6 @@ namespace Battlefield_NS
             else
                 return 0;
         }
-        private void DefenderDealDamage()
-        {
-            float gnd_damage = new float();
-            float air_damage = new float();
-            TerStruct terStruct = _def.GetTerStruct();
-            TerStruct otherPartyterStruct = _atk.GetTerStruct();
-            int numberOfTerUnits = _def.GetTerUnitNumber();
-            int otherPartynumberOfTerUnits = _atk.GetTerUnitNumber();
-
-
-            float atk_modifier_armor_pierce = 0;
-            float atk_modifier_def_brkt = 1;
-
-            atk_modifier_def_brkt += (float)Math.Round((otherPartyterStruct._breakt - terStruct._def) / 5);
-            atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyterStruct._armor, terStruct._pierce);
-
-            float actualHardness = otherPartyterStruct._hardness / otherPartynumberOfTerUnits;
-
-            gnd_damage = (actualHardness * terStruct._h_atk + (1 - actualHardness) * terStruct._s_atk) * atk_modifier_def_brkt * atk_modifier_armor_pierce; // Phase one
-            gnd_damage += gnd_damage * _terrain_modifier_def; // Phase two
-
-
-            air_damage = terStruct._air_atk; // Phase one
-
-            _atk.DamageTerHp(gnd_damage);
-            _atk.DamageAirHp(air_damage);
-
-        }
-        private void AttackerDealDamage()
-        {
-            float gnd_damage = new float();
-            float air_damage = new float();
-            TerStruct terStruct = _atk.GetTerStruct();
-            TerStruct otherPartyterStruct = _def.GetTerStruct();
-            int numberOfTerUnits = _atk.GetTerUnitNumber();
-            int otherPartynumberOfTerUnits = _def.GetTerUnitNumber();
-
-            float atk_modifier_armor_pierce = 0;
-            float atk_modifier_def_brkt = 1;
-
-            atk_modifier_def_brkt += (float)Math.Round((terStruct._breakt - otherPartyterStruct._def) / 5);
-            atk_modifier_armor_pierce = Tools.ReturnArmorPiercingEffectiveness(otherPartyterStruct._armor, terStruct._pierce);
-
-            float actualHardness = otherPartyterStruct._hardness / otherPartynumberOfTerUnits;
-
-            gnd_damage = (actualHardness * terStruct._h_atk + (1 - actualHardness) * terStruct._s_atk) * atk_modifier_def_brkt * atk_modifier_armor_pierce; // Phase one
-            gnd_damage += gnd_damage * _terrain_modifier_atk; // Phase two
-
-            air_damage = terStruct._air_atk; // Phase one
-
-            _def.DamageTerHp(gnd_damage);
-            _def.DamageAirHp(air_damage);
-        }
         private void UpdateModifiers()
         {
             if (_time < 22 && _time > 6)
