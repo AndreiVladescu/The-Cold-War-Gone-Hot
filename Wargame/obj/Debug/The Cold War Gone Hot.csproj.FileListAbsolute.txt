@@ -64,3 +64,28 @@ C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Interop.WMPL
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Wargame.exe.config
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Wargame.exe
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Wargame.pdb
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\bin\Debug\System.Numerics.Vectors.dll
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Interop.WMPLib.dll
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\bin\Debug\AxInterop.WMPLib.dll
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csprojAssemblyReference.cache
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Interop.WMPLib.dll
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\AxInterop.WMPLib.dll
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.AttackerForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.BattleConfigurationForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.CreditsForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.DefenderForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.MainForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.OptionsForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.PlayForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.SplashScreenForm.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Properties.Resources.resources
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.GenerateResource.cache
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
+D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb

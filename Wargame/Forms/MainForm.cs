@@ -70,11 +70,7 @@ namespace Wargame
             OpenChildForm(new Forms.PlayForm(), sender);
         }
 
-        private void BtnCredits_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.CreditsForm(), sender);
-        }
-
+        
         private void BtnMusicPlayer_Click(object sender, EventArgs e)
         {
             if (playerForm.Visible == false)

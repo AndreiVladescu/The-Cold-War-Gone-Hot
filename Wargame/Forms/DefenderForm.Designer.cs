@@ -110,23 +110,24 @@ namespace Wargame.Forms
             // PictureFlagDefender
             // 
             this.PictureFlagDefender.BackColor = System.Drawing.Color.Transparent;
-            this.PictureFlagDefender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.PictureFlagDefender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureFlagDefender.Image = global::Wargame.Properties.Resources.USA_flag;
-            this.PictureFlagDefender.Location = new System.Drawing.Point(12, 12);
+            this.PictureFlagDefender.Location = new System.Drawing.Point(67, 58);
             this.PictureFlagDefender.Name = "PictureFlagDefender";
-            this.PictureFlagDefender.Size = new System.Drawing.Size(123, 82);
+            this.PictureFlagDefender.Size = new System.Drawing.Size(150, 78);
+            this.PictureFlagDefender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureFlagDefender.TabIndex = 0;
             this.PictureFlagDefender.TabStop = false;
             this.PictureFlagDefender.Click += new System.EventHandler(this.PictureFlagDefender_Click);
             // 
             // PanelDefenderStats
             // 
-            this.PanelDefenderStats.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelDefenderStats.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelDefenderStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelDefenderStats.Controls.Add(this.LblAirStats);
             this.PanelDefenderStats.Controls.Add(this.LblTerStats);
             this.PanelDefenderStats.Controls.Add(this.LblDefArmyStats);
-            this.PanelDefenderStats.Location = new System.Drawing.Point(165, 12);
+            this.PanelDefenderStats.Location = new System.Drawing.Point(290, 58);
             this.PanelDefenderStats.Name = "PanelDefenderStats";
             this.PanelDefenderStats.Size = new System.Drawing.Size(1127, 140);
             this.PanelDefenderStats.TabIndex = 1;
@@ -171,7 +172,7 @@ namespace Wargame.Forms
             // 
             // PanelLeg
             // 
-            this.PanelLeg.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelLeg.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelLeg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelLeg.Controls.Add(this.LblLegExp);
             this.PanelLeg.Controls.Add(this.BtnPrevLeg);
@@ -189,7 +190,7 @@ namespace Wargame.Forms
             this.PanelLeg.Controls.Add(this.BtnSubLeg);
             this.PanelLeg.Controls.Add(this.BtnAddLeg);
             this.PanelLeg.Controls.Add(this.PictureLeg);
-            this.PanelLeg.Location = new System.Drawing.Point(165, 179);
+            this.PanelLeg.Location = new System.Drawing.Point(290, 268);
             this.PanelLeg.Name = "PanelLeg";
             this.PanelLeg.Size = new System.Drawing.Size(1127, 139);
             this.PanelLeg.TabIndex = 1;
@@ -208,12 +209,13 @@ namespace Wargame.Forms
             // 
             // BtnPrevLeg
             // 
+            this.BtnPrevLeg.BackgroundImage = global::Wargame.Properties.Resources.left_arrow_button_icon;
+            this.BtnPrevLeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPrevLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPrevLeg.Location = new System.Drawing.Point(1019, 13);
             this.BtnPrevLeg.Name = "BtnPrevLeg";
             this.BtnPrevLeg.Size = new System.Drawing.Size(42, 110);
             this.BtnPrevLeg.TabIndex = 13;
-            this.BtnPrevLeg.Text = "<";
             this.BtnPrevLeg.UseVisualStyleBackColor = true;
             this.BtnPrevLeg.Click += new System.EventHandler(this.BtnPrevLeg_Click);
             // 
@@ -230,12 +232,13 @@ namespace Wargame.Forms
             // 
             // BtnNextLeg
             // 
+            this.BtnNextLeg.BackgroundImage = global::Wargame.Properties.Resources.right_arrow_button_icon;
+            this.BtnNextLeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNextLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNextLeg.Location = new System.Drawing.Point(1067, 13);
             this.BtnNextLeg.Name = "BtnNextLeg";
             this.BtnNextLeg.Size = new System.Drawing.Size(42, 110);
             this.BtnNextLeg.TabIndex = 12;
-            this.BtnNextLeg.Text = ">";
             this.BtnNextLeg.UseVisualStyleBackColor = true;
             this.BtnNextLeg.Click += new System.EventHandler(this.BtnNextLeg_Click);
             // 
@@ -315,6 +318,7 @@ namespace Wargame.Forms
             // 
             this.PictureLegGen.BackColor = System.Drawing.Color.Transparent;
             this.PictureLegGen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureLegGen.BackgroundImage")));
+            this.PictureLegGen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureLegGen.Location = new System.Drawing.Point(267, 16);
             this.PictureLegGen.Name = "PictureLegGen";
             this.PictureLegGen.Size = new System.Drawing.Size(35, 35);
@@ -336,34 +340,43 @@ namespace Wargame.Forms
             // 
             // BtnLegGen
             // 
+            this.BtnLegGen.BackgroundImage = global::Wargame.Properties.Resources.gen_button_icon;
+            this.BtnLegGen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnLegGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLegGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLegGen.ForeColor = System.Drawing.Color.Black;
             this.BtnLegGen.Location = new System.Drawing.Point(203, 13);
             this.BtnLegGen.Name = "BtnLegGen";
             this.BtnLegGen.Size = new System.Drawing.Size(58, 38);
             this.BtnLegGen.TabIndex = 3;
-            this.BtnLegGen.Text = "Gen";
             this.BtnLegGen.UseVisualStyleBackColor = true;
             this.BtnLegGen.Click += new System.EventHandler(this.BtnLegGen_Click);
             // 
             // BtnSubLeg
             // 
+            this.BtnSubLeg.BackgroundImage = global::Wargame.Properties.Resources.minus_icon;
+            this.BtnSubLeg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSubLeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSubLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSubLeg.ForeColor = System.Drawing.Color.Black;
             this.BtnSubLeg.Location = new System.Drawing.Point(114, 99);
             this.BtnSubLeg.Name = "BtnSubLeg";
             this.BtnSubLeg.Size = new System.Drawing.Size(57, 29);
             this.BtnSubLeg.TabIndex = 2;
-            this.BtnSubLeg.Text = "-";
             this.BtnSubLeg.UseVisualStyleBackColor = true;
             this.BtnSubLeg.Click += new System.EventHandler(this.BtnSubLeg_Click);
             // 
             // BtnAddLeg
             // 
+            this.BtnAddLeg.BackgroundImage = global::Wargame.Properties.Resources.plus_icon;
+            this.BtnAddLeg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAddLeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddLeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddLeg.ForeColor = System.Drawing.Color.Black;
             this.BtnAddLeg.Location = new System.Drawing.Point(27, 99);
             this.BtnAddLeg.Name = "BtnAddLeg";
             this.BtnAddLeg.Size = new System.Drawing.Size(57, 29);
             this.BtnAddLeg.TabIndex = 1;
-            this.BtnAddLeg.Text = "+";
             this.BtnAddLeg.UseVisualStyleBackColor = true;
             this.BtnAddLeg.Click += new System.EventHandler(this.BtnAddLeg_Click);
             // 
@@ -379,7 +392,7 @@ namespace Wargame.Forms
             // 
             // PanelMob
             // 
-            this.PanelMob.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelMob.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelMob.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelMob.Controls.Add(this.LblMobExp);
             this.PanelMob.Controls.Add(this.BtnPrevMob);
@@ -397,7 +410,7 @@ namespace Wargame.Forms
             this.PanelMob.Controls.Add(this.BtnSubMob);
             this.PanelMob.Controls.Add(this.BtnAddMob);
             this.PanelMob.Controls.Add(this.PictureMob);
-            this.PanelMob.Location = new System.Drawing.Point(165, 374);
+            this.PanelMob.Location = new System.Drawing.Point(290, 453);
             this.PanelMob.Name = "PanelMob";
             this.PanelMob.Size = new System.Drawing.Size(1127, 139);
             this.PanelMob.TabIndex = 14;
@@ -416,12 +429,13 @@ namespace Wargame.Forms
             // 
             // BtnPrevMob
             // 
+            this.BtnPrevMob.BackgroundImage = global::Wargame.Properties.Resources.left_arrow_button_icon;
+            this.BtnPrevMob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPrevMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPrevMob.Location = new System.Drawing.Point(1019, 13);
             this.BtnPrevMob.Name = "BtnPrevMob";
             this.BtnPrevMob.Size = new System.Drawing.Size(42, 110);
             this.BtnPrevMob.TabIndex = 13;
-            this.BtnPrevMob.Text = "<";
             this.BtnPrevMob.UseVisualStyleBackColor = true;
             this.BtnPrevMob.Click += new System.EventHandler(this.BtnPrevMob_Click);
             // 
@@ -438,12 +452,13 @@ namespace Wargame.Forms
             // 
             // BtnNextMob
             // 
+            this.BtnNextMob.BackgroundImage = global::Wargame.Properties.Resources.right_arrow_button_icon;
+            this.BtnNextMob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNextMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNextMob.Location = new System.Drawing.Point(1067, 13);
             this.BtnNextMob.Name = "BtnNextMob";
             this.BtnNextMob.Size = new System.Drawing.Size(42, 110);
             this.BtnNextMob.TabIndex = 12;
-            this.BtnNextMob.Text = ">";
             this.BtnNextMob.UseVisualStyleBackColor = true;
             this.BtnNextMob.Click += new System.EventHandler(this.BtnNextMob_Click);
             // 
@@ -544,34 +559,40 @@ namespace Wargame.Forms
             // 
             // BtnMobGen
             // 
+            this.BtnMobGen.BackgroundImage = global::Wargame.Properties.Resources.gen_button_icon;
+            this.BtnMobGen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnMobGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMobGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMobGen.Location = new System.Drawing.Point(203, 13);
             this.BtnMobGen.Name = "BtnMobGen";
             this.BtnMobGen.Size = new System.Drawing.Size(58, 38);
             this.BtnMobGen.TabIndex = 3;
-            this.BtnMobGen.Text = "Gen";
             this.BtnMobGen.UseVisualStyleBackColor = true;
             this.BtnMobGen.Click += new System.EventHandler(this.BtnMobGen_Click);
             // 
             // BtnSubMob
             // 
+            this.BtnSubMob.BackgroundImage = global::Wargame.Properties.Resources.minus_icon;
+            this.BtnSubMob.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSubMob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSubMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSubMob.Location = new System.Drawing.Point(114, 99);
             this.BtnSubMob.Name = "BtnSubMob";
             this.BtnSubMob.Size = new System.Drawing.Size(57, 29);
             this.BtnSubMob.TabIndex = 2;
-            this.BtnSubMob.Text = "-";
             this.BtnSubMob.UseVisualStyleBackColor = true;
             this.BtnSubMob.Click += new System.EventHandler(this.BtnSubMob_Click);
             // 
             // BtnAddMob
             // 
+            this.BtnAddMob.BackgroundImage = global::Wargame.Properties.Resources.plus_icon;
+            this.BtnAddMob.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAddMob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddMob.Location = new System.Drawing.Point(27, 99);
             this.BtnAddMob.Name = "BtnAddMob";
             this.BtnAddMob.Size = new System.Drawing.Size(57, 29);
             this.BtnAddMob.TabIndex = 1;
-            this.BtnAddMob.Text = "+";
             this.BtnAddMob.UseVisualStyleBackColor = true;
             this.BtnAddMob.Click += new System.EventHandler(this.BtnAddMob_Click);
             // 
@@ -587,7 +608,7 @@ namespace Wargame.Forms
             // 
             // PanelAir
             // 
-            this.PanelAir.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelAir.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelAir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelAir.Controls.Add(this.LblAirExp);
             this.PanelAir.Controls.Add(this.PictureAirExp);
@@ -601,7 +622,7 @@ namespace Wargame.Forms
             this.PanelAir.Controls.Add(this.BtnSubAir);
             this.PanelAir.Controls.Add(this.BtnAddAir);
             this.PanelAir.Controls.Add(this.PictureAir);
-            this.PanelAir.Location = new System.Drawing.Point(165, 573);
+            this.PanelAir.Location = new System.Drawing.Point(290, 639);
             this.PanelAir.Name = "PanelAir";
             this.PanelAir.Size = new System.Drawing.Size(1127, 139);
             this.PanelAir.TabIndex = 15;
@@ -631,23 +652,25 @@ namespace Wargame.Forms
             // 
             // BtnPrevAir
             // 
+            this.BtnPrevAir.BackgroundImage = global::Wargame.Properties.Resources.left_arrow_button_icon;
+            this.BtnPrevAir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPrevAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPrevAir.Location = new System.Drawing.Point(1019, 13);
             this.BtnPrevAir.Name = "BtnPrevAir";
             this.BtnPrevAir.Size = new System.Drawing.Size(42, 110);
             this.BtnPrevAir.TabIndex = 13;
-            this.BtnPrevAir.Text = "<";
             this.BtnPrevAir.UseVisualStyleBackColor = true;
             this.BtnPrevAir.Click += new System.EventHandler(this.BtnPrevAir_Click);
             // 
             // BtnNextAir
             // 
+            this.BtnNextAir.BackgroundImage = global::Wargame.Properties.Resources.right_arrow_button_icon;
+            this.BtnNextAir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNextAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNextAir.Location = new System.Drawing.Point(1067, 13);
             this.BtnNextAir.Name = "BtnNextAir";
             this.BtnNextAir.Size = new System.Drawing.Size(42, 110);
             this.BtnNextAir.TabIndex = 12;
-            this.BtnNextAir.Text = ">";
             this.BtnNextAir.UseVisualStyleBackColor = true;
             this.BtnNextAir.Click += new System.EventHandler(this.BtnNextAir_Click);
             // 
@@ -700,34 +723,40 @@ namespace Wargame.Forms
             // 
             // BtnAirGen
             // 
+            this.BtnAirGen.BackgroundImage = global::Wargame.Properties.Resources.gen_button_icon;
+            this.BtnAirGen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAirGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAirGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAirGen.Location = new System.Drawing.Point(203, 13);
             this.BtnAirGen.Name = "BtnAirGen";
             this.BtnAirGen.Size = new System.Drawing.Size(58, 38);
             this.BtnAirGen.TabIndex = 3;
-            this.BtnAirGen.Text = "Gen";
             this.BtnAirGen.UseVisualStyleBackColor = true;
             this.BtnAirGen.Click += new System.EventHandler(this.BtnAirGen_Click);
             // 
             // BtnSubAir
             // 
+            this.BtnSubAir.BackgroundImage = global::Wargame.Properties.Resources.minus_icon;
+            this.BtnSubAir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSubAir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSubAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSubAir.Location = new System.Drawing.Point(114, 99);
             this.BtnSubAir.Name = "BtnSubAir";
             this.BtnSubAir.Size = new System.Drawing.Size(57, 29);
             this.BtnSubAir.TabIndex = 2;
-            this.BtnSubAir.Text = "-";
             this.BtnSubAir.UseVisualStyleBackColor = true;
             this.BtnSubAir.Click += new System.EventHandler(this.BtnSubAir_Click);
             // 
             // BtnAddAir
             // 
+            this.BtnAddAir.BackgroundImage = global::Wargame.Properties.Resources.plus_icon;
+            this.BtnAddAir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAddAir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAddAir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddAir.Location = new System.Drawing.Point(27, 99);
             this.BtnAddAir.Name = "BtnAddAir";
             this.BtnAddAir.Size = new System.Drawing.Size(57, 29);
             this.BtnAddAir.TabIndex = 1;
-            this.BtnAddAir.Text = "+";
             this.BtnAddAir.UseVisualStyleBackColor = true;
             this.BtnAddAir.Click += new System.EventHandler(this.BtnAddAir_Click);
             // 
@@ -744,22 +773,22 @@ namespace Wargame.Forms
             // PictureCommander
             // 
             this.PictureCommander.Image = global::Wargame.Properties.Resources.macarthur;
-            this.PictureCommander.Location = new System.Drawing.Point(12, 136);
+            this.PictureCommander.Location = new System.Drawing.Point(67, 225);
             this.PictureCommander.Name = "PictureCommander";
-            this.PictureCommander.Size = new System.Drawing.Size(147, 182);
+            this.PictureCommander.Size = new System.Drawing.Size(150, 182);
             this.PictureCommander.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureCommander.TabIndex = 16;
             this.PictureCommander.TabStop = false;
             // 
             // PanelArmyComposition
             // 
-            this.PanelArmyComposition.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelArmyComposition.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelArmyComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelArmyComposition.Controls.Add(this.LblFuel);
             this.PanelArmyComposition.Controls.Add(this.TrackBarFuel);
             this.PanelArmyComposition.Controls.Add(this.LblAirforceComposition);
             this.PanelArmyComposition.Controls.Add(this.LblArmyComposition);
-            this.PanelArmyComposition.Location = new System.Drawing.Point(165, 769);
+            this.PanelArmyComposition.Location = new System.Drawing.Point(290, 847);
             this.PanelArmyComposition.Margin = new System.Windows.Forms.Padding(2);
             this.PanelArmyComposition.Name = "PanelArmyComposition";
             this.PanelArmyComposition.Size = new System.Drawing.Size(1127, 210);
@@ -821,7 +850,7 @@ namespace Wargame.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Wargame.Properties.Resources.defender_wallpaper;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1456, 1018);
             this.Controls.Add(this.PanelArmyComposition);
@@ -831,6 +860,7 @@ namespace Wargame.Forms
             this.Controls.Add(this.PanelLeg);
             this.Controls.Add(this.PanelDefenderStats);
             this.Controls.Add(this.PictureFlagDefender);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DefenderForm";
             this.Text = "DefenderForm";

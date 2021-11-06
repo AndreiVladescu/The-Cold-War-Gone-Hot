@@ -31,20 +31,19 @@ namespace Wargame
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.PanelDesktopPanel = new System.Windows.Forms.Panel();
+            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.PanelSideMainMenu = new System.Windows.Forms.Panel();
             this.BtnMusicPlayer = new System.Windows.Forms.Button();
-            this.BtnCredits = new System.Windows.Forms.Button();
             this.BtnDefConfig = new System.Windows.Forms.Button();
             this.BtnAtkConfig = new System.Windows.Forms.Button();
             this.BtnBattlefieldConfig = new System.Windows.Forms.Button();
             this.BtnPlay = new System.Windows.Forms.Button();
-            this.BtnOptions = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.PictureMainMenuWallpaper = new System.Windows.Forms.PictureBox();
             this.PanelDesktopPanel.SuspendLayout();
-            this.PanelSideMainMenu.SuspendLayout();
             this.PanelMiniDesktop.SuspendLayout();
+            this.PanelSideMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMainMenuWallpaper)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,17 +58,25 @@ namespace Wargame
             this.PanelDesktopPanel.Size = new System.Drawing.Size(1456, 884);
             this.PanelDesktopPanel.TabIndex = 10;
             // 
+            // PanelMiniDesktop
+            // 
+            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
+            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
+            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
+            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
+            this.PanelMiniDesktop.TabIndex = 2;
+            // 
             // PanelSideMainMenu
             // 
-            this.PanelSideMainMenu.BackColor = System.Drawing.SystemColors.Desktop;
-            this.PanelSideMainMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PanelSideMainMenu.BackColor = System.Drawing.Color.Transparent;
+            this.PanelSideMainMenu.BackgroundImage = global::Wargame.Properties.Resources.main_frame_bg;
+            this.PanelSideMainMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelSideMainMenu.Controls.Add(this.BtnMusicPlayer);
-            this.PanelSideMainMenu.Controls.Add(this.BtnCredits);
             this.PanelSideMainMenu.Controls.Add(this.BtnDefConfig);
             this.PanelSideMainMenu.Controls.Add(this.BtnAtkConfig);
             this.PanelSideMainMenu.Controls.Add(this.BtnBattlefieldConfig);
             this.PanelSideMainMenu.Controls.Add(this.BtnPlay);
-            this.PanelSideMainMenu.Controls.Add(this.BtnOptions);
+            this.PanelSideMainMenu.Controls.Add(this.button1);
             this.PanelSideMainMenu.Controls.Add(this.BtnClose);
             this.PanelSideMainMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PanelSideMainMenu.Location = new System.Drawing.Point(0, 0);
@@ -79,126 +86,100 @@ namespace Wargame
             // 
             // BtnMusicPlayer
             // 
-            this.BtnMusicPlayer.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.BtnMusicPlayer.BackgroundImage = global::Wargame.Properties.Resources.music_button;
             this.BtnMusicPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnMusicPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMusicPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMusicPlayer.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BtnMusicPlayer.Location = new System.Drawing.Point(81, 616);
+            this.BtnMusicPlayer.ForeColor = System.Drawing.Color.Black;
+            this.BtnMusicPlayer.Location = new System.Drawing.Point(46, 497);
             this.BtnMusicPlayer.Name = "BtnMusicPlayer";
-            this.BtnMusicPlayer.Size = new System.Drawing.Size(164, 80);
+            this.BtnMusicPlayer.Size = new System.Drawing.Size(155, 80);
             this.BtnMusicPlayer.TabIndex = 7;
-            this.BtnMusicPlayer.Text = "Music Player";
             this.BtnMusicPlayer.UseVisualStyleBackColor = true;
             this.BtnMusicPlayer.Click += new System.EventHandler(this.BtnMusicPlayer_Click);
             // 
-            // BtnCredits
-            // 
-            this.BtnCredits.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
-            this.BtnCredits.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnCredits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCredits.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BtnCredits.Location = new System.Drawing.Point(-2, 757);
-            this.BtnCredits.Name = "BtnCredits";
-            this.BtnCredits.Size = new System.Drawing.Size(247, 90);
-            this.BtnCredits.TabIndex = 6;
-            this.BtnCredits.Text = "Credits";
-            this.BtnCredits.UseVisualStyleBackColor = true;
-            this.BtnCredits.Click += new System.EventHandler(this.BtnCredits_Click);
-            // 
             // BtnDefConfig
             // 
-            this.BtnDefConfig.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.BtnDefConfig.BackgroundImage = global::Wargame.Properties.Resources.defender_config_button;
             this.BtnDefConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnDefConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDefConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDefConfig.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BtnDefConfig.Location = new System.Drawing.Point(81, 373);
+            this.BtnDefConfig.ForeColor = System.Drawing.Color.Black;
+            this.BtnDefConfig.Location = new System.Drawing.Point(46, 295);
             this.BtnDefConfig.Name = "BtnDefConfig";
             this.BtnDefConfig.Size = new System.Drawing.Size(155, 69);
             this.BtnDefConfig.TabIndex = 5;
-            this.BtnDefConfig.Text = "Defender Config";
             this.BtnDefConfig.UseVisualStyleBackColor = true;
             this.BtnDefConfig.Click += new System.EventHandler(this.BtnDefConfig_Click);
             // 
             // BtnAtkConfig
             // 
-            this.BtnAtkConfig.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.BtnAtkConfig.BackgroundImage = global::Wargame.Properties.Resources.attacker_config_button;
             this.BtnAtkConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAtkConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAtkConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAtkConfig.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BtnAtkConfig.Location = new System.Drawing.Point(81, 290);
+            this.BtnAtkConfig.ForeColor = System.Drawing.Color.Black;
+            this.BtnAtkConfig.Location = new System.Drawing.Point(46, 225);
             this.BtnAtkConfig.Name = "BtnAtkConfig";
             this.BtnAtkConfig.Size = new System.Drawing.Size(155, 64);
             this.BtnAtkConfig.TabIndex = 4;
-            this.BtnAtkConfig.Text = "Attacker Config";
             this.BtnAtkConfig.UseVisualStyleBackColor = true;
             this.BtnAtkConfig.Click += new System.EventHandler(this.BtnAtkConfig_Click);
             // 
             // BtnBattlefieldConfig
             // 
-            this.BtnBattlefieldConfig.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.BtnBattlefieldConfig.BackgroundImage = global::Wargame.Properties.Resources.battlefield_config_button;
             this.BtnBattlefieldConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBattlefieldConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBattlefieldConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBattlefieldConfig.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BtnBattlefieldConfig.Location = new System.Drawing.Point(81, 202);
+            this.BtnBattlefieldConfig.ForeColor = System.Drawing.Color.Black;
+            this.BtnBattlefieldConfig.Location = new System.Drawing.Point(46, 151);
             this.BtnBattlefieldConfig.Name = "BtnBattlefieldConfig";
             this.BtnBattlefieldConfig.Size = new System.Drawing.Size(155, 68);
             this.BtnBattlefieldConfig.TabIndex = 3;
-            this.BtnBattlefieldConfig.Text = "Battlefield Config";
             this.BtnBattlefieldConfig.UseVisualStyleBackColor = true;
             this.BtnBattlefieldConfig.Click += new System.EventHandler(this.BtnBattlefieldConfig_Click);
             // 
             // BtnPlay
             // 
+            this.BtnPlay.BackColor = System.Drawing.Color.Transparent;
             this.BtnPlay.BackgroundImage = global::Wargame.Properties.Resources.play_button_icon;
             this.BtnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPlay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnPlay.Location = new System.Drawing.Point(21, 91);
+            this.BtnPlay.Location = new System.Drawing.Point(21, 55);
             this.BtnPlay.Name = "BtnPlay";
             this.BtnPlay.Size = new System.Drawing.Size(203, 90);
             this.BtnPlay.TabIndex = 2;
-            this.BtnPlay.UseVisualStyleBackColor = true;
+            this.BtnPlay.UseVisualStyleBackColor = false;
             this.BtnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
-            // BtnOptions
+            // button1
             // 
-            this.BtnOptions.BackgroundImage = global::Wargame.Properties.Resources.options_button_icon1;
-            this.BtnOptions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnOptions.ForeColor = System.Drawing.Color.Black;
-            this.BtnOptions.Location = new System.Drawing.Point(0, 519);
-            this.BtnOptions.Name = "BtnOptions";
-            this.BtnOptions.Size = new System.Drawing.Size(247, 90);
-            this.BtnOptions.TabIndex = 1;
-            this.BtnOptions.UseVisualStyleBackColor = true;
-            this.BtnOptions.Click += new System.EventHandler(this.BtnOptions_Click);
+            this.button1.BackgroundImage = global::Wargame.Properties.Resources.options_button_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(21, 386);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(203, 91);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnOptions_Click);
             // 
             // BtnClose
             // 
-            this.BtnClose.BackColor = System.Drawing.Color.Black;
-            this.BtnClose.BackgroundImage = global::Wargame.Properties.Resources.exit_button_icon2;
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.BackgroundImage = global::Wargame.Properties.Resources.exit_button_icon3;
             this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClose.ForeColor = System.Drawing.Color.Black;
-            this.BtnClose.Location = new System.Drawing.Point(53, 967);
+            this.BtnClose.Location = new System.Drawing.Point(21, 723);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(183, 78);
+            this.BtnClose.Size = new System.Drawing.Size(203, 91);
             this.BtnClose.TabIndex = 0;
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnCloseApp);
-            // 
-            // PanelMiniDesktop
-            // 
-            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
-            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
-            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
-            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
-            this.PanelMiniDesktop.TabIndex = 2;
             // 
             // PictureMainMenuWallpaper
             // 
@@ -225,8 +206,8 @@ namespace Wargame
             this.Text = "The Cold War Gone Hot";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.PanelDesktopPanel.ResumeLayout(false);
-            this.PanelSideMainMenu.ResumeLayout(false);
             this.PanelMiniDesktop.ResumeLayout(false);
+            this.PanelSideMainMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureMainMenuWallpaper)).EndInit();
             this.ResumeLayout(false);
 
@@ -236,15 +217,14 @@ namespace Wargame
         private System.Windows.Forms.Panel PanelDesktopPanel;
         private System.Windows.Forms.Panel PanelSideMainMenu;
         private System.Windows.Forms.Button BtnPlay;
-        private System.Windows.Forms.Button BtnOptions;
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Panel PanelMiniDesktop;
         private System.Windows.Forms.PictureBox PictureMainMenuWallpaper;
         private System.Windows.Forms.Button BtnDefConfig;
         private System.Windows.Forms.Button BtnAtkConfig;
         private System.Windows.Forms.Button BtnBattlefieldConfig;
-        private System.Windows.Forms.Button BtnCredits;
         private System.Windows.Forms.Button BtnMusicPlayer;
+        private System.Windows.Forms.Button button1;
     }
 }
 

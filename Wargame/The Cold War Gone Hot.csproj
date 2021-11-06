@@ -194,6 +194,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Icons\Button Icons\left_arrow_button_icon.png" />
+    <None Include="Resources\Icons\Button Icons\right_arrow_button_icon.png" />
+    <None Include="Resources\Icons\Button Icons\background_panel.png" />
+    <None Include="Resources\Panels\main_frame_bg.png" />
+    <None Include="Resources\Icons\Button Icons\battlefield_config_button.png" />
+    <None Include="Resources\Icons\Button Icons\attacker_config_button.png" />
+    <None Include="Resources\Icons\Button Icons\defender_config_button.png" />
+    <None Include="Resources\Icons\Button Icons\music_button.png" />
+    <None Include="Resources\Icons\Button Icons\plus_icon.png" />
+    <None Include="Resources\Icons\Button Icons\minus_icon.png" />
+    <None Include="Resources\bg_battle_configuration.png" />
+    <None Include="Resources\bg_options.png" />
+    <None Include="Resources\Icons\Button Icons\gen_button_icon.png" />
     <Content Include="Resources\XML_Files\airUnits.xml" />
     <Content Include="Resources\XML_Files\groundUnits.xml" />
     <None Include="Resources\battlefield_config_wallpaper1.jpg" />

@@ -81,12 +81,13 @@ namespace Wargame.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Wargame.Properties.Resources.options_wallpaper;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImage = global::Wargame.Properties.Resources.bg_options;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1554, 1041);
             this.Controls.Add(this.TrackBarSensitivity);
             this.Controls.Add(this.TrackBarVolume);
             this.Controls.Add(this.PictureOptions);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(350, 0);
             this.Name = "OptionsForm";

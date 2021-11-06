@@ -118,101 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SOV_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Flags\SOV_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SUA_Inf_Eq_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unit_Images\Ter_Units\SUA_Inf_Eq_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="terrain_hills" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\terrain_hills.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="generic_bg_307x113" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="battlefield_config_wallpaper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battlefield_config_wallpaper1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="main_menu_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main_menu_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="weather_light_rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\weather_light_rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="river_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\river_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unit_level_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\unit_level_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fort_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\fort_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gen_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\gen_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unit_level_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\unit_level_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="weather_heavy_rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\weather_heavy_rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="weather_clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\weather_clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SUA_MultiRole_Jet_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unit_Images\Air_Units\SUA_MultiRole_Jet_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unit_level_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\unit_level_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gen_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\gen_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zhukov" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Commanders\zhukov.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="terrain_forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\terrain_forest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="breakthrough" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Doctrines\breakthrough.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="main_menu_wallpaper_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main_menu_wallpaper_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="USA_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Flags\USA_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exit_button_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SUA_Mot_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unit_Images\Ter_Units\SUA_Mot_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="generic_bg_307x1132" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="play_button_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\play_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="options_button_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Button Icons\options_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="winter_indicator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\winter_indicator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="main_menu_wallpaper_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main_menu_wallpaper_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="title_picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Button Icons\title_picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unit_level_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unit_level_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="defender_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\defender_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="play_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\play_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,26 +127,158 @@
   <data name="unit_level_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\unit_level_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="attacker_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attacker_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unit_level_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\unit_level_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gen_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\gen_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="breakthrough" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doctrines\breakthrough.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terrain_plains" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\terrain_plains.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="options_button_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\options_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="options_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\options_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="generic_bg_307x1131" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terrain_mountain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\terrain_mountain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gen_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\gen_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gen_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\gen_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="right_arrow_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\right_arrow_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="generic_bg_307x1132" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_button_icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\music_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="title_picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\title_picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main_menu_wallpaper_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main_menu_wallpaper_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unit_level_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unit_level_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zhukov" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Commanders\zhukov.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_button_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\play_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="elastic_defence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doctrines\elastic_defence.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SUA_MultiRole_Jet_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unit_Images\Air_Units\SUA_MultiRole_Jet_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unit_level_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\unit_level_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg_options" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SUA_Mot_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unit_Images\Ter_Units\SUA_Mot_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="generic_bg_307x113" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battlefield_config_wallpaper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battlefield_config_wallpaper1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="macarthur" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Commanders\macarthur.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="unit_level_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\unit_level_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="main_menu_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main_menu_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="night_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\night_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit_button_icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gen_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\gen_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main_menu_wallpaper_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main_menu_wallpaper_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_button_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="river_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\river_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terrain_forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\terrain_forest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\background_panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="attacker_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attacker_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="title_picture_fhd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\title_picture_fhd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="winter_indicator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\winter_indicator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fort_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\fort_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg_battle_configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_battle_configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\plus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unit_level_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\unit_level_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battlefield_config_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\battlefield_config_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SUA_Inf_Eq_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unit_Images\Ter_Units\SUA_Inf_Eq_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main_frame_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Panels\main_frame_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="options_button_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\options_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="defender_config_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\defender_config_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="defender_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defender_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg_battle_configuration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_battle_configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USA_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Flags\USA_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unit_level_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\unit_level_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit_button_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,43 +286,58 @@
   <data name="play_form_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play_form_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="multi_group_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\multi_group_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="generic_bg_307x1131" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="battlefield_config_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battlefield_config_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="terrain_plains" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\terrain_plains.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="air_experience_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\air_experience_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="terrain_mountain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\terrain_mountain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SUA_Art_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unit_Images\Ter_Units\SUA_Art_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="aa_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\aa_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="title_picture_fhd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\title_picture_fhd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exit_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="terrain_urban" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\terrain_urban.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="weather_light_rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\weather_light_rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="options_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\options_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="elastic_defence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Doctrines\elastic_defence.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aa_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\aa_icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="attacker_config_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\attacker_config_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terrain_urban" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\terrain_urban.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weather_heavy_rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\weather_heavy_rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="left_arrow_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\left_arrow_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SUA_Art_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unit_Images\Ter_Units\SUA_Art_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="air_experience_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\air_experience_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terrain_hills" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\terrain_hills.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="night_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\night_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SOV_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Flags\SOV_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\minus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battlefield_config_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battlefield_config_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weather_clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\weather_clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="multi_group_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\multi_group_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gen_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\gen_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

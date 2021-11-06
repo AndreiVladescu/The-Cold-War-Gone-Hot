@@ -100,8 +100,8 @@ namespace Wargame.Forms
             // 
             // PanelBattlefield
             // 
-            this.PanelBattlefield.BackgroundImage = global::Wargame.Properties.Resources.battlefield_config_wallpaper1;
-            this.PanelBattlefield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PanelBattlefield.BackgroundImage = global::Wargame.Properties.Resources.bg_battle_configuration1;
+            this.PanelBattlefield.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelBattlefield.Controls.Add(this.PanelBattlefieldConfigSliders);
             this.PanelBattlefield.Controls.Add(this.PanelBattlefieldConfig2);
             this.PanelBattlefield.Controls.Add(this.PanelBattlefieldConfig1);
@@ -110,10 +110,11 @@ namespace Wargame.Forms
             this.PanelBattlefield.Name = "PanelBattlefield";
             this.PanelBattlefield.Size = new System.Drawing.Size(1520, 939);
             this.PanelBattlefield.TabIndex = 0;
+            this.PanelBattlefield.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelBattlefield_Paint);
             // 
             // PanelBattlefieldConfigSliders
             // 
-            this.PanelBattlefieldConfigSliders.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelBattlefieldConfigSliders.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelBattlefieldConfigSliders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelBattlefieldConfigSliders.Controls.Add(this.TrackBarFortLevel);
             this.PanelBattlefieldConfigSliders.Controls.Add(this.LblFort);
@@ -127,7 +128,7 @@ namespace Wargame.Forms
             this.PanelBattlefieldConfigSliders.Controls.Add(this.TrackBarTime);
             this.PanelBattlefieldConfigSliders.Controls.Add(this.LblTime);
             this.PanelBattlefieldConfigSliders.Controls.Add(this.PictureTime);
-            this.PanelBattlefieldConfigSliders.Location = new System.Drawing.Point(40, 636);
+            this.PanelBattlefieldConfigSliders.Location = new System.Drawing.Point(17, 388);
             this.PanelBattlefieldConfigSliders.Name = "PanelBattlefieldConfigSliders";
             this.PanelBattlefieldConfigSliders.Size = new System.Drawing.Size(693, 252);
             this.PanelBattlefieldConfigSliders.TabIndex = 29;
@@ -277,7 +278,7 @@ namespace Wargame.Forms
             // 
             // PanelBattlefieldConfig2
             // 
-            this.PanelBattlefieldConfig2.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelBattlefieldConfig2.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelBattlefieldConfig2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelBattlefieldConfig2.Controls.Add(this.PictureWeather);
             this.PanelBattlefieldConfig2.Controls.Add(this.LblWeather);
@@ -285,15 +286,15 @@ namespace Wargame.Forms
             this.PanelBattlefieldConfig2.Controls.Add(this.LblTerrainShow);
             this.PanelBattlefieldConfig2.Controls.Add(this.LblTerrain);
             this.PanelBattlefieldConfig2.Controls.Add(this.PictureTerrain);
-            this.PanelBattlefieldConfig2.Location = new System.Drawing.Point(40, 363);
+            this.PanelBattlefieldConfig2.Location = new System.Drawing.Point(17, 96);
             this.PanelBattlefieldConfig2.Name = "PanelBattlefieldConfig2";
-            this.PanelBattlefieldConfig2.Size = new System.Drawing.Size(634, 248);
+            this.PanelBattlefieldConfig2.Size = new System.Drawing.Size(693, 248);
             this.PanelBattlefieldConfig2.TabIndex = 28;
             // 
             // PictureWeather
             // 
             this.PictureWeather.Image = global::Wargame.Properties.Resources.weather_clear;
-            this.PictureWeather.Location = new System.Drawing.Point(298, 165);
+            this.PictureWeather.Location = new System.Drawing.Point(278, 165);
             this.PictureWeather.Name = "PictureWeather";
             this.PictureWeather.Size = new System.Drawing.Size(248, 47);
             this.PictureWeather.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -364,7 +365,7 @@ namespace Wargame.Forms
             // 
             // PanelBattlefieldConfig1
             // 
-            this.PanelBattlefieldConfig1.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelBattlefieldConfig1.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelBattlefieldConfig1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelBattlefieldConfig1.Controls.Add(this.ToolContainerTerrain);
             this.PanelBattlefieldConfig1.Controls.Add(this.PictureSeason);
@@ -373,9 +374,9 @@ namespace Wargame.Forms
             this.PanelBattlefieldConfig1.Controls.Add(this.PictureRiver);
             this.PanelBattlefieldConfig1.Controls.Add(this.LblSeason);
             this.PanelBattlefieldConfig1.Controls.Add(this.LblRiverShow);
-            this.PanelBattlefieldConfig1.Location = new System.Drawing.Point(40, 43);
+            this.PanelBattlefieldConfig1.Location = new System.Drawing.Point(741, 96);
             this.PanelBattlefieldConfig1.Name = "PanelBattlefieldConfig1";
-            this.PanelBattlefieldConfig1.Size = new System.Drawing.Size(210, 298);
+            this.PanelBattlefieldConfig1.Size = new System.Drawing.Size(210, 299);
             this.PanelBattlefieldConfig1.TabIndex = 27;
             // 
             // ToolContainerTerrain
@@ -387,7 +388,7 @@ namespace Wargame.Forms
             this.ToolContainerTerrain.ContentPanel.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.ToolContainerTerrain.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ToolContainerTerrain.ContentPanel.Enabled = false;
-            this.ToolContainerTerrain.ContentPanel.Size = new System.Drawing.Size(0, 125);
+            this.ToolContainerTerrain.ContentPanel.Size = new System.Drawing.Size(20, 125);
             this.ToolContainerTerrain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // ToolContainerTerrain.LeftToolStripPanel
@@ -420,7 +421,7 @@ namespace Wargame.Forms
             this.seasonToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(126, 125);
+            this.menuStrip1.Size = new System.Drawing.Size(103, 125);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -435,7 +436,7 @@ namespace Wargame.Forms
             this.terrainToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.terrainToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.terrainToolStripMenuItem.Name = "terrainToolStripMenuItem";
-            this.terrainToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
+            this.terrainToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.terrainToolStripMenuItem.Text = "Terrain";
             // 
             // plainsToolStripMenuItem
@@ -494,7 +495,7 @@ namespace Wargame.Forms
             this.weatherToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weatherToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.weatherToolStripMenuItem.Name = "weatherToolStripMenuItem";
-            this.weatherToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
+            this.weatherToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.weatherToolStripMenuItem.Text = "Season";
             // 
             // autumnToolStripMenuItem
@@ -542,7 +543,7 @@ namespace Wargame.Forms
             this.riverToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.riverToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.riverToolStripMenuItem.Name = "riverToolStripMenuItem";
-            this.riverToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
+            this.riverToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.riverToolStripMenuItem.Text = "River";
             // 
             // noRiverToolStripMenuItem
@@ -581,7 +582,7 @@ namespace Wargame.Forms
             this.seasonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seasonToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.seasonToolStripMenuItem.Name = "seasonToolStripMenuItem";
-            this.seasonToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
+            this.seasonToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
             this.seasonToolStripMenuItem.Text = "Weather";
             // 
             // clearToolStripMenuItem
@@ -589,7 +590,7 @@ namespace Wargame.Forms
             this.clearToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.clearToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(145, 30);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -598,7 +599,7 @@ namespace Wargame.Forms
             this.windyToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.windyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.windyToolStripMenuItem.Name = "windyToolStripMenuItem";
-            this.windyToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.windyToolStripMenuItem.Size = new System.Drawing.Size(145, 30);
             this.windyToolStripMenuItem.Text = "Windy";
             this.windyToolStripMenuItem.Click += new System.EventHandler(this.windyToolStripMenuItem_Click);
             // 
@@ -607,7 +608,7 @@ namespace Wargame.Forms
             this.stormyToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.stormyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.stormyToolStripMenuItem.Name = "stormyToolStripMenuItem";
-            this.stormyToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.stormyToolStripMenuItem.Size = new System.Drawing.Size(145, 30);
             this.stormyToolStripMenuItem.Text = "Stormy";
             this.stormyToolStripMenuItem.Click += new System.EventHandler(this.stormyToolStripMenuItem_Click);
             // 

@@ -73,7 +73,7 @@ namespace Wargame.Forms
             // 
             // BtnSimulate
             // 
-            this.BtnSimulate.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.BtnSimulate.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.BtnSimulate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSimulate.ForeColor = System.Drawing.Color.LightGray;
             this.BtnSimulate.Location = new System.Drawing.Point(780, 36);
@@ -90,7 +90,7 @@ namespace Wargame.Forms
             this.LblStatus.BackColor = System.Drawing.SystemColors.Control;
             this.LblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblStatus.ForeColor = System.Drawing.Color.LightGray;
-            this.LblStatus.Image = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.LblStatus.Image = global::Wargame.Properties.Resources.background_panel;
             this.LblStatus.Location = new System.Drawing.Point(799, 130);
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(103, 24);
@@ -99,7 +99,7 @@ namespace Wargame.Forms
             // 
             // PanelAtkAirComposition
             // 
-            this.PanelAtkAirComposition.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelAtkAirComposition.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelAtkAirComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelAtkAirComposition.Controls.Add(this.LblAtkAirStats);
             this.PanelAtkAirComposition.Location = new System.Drawing.Point(12, 12);
@@ -135,7 +135,7 @@ namespace Wargame.Forms
             // 
             // PanelAtkTerComposition
             // 
-            this.PanelAtkTerComposition.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelAtkTerComposition.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelAtkTerComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelAtkTerComposition.Controls.Add(this.LblAtkTerStatsShow);
             this.PanelAtkTerComposition.Controls.Add(this.LblAtkTerStats);
@@ -157,7 +157,7 @@ namespace Wargame.Forms
             // 
             // PanelAtkStrategy
             // 
-            this.PanelAtkStrategy.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelAtkStrategy.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelAtkStrategy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelAtkStrategy.Controls.Add(this.LblDoctrineAtkShow);
             this.PanelAtkStrategy.Controls.Add(this.LblAtkModifierStats);
@@ -289,7 +289,7 @@ namespace Wargame.Forms
             // 
             // PanelDefTerComposition
             // 
-            this.PanelDefTerComposition.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelDefTerComposition.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelDefTerComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelDefTerComposition.Controls.Add(this.label2);
             this.PanelDefTerComposition.Controls.Add(this.LblDefTerStats);
@@ -324,7 +324,7 @@ namespace Wargame.Forms
             // 
             // PanelDefAirComposition
             // 
-            this.PanelDefAirComposition.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelDefAirComposition.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelDefAirComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelDefAirComposition.Controls.Add(this.LblDefAirStats);
             this.PanelDefAirComposition.Location = new System.Drawing.Point(1327, 12);
@@ -334,7 +334,7 @@ namespace Wargame.Forms
             // 
             // PanelDefStrategy
             // 
-            this.PanelDefStrategy.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
+            this.PanelDefStrategy.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelDefStrategy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelDefStrategy.Controls.Add(this.LblDoctrineDefShow);
             this.PanelDefStrategy.Controls.Add(this.LblDefModifierStats);
