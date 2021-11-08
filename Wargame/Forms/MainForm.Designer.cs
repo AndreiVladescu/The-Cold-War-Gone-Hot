@@ -31,7 +31,6 @@ namespace Wargame
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.PanelDesktopPanel = new System.Windows.Forms.Panel();
-            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.PanelSideMainMenu = new System.Windows.Forms.Panel();
             this.BtnMusicPlayer = new System.Windows.Forms.Button();
             this.BtnDefConfig = new System.Windows.Forms.Button();
@@ -40,10 +39,11 @@ namespace Wargame
             this.BtnPlay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
+            this.PanelMiniDesktop = new System.Windows.Forms.Panel();
             this.PictureMainMenuWallpaper = new System.Windows.Forms.PictureBox();
             this.PanelDesktopPanel.SuspendLayout();
-            this.PanelMiniDesktop.SuspendLayout();
             this.PanelSideMainMenu.SuspendLayout();
+            this.PanelMiniDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMainMenuWallpaper)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +57,6 @@ namespace Wargame
             this.PanelDesktopPanel.Name = "PanelDesktopPanel";
             this.PanelDesktopPanel.Size = new System.Drawing.Size(1456, 884);
             this.PanelDesktopPanel.TabIndex = 10;
-            // 
-            // PanelMiniDesktop
-            // 
-            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
-            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
-            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
-            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
-            this.PanelMiniDesktop.TabIndex = 2;
             // 
             // PanelSideMainMenu
             // 
@@ -91,7 +83,7 @@ namespace Wargame
             this.BtnMusicPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMusicPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMusicPlayer.ForeColor = System.Drawing.Color.Black;
-            this.BtnMusicPlayer.Location = new System.Drawing.Point(46, 497);
+            this.BtnMusicPlayer.Location = new System.Drawing.Point(46, 556);
             this.BtnMusicPlayer.Name = "BtnMusicPlayer";
             this.BtnMusicPlayer.Size = new System.Drawing.Size(155, 80);
             this.BtnMusicPlayer.TabIndex = 7;
@@ -160,7 +152,7 @@ namespace Wargame
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(21, 386);
+            this.button1.Location = new System.Drawing.Point(21, 435);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 91);
             this.button1.TabIndex = 1;
@@ -174,12 +166,20 @@ namespace Wargame
             this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClose.ForeColor = System.Drawing.Color.Black;
-            this.BtnClose.Location = new System.Drawing.Point(21, 723);
+            this.BtnClose.Location = new System.Drawing.Point(21, 781);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(203, 91);
             this.BtnClose.TabIndex = 0;
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnCloseApp);
+            // 
+            // PanelMiniDesktop
+            // 
+            this.PanelMiniDesktop.Controls.Add(this.PictureMainMenuWallpaper);
+            this.PanelMiniDesktop.Location = new System.Drawing.Point(242, 0);
+            this.PanelMiniDesktop.Name = "PanelMiniDesktop";
+            this.PanelMiniDesktop.Size = new System.Drawing.Size(1783, 1102);
+            this.PanelMiniDesktop.TabIndex = 2;
             // 
             // PictureMainMenuWallpaper
             // 
@@ -206,8 +206,8 @@ namespace Wargame
             this.Text = "The Cold War Gone Hot";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.PanelDesktopPanel.ResumeLayout(false);
-            this.PanelMiniDesktop.ResumeLayout(false);
             this.PanelSideMainMenu.ResumeLayout(false);
+            this.PanelMiniDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureMainMenuWallpaper)).EndInit();
             this.ResumeLayout(false);
 
