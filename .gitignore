@@ -1,3 +1,12 @@
 .vs
 *.cache
 *.cache
+Wargame/obj/Debug/Wargame.pdb
+Wargame/obj/Debug/Wargame.exe
+Wargame/obj/Debug/The Cold War Gone Hot.csproj.GenerateResource.cache
+Wargame/obj/Debug/The Cold War Gone Hot.csproj.FileListAbsolute.txt
+Wargame/obj/Debug/Interop.WMPLib.dll
+Wargame/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Wargame/bin/Debug/Wargame.pdb
+Wargame/bin/Debug/Wargame.exe
+Wargame/bin/Debug/Interop.WMPLib.dll
