@@ -89,3 +89,28 @@ D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Ho
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Wargame.exe.config
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Wargame.exe
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Wargame.pdb
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\bin\Debug\Interop.WMPLib.dll
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Interop.WMPLib.dll
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.AttackerForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.BattleConfigurationForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.CreditsForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.DefenderForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.MainForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.OptionsForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.PlayForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.SplashScreenForm.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.GenerateResource.cache
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
+C:\Users\USER\Documents\GitHub\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb
