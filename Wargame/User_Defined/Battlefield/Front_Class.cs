@@ -46,6 +46,7 @@ namespace Front_NS
             _entrench += terUnitStats[11];
             _combat_width += terUnitStats[12];
             _hardness += terUnitStats[13];
+
         }
         public void DisolveRegiment(Ter_Unit unit)
         {
@@ -100,8 +101,10 @@ namespace Front_NS
         Commander _commander;
         Doctrine _doctrine;
 
-        TerStruct terStruct = new TerStruct();
-        AirStruct airStruct = new AirStruct();
+        public float initialHP;
+
+        public TerStruct terStruct = new TerStruct();
+        public AirStruct airStruct = new AirStruct();
 
         public float _fuel_left { get; set; }
         public bool isRetreating { get; set; }
@@ -127,6 +130,7 @@ namespace Front_NS
         {
             Ter_Unit newTerUnit = new Ter_Unit(gen, unit_type, unit_exp);
             _gnd.Add(newTerUnit);
+            initialHP += newTerUnit._hp;
             terStruct.IntegrateRegiment(_gnd[_gnd.Count() - 1].GetExtendedStats()); // Get the stats from the last added element
         }
         public void AddAirUnit(List<float> unitStats) // Don't use me
@@ -148,6 +152,7 @@ namespace Front_NS
                 Ter_Unit unit = _gnd[index];
                 if (unit._gen == gen && unit._unit_exp == unit_exp && unit._unit_type == unit_type)
                 {
+                    initialHP -= unit._hp;
                     terStruct.DisolveRegiment(unit);
                     _gnd.RemoveAt(index);
                     break;
@@ -193,7 +198,31 @@ namespace Front_NS
         {
             Random rand = new Random();
             int chanceToRetreat = rand.Next(1,100);
-            // TODO organisation equation
+            if (initialHP * 0.2 > terStruct._hp)
+            {
+                terStruct._organ *= (float)0.3;
+            }
+            else if (initialHP * 0.5 > terStruct._hp)
+            {
+                terStruct._organ *= (float)0.6;
+            }
+            else if (initialHP * 0.75 > terStruct._hp)
+            {
+                terStruct._organ *= (float)0.8;
+            }
+            else if (initialHP * 0.95 > terStruct._hp)
+            {
+                terStruct._organ *= (float)0.95;
+            }
+            else
+            {
+                terStruct._organ *= (float)0.98;
+            }
+
+            if (terStruct._organ * 0.90 + chanceToRetreat * 0.10 < 0.2)
+            {
+                isRetreating = true;
+            }
         }
         public void DamageAirHp(float hp)
         {

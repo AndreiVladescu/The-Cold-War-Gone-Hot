@@ -89,3 +89,4 @@ D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Ho
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete

@@ -23,7 +23,7 @@ namespace Battlefield_NS
         public Terrain_Enum _terrain { get; set; }
         public Season_Enum _season { get; set; }
 
-        Front _atk = new Front(), 
+        public Front _atk = new Front(), 
             _def = new Front();
 
         bool _is_night = false;
@@ -108,13 +108,28 @@ namespace Battlefield_NS
                 // TODO add rng
                 DefenderGroundAttack(); // Defender starts first 
                 AttackerGroundAttack();
+                ApplyFuelConsumption();
             }
-
-            //DefenderDealDamage();
-            //AttackerDealDamage();
 
             return DetermineWinner();
         }
+
+        private void ApplyFuelConsumption()
+        {
+            float attackerFuelConsumption = _atk.terStruct._fuel * _atk.terStruct._hp / _atk.initialHP;
+            float defenderFuelConsumption = _def.terStruct._fuel * _def.terStruct._hp / _def.initialHP;
+
+            if (_atk._fuel_left <= attackerFuelConsumption)
+                _atk._fuel_left = 0;
+            else
+                _atk._fuel_left -= attackerFuelConsumption;
+
+            if (_def._fuel_left <= defenderFuelConsumption)
+                _def._fuel_left = 0;
+            else
+                _def._fuel_left -= defenderFuelConsumption;
+        }
+
         private void AttackerGroundAttack()
         {
             if (_atk.IsTerDefeated())
@@ -161,14 +176,19 @@ namespace Battlefield_NS
 
             // TODO entrenchment - done
             // TODO reliability losses - done
-            // TODO fuel usage
-            // TODO organisation loss
+            // TODO fuel usage 
+            // TODO organisation loss - done
+            
 
             // Added reliability losses for the attacker side after his attack
             float reliability_losses_for_attacker = Tools.ReturnCombatLossesThroughReliability(thisPartyStruct._reliab / thisPartyNrOfUnits, thisPartyStruct._hp);
             _atk.DamageTerHp(reliability_losses_for_attacker);
-            
+
             // Finally, dish the damage
+            if (_atk._fuel_left != 0)
+            {
+                damage *= (float)0.5;
+            }
             _def.DamageTerHp(damage);
         }
         private void DefenderGroundAttack()
@@ -213,13 +233,17 @@ namespace Battlefield_NS
             // TODO entrenchment - done
             // TODO reliability losses - done
             // TODO fuel usage
-            // TODO organisation loss
+            // TODO organisation loss - done
 
             // Added reliability losses for the defender side after his attack
             float reliability_losses_for_attacker = Tools.ReturnCombatLossesThroughReliability(thisPartyStruct._reliab / thisPartyNrOfUnits, thisPartyStruct._hp);
             _def.DamageTerHp(reliability_losses_for_attacker);
 
             // Finally, dish the damage
+            if (_def._fuel_left != 0)
+            {
+                damage *= (float)0.8;
+            }
             _atk.DamageTerHp(damage);
         }
         public void SetFuelAtk(float fuel)
@@ -388,6 +412,10 @@ namespace Battlefield_NS
         }
         private int DetermineWinner()
         {
+            if (_atk.isRetreating)
+                return 3;
+            if (_def.isRetreating)
+                return -3;
             if (_atk.IsTerDefeated() && _atk.IsAirDefeated())
                 return 3;
             else if (_def.IsTerDefeated() && _def.IsAirDefeated())

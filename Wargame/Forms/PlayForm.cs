@@ -11,12 +11,14 @@ using Doctrine_NS;
 using Battlefield_NS;
 using Enums_NS;
 using Wargame.User_Defined.Tools;
+using System.Threading;
 
 namespace Wargame.Forms
 {
     public partial class PlayForm : Form
     {
         int countHoursPassed = 0;
+        static bool simulationStarted = false;
 
         List<string> atkDoctrineNames = new List<string> { "Breakthrough", "Well Planned Attack", "Relentless Assault" };
         List<string> defDoctrineNames = new List<string> { "Elastic Defense", "Overwhelming Fire", "Backhand Blow" };
@@ -24,8 +26,8 @@ namespace Wargame.Forms
         int atkDoctrineCount = 0;
         int defDoctrineCount = 0;
 
-        Doctrine_Enum atkDoctrine = Doctrine_Enum.Breakthrough;
-        Doctrine_Enum defDoctrine = Doctrine_Enum.Elastic_Defense;
+        static public Doctrine_Enum atkDoctrine = Doctrine_Enum.Breakthrough;
+        static public Doctrine_Enum defDoctrine = Doctrine_Enum.Elastic_Defense;
 
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
         public PlayForm()
@@ -34,6 +36,7 @@ namespace Wargame.Forms
             UpdateGndStats();
             UpdateAirStats();
             UpdateCommanders();
+            UpdateFuel();
         }
         private void UpdateDoctrinePictures()
         {
@@ -100,7 +103,20 @@ namespace Wargame.Forms
             }
 
         }
-        private void BtnSimulate_Click(object sender, EventArgs e)
+        private async void BtnSimulate_ClickAsync(object sender, EventArgs e)
+        {
+            simulationStarted = !simulationStarted;
+            if (simulationStarted)
+            {
+                while (simulationStarted)
+                {
+                    if (Math.Abs(StartSimulation()) == 3)
+                        break;
+                    await Task.Delay(1500);
+                }
+            }
+        }
+        private int StartSimulation()
         {
             countHoursPassed++;
             BtnSimulate.Text = "Hours Passed: " + countHoursPassed.ToString();
@@ -114,7 +130,17 @@ namespace Wargame.Forms
                 LblStatus.Text = "Defenders Won";
             else if (result == -3)
                 LblStatus.Text = "Attackers Won";
+
+            UpdateFuel();
+            return result;
         }
+
+        private void UpdateFuel()
+        {
+            LblAtkFuel.Text = "Fuel Left: " + battlefieldInstance._atk._fuel_left.ToString();
+            LblDefFuel.Text = "Fuel Left: " + battlefieldInstance._def._fuel_left.ToString();
+        }
+
         private void PictureAtkDoctrine_Click(object sender, EventArgs e)
         {
             atkDoctrineCount++;

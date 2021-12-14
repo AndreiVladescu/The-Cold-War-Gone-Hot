@@ -59,6 +59,8 @@ namespace Wargame.Forms
             this.LblDoctrineDef = new System.Windows.Forms.Label();
             this.PictureDefDoctrine = new System.Windows.Forms.PictureBox();
             this.ChBoxDefAir = new System.Windows.Forms.CheckBox();
+            this.LblAtkFuel = new System.Windows.Forms.Label();
+            this.LblDefFuel = new System.Windows.Forms.Label();
             this.PanelAtkAirComposition.SuspendLayout();
             this.PanelAtkTerComposition.SuspendLayout();
             this.PanelAtkStrategy.SuspendLayout();
@@ -82,7 +84,7 @@ namespace Wargame.Forms
             this.BtnSimulate.TabIndex = 0;
             this.BtnSimulate.Text = "Simulate Battle";
             this.BtnSimulate.UseVisualStyleBackColor = true;
-            this.BtnSimulate.Click += new System.EventHandler(this.BtnSimulate_Click);
+            this.BtnSimulate.Click += new System.EventHandler(this.BtnSimulate_ClickAsync);
             // 
             // LblStatus
             // 
@@ -137,6 +139,7 @@ namespace Wargame.Forms
             // 
             this.PanelAtkTerComposition.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelAtkTerComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelAtkTerComposition.Controls.Add(this.LblAtkFuel);
             this.PanelAtkTerComposition.Controls.Add(this.LblAtkTerStatsShow);
             this.PanelAtkTerComposition.Controls.Add(this.LblAtkTerStats);
             this.PanelAtkTerComposition.Location = new System.Drawing.Point(12, 224);
@@ -291,6 +294,7 @@ namespace Wargame.Forms
             // 
             this.PanelDefTerComposition.BackgroundImage = global::Wargame.Properties.Resources.background_panel;
             this.PanelDefTerComposition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelDefTerComposition.Controls.Add(this.LblDefFuel);
             this.PanelDefTerComposition.Controls.Add(this.label2);
             this.PanelDefTerComposition.Controls.Add(this.LblDefTerStats);
             this.PanelDefTerComposition.Location = new System.Drawing.Point(1327, 224);
@@ -434,6 +438,30 @@ namespace Wargame.Forms
             this.ChBoxDefAir.UseVisualStyleBackColor = false;
             this.ChBoxDefAir.CheckedChanged += new System.EventHandler(this.ChBoxDefAir_CheckedChanged);
             // 
+            // LblAtkFuel
+            // 
+            this.LblAtkFuel.AutoSize = true;
+            this.LblAtkFuel.BackColor = System.Drawing.Color.Transparent;
+            this.LblAtkFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAtkFuel.ForeColor = System.Drawing.Color.LightGray;
+            this.LblAtkFuel.Location = new System.Drawing.Point(13, 433);
+            this.LblAtkFuel.Name = "LblAtkFuel";
+            this.LblAtkFuel.Size = new System.Drawing.Size(76, 20);
+            this.LblAtkFuel.TabIndex = 15;
+            this.LblAtkFuel.Text = "Fuel Left:";
+            // 
+            // LblDefFuel
+            // 
+            this.LblDefFuel.AutoSize = true;
+            this.LblDefFuel.BackColor = System.Drawing.Color.Transparent;
+            this.LblDefFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDefFuel.ForeColor = System.Drawing.Color.LightGray;
+            this.LblDefFuel.Location = new System.Drawing.Point(22, 433);
+            this.LblDefFuel.Name = "LblDefFuel";
+            this.LblDefFuel.Size = new System.Drawing.Size(76, 20);
+            this.LblDefFuel.TabIndex = 16;
+            this.LblDefFuel.Text = "Fuel Left:";
+            // 
             // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -505,5 +533,7 @@ namespace Wargame.Forms
         private System.Windows.Forms.Label LblDoctrineDef;
         private System.Windows.Forms.PictureBox PictureDefDoctrine;
         private System.Windows.Forms.CheckBox ChBoxDefAir;
+        private System.Windows.Forms.Label LblAtkFuel;
+        private System.Windows.Forms.Label LblDefFuel;
     }
 }
