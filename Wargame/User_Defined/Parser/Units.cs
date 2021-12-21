@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Runtime;
 
 namespace Parser
 {
@@ -9,7 +7,7 @@ namespace Parser
     {
         public struct Air_Unit
         {
-            public Air_Unit(int ID, float hp, float air_atk, float gnd_atk, 
+            public Air_Unit(int ID, float hp, float air_atk, float gnd_atk,
                 float strat_bmb, float air_sup)
             {
                 this.ID = ID;
@@ -69,7 +67,7 @@ namespace Parser
 
         static public List<float> GetUnitField(int ID) //folosesc listele globale ca sa caut in ele atributele
         {
-            if(ID < 101 || ID > 402)
+            if (ID < 101 || ID > 402)
             {
                 Console.WriteLine("Sorry, no unit was found with the ID {0}", ID);
                 return null;
@@ -77,11 +75,11 @@ namespace Parser
 
             List<float> attributes = new List<float>();
 
-            if(ID < 300)
+            if (ID < 300)
             {
-                foreach(Units.Ter_Unit unit in Wargame.Program.allTerUnits)
+                foreach (Units.Ter_Unit unit in Wargame.Program.allTerUnits)
                 {
-                    if(unit.ID == ID)
+                    if (unit.ID == ID)
                     {
                         attributes.Add(unit.hp);
                         attributes.Add(unit.s_atk);
@@ -99,7 +97,7 @@ namespace Parser
                         attributes.Add(unit.hardness);
 
                         return attributes;
-                    }    
+                    }
                 }
             }
             else

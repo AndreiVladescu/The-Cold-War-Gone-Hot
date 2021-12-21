@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Air_Units_NS;
 using Enums_NS;
 using Front_NS;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Ter_Units_NS;
-using Air_Units_NS;
 using Wargame.User_Defined.Tools;
 
 namespace Battlefield_NS
@@ -23,7 +20,7 @@ namespace Battlefield_NS
         public Terrain_Enum _terrain { get; set; }
         public Season_Enum _season { get; set; }
 
-        public Front _atk = new Front(), 
+        public Front _atk = new Front(),
             _def = new Front();
 
         bool _is_night = false;
@@ -68,11 +65,11 @@ namespace Battlefield_NS
             _def.SetCommander(1, "MacArthur");
 
         }
-        private Battlefield(int time, 
+        private Battlefield(int time,
             int fort_level,
             Weather_Enum weather,
-            River_Enum river, 
-            Terrain_Enum terrain, 
+            River_Enum river,
+            Terrain_Enum terrain,
             Season_Enum season)
         {
             _time = time;
@@ -178,7 +175,7 @@ namespace Battlefield_NS
             // TODO reliability losses - done
             // TODO fuel usage 
             // TODO organisation loss - done
-            
+
 
             // Added reliability losses for the attacker side after his attack
             float reliability_losses_for_attacker = Tools.ReturnCombatLossesThroughReliability(thisPartyStruct._reliab / thisPartyNrOfUnits, thisPartyStruct._hp);
@@ -285,7 +282,7 @@ namespace Battlefield_NS
                 _def.DamageTerHp((damage_done_atk_gnd * (1 + rng / 100)) * air_superiorty_modifier);
             rng = rand.Next(-5, 5);
             if (!_atk.IsAirDefeated())
-                _atk.DamageTerHp((damage_done_def_gnd * (1 + rng / 100)) * ( 1 / air_superiorty_modifier));
+                _atk.DamageTerHp((damage_done_def_gnd * (1 + rng / 100)) * (1 / air_superiorty_modifier));
             #endregion
 
             #region Air Attack
@@ -781,13 +778,13 @@ namespace Battlefield_NS
         {
             string returnString = "";
 
-            
+
             List<Ter_Unit> ter_Units = _def.GetTerUnits();
 
-            ter_Units.Sort((x,y) =>
+            ter_Units.Sort((x, y) =>
                 x._unit_type.CompareTo(y._unit_type));
 
-            for (int index = 0; index< ter_Units.Count(); index++)
+            for (int index = 0; index < ter_Units.Count(); index++)
             {
                 switch (ter_Units[index]._unit_type)
                 {

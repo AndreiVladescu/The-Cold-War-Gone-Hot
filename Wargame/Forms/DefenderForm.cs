@@ -1,18 +1,13 @@
-﻿using System;
+﻿using Air_Units_NS;
+using Battlefield_NS;
+using Enums_NS;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using Battlefield_NS;
-using Wargame.User_Defined.Tools;
-using Enums_NS;
 using Ter_Units_NS;
-using Air_Units_NS;
+using Wargame.User_Defined.Tools;
 
 namespace Wargame.Forms
 {
@@ -21,7 +16,7 @@ namespace Wargame.Forms
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
 
         List<string> legUnitNames = new List<string> { "Inf_Eq", "Art", "L_Art", "H_Art", "AAG", "AT" };
-        List<string> mobUnitNames = new List<string> { "MBT", "L_Tank", "L_Mech", "H_Mech", "Mot", "SPAAG", "SPL_Art", "SPArt", "SPH_Art",  "SPAT", "SPRArt" };
+        List<string> mobUnitNames = new List<string> { "MBT", "L_Tank", "L_Mech", "H_Mech", "Mot", "SPAAG", "SPL_Art", "SPArt", "SPH_Art", "SPAT", "SPRArt" };
         List<string> airUnitNames = new List<string> { "MultiRole_Jet", "CAS", "Interd", "AtkHeli", "L_AtkHeli" };
 
         List<string> expNames = new List<string> { "Green", "Trained", "Experienced", "Veteran", "Elite" };
@@ -29,7 +24,7 @@ namespace Wargame.Forms
         List<string> flagNames = new List<string> { "SUA", "SOV" };
 
         int flagCounter = 0;
-       
+
         int legGen = 1;
         int mobGen = 1;
         int airGen = 1;
@@ -44,7 +39,7 @@ namespace Wargame.Forms
         int legExp = 1;
         int mobExp = 1;
         int airExp = 1;
-        
+
         public DefenderForm()
         {
             InitializeComponent();
@@ -122,7 +117,7 @@ namespace Wargame.Forms
         private void PictureFlagDefender_Click(object sender, EventArgs e)
         {
             PictureFlagDefender.Image = null;
-            
+
             if (flagCounter == 0)
             {
                 PictureFlagDefender.Image = global::Wargame.Properties.Resources.SOV_flag;
@@ -145,7 +140,7 @@ namespace Wargame.Forms
             PictureMob.Image = Image.FromFile(UpdateUnitPicture(mobUnitNames, mobUnitNameCounter, mobGen));
             PictureAir.Image = Image.FromFile(UpdateUnitPicture(airUnitNames, airUnitNameCounter, airGen, true));
         }
-        private string UpdateUnitPicture(List<string> unitNames, int unitCounter,int gen, bool isAir = false)
+        private string UpdateUnitPicture(List<string> unitNames, int unitCounter, int gen, bool isAir = false)
         {
             string folderName;
             if (isAir == true)
@@ -246,7 +241,7 @@ namespace Wargame.Forms
         private void BtnNextLeg_Click(object sender, EventArgs e)
         {
             legUnitNameCounter++;
-            legUnitNameCounter = legUnitNameCounter % legUnitNames.Count();  
+            legUnitNameCounter = legUnitNameCounter % legUnitNames.Count();
             PictureLeg.Image = Image.FromFile(UpdateUnitPicture(legUnitNames, legUnitNameCounter, legGen));
 
             UpdateStatsLeg();

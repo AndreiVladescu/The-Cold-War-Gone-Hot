@@ -1,6 +1,6 @@
 ﻿namespace Enums_NS
 {
-  public enum Gen_Enum
+    public enum Gen_Enum
     {
         // Tech Generations
         Gen1 = 0, // 1950s
@@ -8,7 +8,7 @@
         Gen3 = 2  // 1980s
     }
 
-  public enum Ter_Units_Enum
+    public enum Ter_Units_Enum
     {
         // Motorized
         MBT = 101,
@@ -85,7 +85,7 @@
         Seasoned = 2,
         Veteran = 3
     }
-    
+
     public enum Factions_Enum
     {
         // For now

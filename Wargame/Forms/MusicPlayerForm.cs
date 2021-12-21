@@ -1,16 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using System.IO;
-using System.Collections;
 using Wargame.User_Defined.Tools;
 
 namespace Wargame.Forms
@@ -46,12 +38,12 @@ namespace Wargame.Forms
             timer1.Start();
             trackBar1.Value = 30;
             lbl_volume.Text = trackBar1.Value.ToString() + "%";
-            
+
         }
         private void listBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            
+
         }
         private void MusicPlayerForm_Load(object sender, EventArgs e)
         {

@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Battlefield_NS;
+using System;
 using System.Windows.Forms;
-using System.Threading;
-using Battlefield_NS;
 using Wargame.Forms;
 using Wargame.User_Defined.Tools;
 
@@ -27,7 +19,7 @@ namespace Wargame
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            
+
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
@@ -70,7 +62,7 @@ namespace Wargame
             OpenChildForm(new Forms.PlayForm(), sender);
         }
 
-        
+
         private void BtnMusicPlayer_Click(object sender, EventArgs e)
         {
             if (playerForm.Visible == false)

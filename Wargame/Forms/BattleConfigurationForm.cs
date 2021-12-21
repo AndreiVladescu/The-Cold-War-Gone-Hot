@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Battlefield_NS;
+using System;
 using System.Windows.Forms;
-using Battlefield_NS;
 
 namespace Wargame.Forms
 {
@@ -39,7 +32,7 @@ namespace Wargame.Forms
         private void plainsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PictureTerrain.Image = global::Wargame.Properties.Resources.terrain_plains;
-            LblTerrainShow.Text = "Plains"; 
+            LblTerrainShow.Text = "Plains";
             battlefieldInstance._terrain = Enums_NS.Terrain_Enum.Plain;
         }
 

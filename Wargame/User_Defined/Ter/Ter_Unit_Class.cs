@@ -1,10 +1,5 @@
 ﻿using Enums_NS;
-
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ter_Units_NS
 {
@@ -141,8 +136,8 @@ namespace Ter_Units_NS
             //entrench += unitGenModifier * entrench;
             //combat_width += unitGenModifier * combat_width;
             hardness += unitGenModifier * hardness;
-            
-            
+
+
             _hp = hp + unitExpModifier * hp;
             _s_atk = s_atk + unitExpModifier * s_atk;
             _h_atk = h_atk + unitExpModifier * h_atk;

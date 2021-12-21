@@ -1,0 +1,1 @@
+echo @start "" "bin\Debug\bat.bat" > Shortcut.bat

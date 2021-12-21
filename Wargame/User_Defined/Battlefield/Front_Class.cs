@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Enums_NS;
-using Ter_Units_NS;
-using Air_Units_NS;
+﻿using Air_Units_NS;
 using Commander_NS;
 using Doctrine_NS;
+using Enums_NS;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Ter_Units_NS;
 
 namespace Front_NS
 {
@@ -197,7 +194,9 @@ namespace Front_NS
         private void MoraleCheck()
         {
             Random rand = new Random();
-            int chanceToRetreat = rand.Next(1,100);
+
+            int chanceToRetreat = rand.Next(1, 100);
+
             if (initialHP * 0.2 > terStruct._hp)
             {
                 terStruct._organ *= (float)0.3;
@@ -219,7 +218,7 @@ namespace Front_NS
                 terStruct._organ *= (float)0.98;
             }
 
-            if (terStruct._organ * 0.90 + chanceToRetreat * 0.10 < 0.2)
+            if (terStruct._organ * 0.90 + chanceToRetreat * 0.10 < 20)
             {
                 isRetreating = true;
             }
@@ -253,7 +252,7 @@ namespace Front_NS
         public int GetLegUnitNumber()
         {
             int nmbr = 0;
-            for (int index =0;index < _gnd.Count(); index++)
+            for (int index = 0; index < _gnd.Count(); index++)
             {
                 if ((int)_gnd[index]._unit_type > 200)
                     nmbr++;

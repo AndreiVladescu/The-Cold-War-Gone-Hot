@@ -1,10 +1,5 @@
-﻿using System;
+﻿using Enums_NS;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Enums_NS;
 
 namespace Air_Units_NS
 {
@@ -15,7 +10,7 @@ namespace Air_Units_NS
         public Air_Units_Enum _unit_type { get; set; }
         public Regiment_Exp_Enum _unit_exp { get; set; }
 
-        public float 
+        public float
             _hp,
             _air_atk,
             _gnd_atk,

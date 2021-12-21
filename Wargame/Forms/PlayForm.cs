@@ -1,17 +1,11 @@
-﻿using System;
+﻿using Battlefield_NS;
+using Enums_NS;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Doctrine_NS;
-using Battlefield_NS;
-using Enums_NS;
 using Wargame.User_Defined.Tools;
-using System.Threading;
 
 namespace Wargame.Forms
 {

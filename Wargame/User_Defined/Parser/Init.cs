@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Xml;
-using System.Xml.Linq;
 using System.IO;
-using System.Collections.Generic;
+using System.Xml;
 using Wargame.User_Defined.Tools;
 
 namespace Parser
@@ -70,7 +68,7 @@ namespace Parser
                     Reliab, Org, A_Atk, Entr, Combat_Wdt, Hardness));
             }
 
-     
+
             Console.WriteLine("Ground Units initialized successfully!");
         }
 

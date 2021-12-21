@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.InteropServices;
 
@@ -23,7 +19,7 @@ namespace Wargame.User_Defined.Tools
            UInt32 uiParam,
            UInt32 pvParam,
            UInt32 fWinIni);
-        
+
         public static string GetTrueDirectory(string dir)
         {
             string newDir = "";
@@ -111,7 +107,7 @@ namespace Wargame.User_Defined.Tools
             {
                 effectiveness = rate;
             }
-            else 
+            else
             {
                 effectiveness = (float)1.1;
             }
@@ -164,11 +160,11 @@ namespace Wargame.User_Defined.Tools
         }
         public static void UpdateMouseValue(UInt32 mouseSpeed)
         {
-           SystemParametersInfo(
-           SPI_SETMOUSESPEED,
-           0,
-           mouseSpeed,
-           0);
+            SystemParametersInfo(
+            SPI_SETMOUSESPEED,
+            0,
+            mouseSpeed,
+            0);
         }
         public static void SaveMouseValue()
         {
