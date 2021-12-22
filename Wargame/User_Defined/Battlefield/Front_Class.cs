@@ -205,7 +205,7 @@ namespace Front_NS
             {
                 terStruct._organ *= (float)0.6;
             }
-            else if (initialHP * 0.75 > terStruct._hp)
+            else if (initialHP * 0.72 > terStruct._hp)
             {
                 terStruct._organ *= (float)0.8;
             }
