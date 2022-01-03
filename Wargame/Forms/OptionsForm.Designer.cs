@@ -40,7 +40,7 @@ namespace Wargame.Forms
             // TrackBarVolume
             // 
             this.TrackBarVolume.AutoSize = false;
-            this.TrackBarVolume.BackColor = System.Drawing.SystemColors.GrayText;
+            this.TrackBarVolume.BackColor = System.Drawing.SystemColors.ControlText;
             this.TrackBarVolume.Location = new System.Drawing.Point(409, 493);
             this.TrackBarVolume.Maximum = 40;
             this.TrackBarVolume.Name = "TrackBarVolume";
@@ -54,7 +54,7 @@ namespace Wargame.Forms
             this.TrackBarSensitivity.AccessibleDescription = "Description";
             this.TrackBarSensitivity.AccessibleName = "Mouse Sensitivity";
             this.TrackBarSensitivity.AutoSize = false;
-            this.TrackBarSensitivity.BackColor = System.Drawing.SystemColors.GrayText;
+            this.TrackBarSensitivity.BackColor = System.Drawing.SystemColors.ControlText;
             this.TrackBarSensitivity.Location = new System.Drawing.Point(409, 580);
             this.TrackBarSensitivity.Maximum = 20;
             this.TrackBarSensitivity.Minimum = 1;

@@ -136,7 +136,7 @@ namespace Wargame.Forms
             // TrackBarFortLevel
             // 
             this.TrackBarFortLevel.AutoSize = false;
-            this.TrackBarFortLevel.BackColor = System.Drawing.Color.DimGray;
+            this.TrackBarFortLevel.BackColor = System.Drawing.Color.Black;
             this.TrackBarFortLevel.Location = new System.Drawing.Point(8, 115);
             this.TrackBarFortLevel.Maximum = 6;
             this.TrackBarFortLevel.Name = "TrackBarFortLevel";
@@ -209,7 +209,7 @@ namespace Wargame.Forms
             // TrackbarAALevel
             // 
             this.TrackbarAALevel.AutoSize = false;
-            this.TrackbarAALevel.BackColor = System.Drawing.Color.DimGray;
+            this.TrackbarAALevel.BackColor = System.Drawing.Color.Black;
             this.TrackbarAALevel.Location = new System.Drawing.Point(8, 204);
             this.TrackbarAALevel.Maximum = 6;
             this.TrackbarAALevel.Name = "TrackbarAALevel";
@@ -243,7 +243,7 @@ namespace Wargame.Forms
             // TrackBarTime
             // 
             this.TrackBarTime.AutoSize = false;
-            this.TrackBarTime.BackColor = System.Drawing.Color.DimGray;
+            this.TrackBarTime.BackColor = System.Drawing.Color.Black;
             this.TrackBarTime.Location = new System.Drawing.Point(8, 42);
             this.TrackBarTime.Maximum = 23;
             this.TrackBarTime.Name = "TrackBarTime";
@@ -385,6 +385,7 @@ namespace Wargame.Forms
             // 
             // ToolContainerTerrain.ContentPanel
             // 
+            this.ToolContainerTerrain.ContentPanel.BackColor = System.Drawing.Color.Transparent;
             this.ToolContainerTerrain.ContentPanel.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.ToolContainerTerrain.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ToolContainerTerrain.ContentPanel.Enabled = false;
@@ -409,7 +410,7 @@ namespace Wargame.Forms
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.menuStrip1.BackColor = System.Drawing.Color.Black;
             this.menuStrip1.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -436,7 +437,7 @@ namespace Wargame.Forms
             this.terrainToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.terrainToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.terrainToolStripMenuItem.Name = "terrainToolStripMenuItem";
-            this.terrainToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
+            this.terrainToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
             this.terrainToolStripMenuItem.Text = "Terrain";
             // 
             // plainsToolStripMenuItem
@@ -444,7 +445,7 @@ namespace Wargame.Forms
             this.plainsToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.plainsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.plainsToolStripMenuItem.Name = "plainsToolStripMenuItem";
-            this.plainsToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
+            this.plainsToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.plainsToolStripMenuItem.Text = "Plains";
             this.plainsToolStripMenuItem.Click += new System.EventHandler(this.plainsToolStripMenuItem_Click);
             // 
@@ -454,7 +455,7 @@ namespace Wargame.Forms
             this.forestToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.forestToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.forestToolStripMenuItem.Name = "forestToolStripMenuItem";
-            this.forestToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
+            this.forestToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.forestToolStripMenuItem.Text = "Forest";
             this.forestToolStripMenuItem.Click += new System.EventHandler(this.forestToolStripMenuItem_Click);
             // 
@@ -463,7 +464,7 @@ namespace Wargame.Forms
             this.hillToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.hillToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.hillToolStripMenuItem.Name = "hillToolStripMenuItem";
-            this.hillToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
+            this.hillToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.hillToolStripMenuItem.Text = "Hills";
             this.hillToolStripMenuItem.Click += new System.EventHandler(this.hillToolStripMenuItem_Click);
             // 
@@ -472,7 +473,7 @@ namespace Wargame.Forms
             this.mountainToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.mountainToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.mountainToolStripMenuItem.Name = "mountainToolStripMenuItem";
-            this.mountainToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
+            this.mountainToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.mountainToolStripMenuItem.Text = "Mountains";
             this.mountainToolStripMenuItem.Click += new System.EventHandler(this.mountainToolStripMenuItem_Click);
             // 
@@ -481,7 +482,7 @@ namespace Wargame.Forms
             this.cityToolStripMenuItem.BackgroundImage = global::Wargame.Properties.Resources.generic_bg_307x113;
             this.cityToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.cityToolStripMenuItem.Name = "cityToolStripMenuItem";
-            this.cityToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
+            this.cityToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.cityToolStripMenuItem.Text = "City";
             this.cityToolStripMenuItem.Click += new System.EventHandler(this.cityToolStripMenuItem_Click);
             // 
@@ -495,7 +496,7 @@ namespace Wargame.Forms
             this.weatherToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weatherToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.weatherToolStripMenuItem.Name = "weatherToolStripMenuItem";
-            this.weatherToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
+            this.weatherToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
             this.weatherToolStripMenuItem.Text = "Season";
             // 
             // autumnToolStripMenuItem
@@ -543,7 +544,7 @@ namespace Wargame.Forms
             this.riverToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.riverToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.riverToolStripMenuItem.Name = "riverToolStripMenuItem";
-            this.riverToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
+            this.riverToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
             this.riverToolStripMenuItem.Text = "River";
             // 
             // noRiverToolStripMenuItem
@@ -582,7 +583,7 @@ namespace Wargame.Forms
             this.seasonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seasonToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.seasonToolStripMenuItem.Name = "seasonToolStripMenuItem";
-            this.seasonToolStripMenuItem.Size = new System.Drawing.Size(96, 29);
+            this.seasonToolStripMenuItem.Size = new System.Drawing.Size(119, 29);
             this.seasonToolStripMenuItem.Text = "Weather";
             // 
             // clearToolStripMenuItem
