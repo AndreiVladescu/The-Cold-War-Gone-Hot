@@ -198,6 +198,7 @@
     <None Include="Resources\bg_battle_configuration.png" />
     <None Include="Resources\bg_options.png" />
     <None Include="Resources\Icons\Button Icons\gen_button_icon.png" />
+    <Content Include="Resources\PeaceDealSound.wav" />
     <Content Include="Resources\XML_Files\airUnits.xml" />
     <Content Include="Resources\XML_Files\groundUnits.xml" />
     <None Include="Resources\battlefield_config_wallpaper1.jpg" />

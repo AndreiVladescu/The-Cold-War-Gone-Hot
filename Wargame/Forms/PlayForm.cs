@@ -12,6 +12,10 @@ namespace Wargame.Forms
 {
     public partial class PlayForm : Form
     {
+        private SoundPlayer buttonSound = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\button6.wav");
+        private SoundPlayer declareWarButton = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\declareWar.wav");
+        private SoundPlayer peaceButton = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\PeaceDealSound.wav");
+
         int countHoursPassed = 0;
         static bool simulationStarted = false;
 
@@ -25,7 +29,7 @@ namespace Wargame.Forms
         static public Doctrine_Enum defDoctrine = Doctrine_Enum.Elastic_Defense;
 
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
-        private SoundPlayer declareWarButton = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\declareWar.wav");
+       
         protected override CreateParams CreateParams
         {
             get
@@ -132,9 +136,15 @@ namespace Wargame.Forms
             UpdateAirStats();
 
             if (result == 3)
+            {
                 LblStatus.Text = "Defenders Won";
+                peaceButton.Play();
+            }
             else if (result == -3)
+            {
+                peaceButton.Play();
                 LblStatus.Text = "Attackers Won";
+            }
 
             UpdateFuel();
             return result;
@@ -148,6 +158,7 @@ namespace Wargame.Forms
 
         private void PictureAtkDoctrine_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             atkDoctrineCount++;
             atkDoctrineCount %= 3;
             switch (atkDoctrineCount)
@@ -179,6 +190,7 @@ namespace Wargame.Forms
         }
         private void PictureDefDoctrine_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             defDoctrineCount++;
             defDoctrineCount %= 3;
             switch (defDoctrineCount)
@@ -226,16 +238,19 @@ namespace Wargame.Forms
 
         private void ChBoxAtkAir_CheckedChanged(object sender, EventArgs e)
         {
+            buttonSound.Play();
             this.battlefieldInstance._atk_air_attacks = !this.battlefieldInstance._atk_air_attacks;
         }
 
         private void ChBoxAtkArmy_CheckedChanged(object sender, EventArgs e)
         {
+            buttonSound.Play();
             this.battlefieldInstance._atk_ter_attacks = !this.battlefieldInstance._atk_ter_attacks;
         }
 
         private void ChBoxDefAir_CheckedChanged(object sender, EventArgs e)
         {
+            buttonSound.Play();
             this.battlefieldInstance._def_air_attacks = !this.battlefieldInstance._def_air_attacks;
         }
     }
