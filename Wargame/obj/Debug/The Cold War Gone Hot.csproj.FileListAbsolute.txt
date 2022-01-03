@@ -32,7 +32,6 @@ C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.PlayForm.resources
-C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.CreditsForm.resources
 E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\Wargame.exe.config
 E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\Wargame.exe
 E:\The-Cold-War-Gone-Hot-main\Wargame\bin\Debug\Wargame.pdb

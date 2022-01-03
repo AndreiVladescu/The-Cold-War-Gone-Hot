@@ -69,20 +69,20 @@ namespace Wargame.Forms
             this.trackBar1.Location = new System.Drawing.Point(385, 220);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(302, 45);
+            this.trackBar1.Size = new System.Drawing.Size(260, 45);
             this.trackBar1.TabIndex = 22;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // listBoxSongs
             // 
-            this.listBoxSongs.BackColor = System.Drawing.Color.DarkGray;
+            this.listBoxSongs.BackColor = System.Drawing.Color.DimGray;
             this.listBoxSongs.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listBoxSongs.FormattingEnabled = true;
             this.listBoxSongs.ItemHeight = 15;
             this.listBoxSongs.Location = new System.Drawing.Point(384, 35);
             this.listBoxSongs.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxSongs.Name = "listBoxSongs";
-            this.listBoxSongs.Size = new System.Drawing.Size(312, 169);
+            this.listBoxSongs.Size = new System.Drawing.Size(261, 169);
             this.listBoxSongs.TabIndex = 23;
             this.listBoxSongs.SelectedIndexChanged += new System.EventHandler(this.listBoxSongs_SelectedIndexChanged_1);
             // 
@@ -98,21 +98,22 @@ namespace Wargame.Forms
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.DimGray;
+            this.TopPanel.BackgroundImage = global::Wargame.Properties.Resources.main_frame_bg;
             this.TopPanel.Controls.Add(this.pictureBox3);
             this.TopPanel.Controls.Add(this.pictureBox1);
             this.TopPanel.Controls.Add(this.lblLogo);
             this.TopPanel.Location = new System.Drawing.Point(-2, 1);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(2);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(698, 32);
+            this.TopPanel.Size = new System.Drawing.Size(647, 32);
             this.TopPanel.TabIndex = 25;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(642, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(620, 1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 29);
+            this.pictureBox3.Size = new System.Drawing.Size(27, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -132,7 +133,9 @@ namespace Wargame.Forms
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
+            this.lblLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblLogo.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblLogo.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblLogo.Location = new System.Drawing.Point(9, 8);
             this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogo.Name = "lblLogo";
@@ -142,19 +145,18 @@ namespace Wargame.Forms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_sunet);
+            this.groupBox1.BackgroundImage = global::Wargame.Properties.Resources.main_frame_bg;
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.btn_next);
             this.groupBox1.Controls.Add(this.btn_stop);
             this.groupBox1.Controls.Add(this.btn_prev);
             this.groupBox1.Controls.Add(this.btn_pause);
-            this.groupBox1.Controls.Add(this.btn_open);
             this.groupBox1.Controls.Add(this.btn_play);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(-2, 271);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(698, 68);
+            this.groupBox1.Size = new System.Drawing.Size(647, 68);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Controls";
@@ -164,13 +166,14 @@ namespace Wargame.Forms
             this.btn_sunet.BackColor = System.Drawing.Color.LightGray;
             this.btn_sunet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sunet.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_sunet.Location = new System.Drawing.Point(553, 18);
+            this.btn_sunet.Location = new System.Drawing.Point(305, 37);
             this.btn_sunet.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sunet.Name = "btn_sunet";
             this.btn_sunet.Size = new System.Drawing.Size(74, 29);
             this.btn_sunet.TabIndex = 13;
             this.btn_sunet.Text = "Sunet";
             this.btn_sunet.UseVisualStyleBackColor = false;
+            this.btn_sunet.Visible = false;
             this.btn_sunet.Click += new System.EventHandler(this.btn_sunet_Click);
             // 
             // button3
@@ -178,7 +181,7 @@ namespace Wargame.Forms
             this.button3.BackColor = System.Drawing.Color.LightGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(480, 18);
+            this.button3.Location = new System.Drawing.Point(564, 18);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 29);
@@ -191,7 +194,7 @@ namespace Wargame.Forms
             this.button4.BackColor = System.Drawing.Color.LightGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(409, 18);
+            this.button4.Location = new System.Drawing.Point(486, 18);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 29);
@@ -205,7 +208,7 @@ namespace Wargame.Forms
             this.btn_next.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btn_next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_next.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_next.Location = new System.Drawing.Point(271, 18);
+            this.btn_next.Location = new System.Drawing.Point(370, 18);
             this.btn_next.Margin = new System.Windows.Forms.Padding(2);
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(74, 29);
@@ -219,7 +222,7 @@ namespace Wargame.Forms
             this.btn_stop.BackColor = System.Drawing.Color.LightGray;
             this.btn_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stop.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_stop.Location = new System.Drawing.Point(135, 18);
+            this.btn_stop.Location = new System.Drawing.Point(78, 18);
             this.btn_stop.Margin = new System.Windows.Forms.Padding(2);
             this.btn_stop.Name = "btn_stop";
             this.btn_stop.Size = new System.Drawing.Size(74, 29);
@@ -233,7 +236,7 @@ namespace Wargame.Forms
             this.btn_prev.BackColor = System.Drawing.Color.LightGray;
             this.btn_prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_prev.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_prev.Location = new System.Drawing.Point(204, 18);
+            this.btn_prev.Location = new System.Drawing.Point(214, 18);
             this.btn_prev.Margin = new System.Windows.Forms.Padding(2);
             this.btn_prev.Name = "btn_prev";
             this.btn_prev.Size = new System.Drawing.Size(74, 29);
@@ -247,7 +250,7 @@ namespace Wargame.Forms
             this.btn_pause.BackColor = System.Drawing.Color.LightGray;
             this.btn_pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pause.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_pause.Location = new System.Drawing.Point(68, 18);
+            this.btn_pause.Location = new System.Drawing.Point(292, 18);
             this.btn_pause.Margin = new System.Windows.Forms.Padding(2);
             this.btn_pause.Name = "btn_pause";
             this.btn_pause.Size = new System.Drawing.Size(74, 29);
@@ -261,13 +264,14 @@ namespace Wargame.Forms
             this.btn_open.BackColor = System.Drawing.Color.LightGray;
             this.btn_open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_open.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btn_open.Location = new System.Drawing.Point(340, 18);
+            this.btn_open.Location = new System.Drawing.Point(306, 70);
             this.btn_open.Margin = new System.Windows.Forms.Padding(2);
             this.btn_open.Name = "btn_open";
             this.btn_open.Size = new System.Drawing.Size(74, 29);
             this.btn_open.TabIndex = 2;
             this.btn_open.Text = "Open";
             this.btn_open.UseVisualStyleBackColor = false;
+            this.btn_open.Visible = false;
             this.btn_open.Click += new System.EventHandler(this.btn_open_Click);
             // 
             // btn_play
@@ -340,8 +344,9 @@ namespace Wargame.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(699, 340);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(647, 340);
+            this.Controls.Add(this.btn_sunet);
             this.Controls.Add(this.lbl_track_end);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbl_track_start);
@@ -349,6 +354,7 @@ namespace Wargame.Forms
             this.Controls.Add(this.lbl_volume);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.btn_open);
             this.Controls.Add(this.WindowsMediaPlayer2);
             this.Controls.Add(this.listBoxSongs);
             this.Controls.Add(this.trackBar1);
