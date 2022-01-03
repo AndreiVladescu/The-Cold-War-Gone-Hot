@@ -51,6 +51,14 @@ namespace Wargame.Forms
             UpdateStatsLeg();
             UpdateStatsMob();
             UpdateStatsAir();
+            UpdateMiscGUI();
+        }
+        private void UpdateMiscGUI()
+        {
+            //TrackBarFuel.BackgroundImage = Image.FromFile(Tools.dirPath + "\\Resources\\Panels\\main_frame_bg.png");
+            TrackBarFuel.Value = (int)battlefieldInstance._atk._fuel_left;
+            LblFuel.Text = "Fuel available: " +
+                battlefieldInstance._atk._fuel_left.ToString();
         }
         private void UpdateArmyComposition()
         {

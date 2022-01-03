@@ -6,7 +6,7 @@
         public string _name { get; set; }
         public Commander()
         {
-
+            _level = 1;
         }
         public Commander(int level,
             string name)

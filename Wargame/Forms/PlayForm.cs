@@ -31,10 +31,7 @@ namespace Wargame.Forms
             UpdateAirStats();
             UpdateCommanders();
             UpdateFuel();
-        }
-        private void UpdateDoctrinePictures()
-        {
-
+            UpdateModifiers();
         }
         private void UpdateAirStats()
         {
@@ -96,6 +93,8 @@ namespace Wargame.Forms
                 PictureDefCommander.BackgroundImage = Image.FromFile(Tools.dirPath + "\\Resources\\Commanders\\macarthur.jpg");
             }
 
+
+            UpdateModifiers();
         }
         private async void BtnSimulate_ClickAsync(object sender, EventArgs e)
         {
@@ -142,24 +141,29 @@ namespace Wargame.Forms
             switch (atkDoctrineCount)
             {
                 case 0:
+                    battlefieldInstance._atk._doctrine.attackModifier = (float)0.075;
+                    battlefieldInstance._atk._doctrine.defendModifier = (float)0.075;
                     PictureAtkDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\breakthrough.jpg");
                     LblDoctrineAtkShow.Text = "Breakthrough";
                     break;
                 case 1:
+                    battlefieldInstance._atk._doctrine.attackModifier = (float)0.025;
+                    battlefieldInstance._atk._doctrine.defendModifier = (float)0.1;
                     PictureAtkDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\planned_attack.jpg");
                     LblDoctrineAtkShow.Text = "Well Planned Attack";
                     break;
                 case 2:
+                    battlefieldInstance._atk._doctrine.attackModifier = (float)0.15;
+                    battlefieldInstance._atk._doctrine.defendModifier = (float)0;
                     PictureAtkDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\relentless_assault.jpg");
                     LblDoctrineAtkShow.Text = "Relentless Assault";
                     break;
                 default:
-                    PictureAtkDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\breakthrough.jpg");
-                    break;
+                    throw new Exception("Image not found");
             }
 
             atkDoctrine = (Doctrine_Enum)(atkDoctrineCount + 1);
-
+            UpdateModifiers();
         }
         private void PictureDefDoctrine_Click(object sender, EventArgs e)
         {
@@ -168,24 +172,46 @@ namespace Wargame.Forms
             switch (defDoctrineCount)
             {
                 case 0:
+                    battlefieldInstance._def._doctrine.attackModifier = (float)0.075;
+                    battlefieldInstance._def._doctrine.defendModifier = (float)0.075;
                     PictureDefDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\elastic_defence.jpg");
                     LblDoctrineDefShow.Text = "Elastic Defence";
                     break;
                 case 1:
+                    battlefieldInstance._def._doctrine.attackModifier = (float)0;
+                    battlefieldInstance._def._doctrine.defendModifier = (float)0.25;
                     PictureDefDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\overwhelming_fire.jpg");
                     LblDoctrineDefShow.Text = "Overwhelming Fire";
                     break;
                 case 2:
+                    battlefieldInstance._def._doctrine.attackModifier = (float)0.175;
+                    battlefieldInstance._def._doctrine.defendModifier = (float)0.05;
                     PictureDefDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\backhand_blow.jpg");
                     LblDoctrineDefShow.Text = "Backhand Blow";
                     break;
                 default:
-                    PictureDefDoctrine.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Doctrines\\elastic_defence.jpg");
-                    break;
+                    throw new Exception("Image not found");
             }
 
             defDoctrine = (Doctrine_Enum)(defDoctrineCount + 11);
+            UpdateModifiers();
         }
+
+        private void UpdateModifiers()
+        {
+            LblAtkModifierStats.Text = "Modifiers:\n" +
+                ((battlefieldInstance._atk._doctrine.attackModifier + battlefieldInstance._atk._commander._level * (float)0.15) * 100).ToString() + 
+                "% attack\n" +
+                ((battlefieldInstance._atk._doctrine.defendModifier + battlefieldInstance._atk._commander._level * (float)0.15) * 100).ToString() +
+                "% defence";
+
+            LblDefModifierStats.Text = "Modifiers:\n" +
+                ((battlefieldInstance._def._doctrine.attackModifier + battlefieldInstance._def._commander._level * (float)0.15) * 100).ToString() +
+                "% attack\n" +
+                ((battlefieldInstance._def._doctrine.defendModifier + battlefieldInstance._def._commander._level * (float)0.15) * 100).ToString() +
+                "% defence";
+        }
+
         private void ChBoxAtkAir_CheckedChanged(object sender, EventArgs e)
         {
             this.battlefieldInstance._atk_air_attacks = !this.battlefieldInstance._atk_air_attacks;

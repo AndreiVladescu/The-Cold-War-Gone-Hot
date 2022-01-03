@@ -95,8 +95,8 @@ namespace Front_NS
         List<Ter_Unit> _gnd = new List<Ter_Unit>();
         List<Air_Unit> _air = new List<Air_Unit>();
 
-        Commander _commander;
-        Doctrine _doctrine;
+        public Commander _commander { get; set; }
+        public Doctrine _doctrine { get; set; }
 
         public float initialHP;
 
@@ -109,6 +109,8 @@ namespace Front_NS
         {
             isRetreating = false;
             _fuel_left = 1000;
+            _commander = new Commander();
+            _doctrine = new Doctrine();
         }
         // Getters
         public string GetCommanderName()

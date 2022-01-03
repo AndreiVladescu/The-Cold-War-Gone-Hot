@@ -52,7 +52,16 @@ namespace Wargame.Forms
             UpdateStatsLeg();
             UpdateStatsMob();
             UpdateStatsAir();
+            UpdateMiscGUI();
         }
+
+        private void UpdateMiscGUI()
+        {
+            TrackBarFuel.Value = (int)battlefieldInstance._def._fuel_left;
+            LblFuel.Text = "Fuel available: " + 
+                battlefieldInstance._def._fuel_left.ToString();
+        }
+
         private void UpdateCommander()
         {
             string commander_name = battlefieldInstance.GetCommanderNameDef();

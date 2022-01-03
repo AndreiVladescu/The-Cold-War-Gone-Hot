@@ -86,7 +86,6 @@ namespace Battlefield_NS
             UpdateEnvironment();
 
             // Aerial attacks come first
-            // TODO add rng
             if (_atk_air_attacks == true && _def_air_attacks == true)
             {
                 MutualAeriaLAttack();
@@ -102,7 +101,6 @@ namespace Battlefield_NS
 
             if (_atk_ter_attacks == true)
             {
-                // TODO add rng
                 DefenderGroundAttack(); // Defender starts first 
                 AttackerGroundAttack();
                 ApplyFuelConsumption();
@@ -173,13 +171,20 @@ namespace Battlefield_NS
 
             // TODO entrenchment - done
             // TODO reliability losses - done
-            // TODO fuel usage 
+            // TODO fuel usage - done
             // TODO organisation loss - done
 
 
             // Added reliability losses for the attacker side after his attack
             float reliability_losses_for_attacker = Tools.ReturnCombatLossesThroughReliability(thisPartyStruct._reliab / thisPartyNrOfUnits, thisPartyStruct._hp);
             _atk.DamageTerHp(reliability_losses_for_attacker);
+
+            // Doctrine + Commander modifiers
+            damage *= 1 + _atk._doctrine.attackModifier;
+            damage *= 1 + _atk._commander._level * (float)0.15;
+            damage += _def._doctrine.defendModifier;
+            damage += _def._commander._level * (float)0.15;
+
 
             // Finally, dish the damage
             if (_atk._fuel_left != 0)
@@ -229,12 +234,18 @@ namespace Battlefield_NS
 
             // TODO entrenchment - done
             // TODO reliability losses - done
-            // TODO fuel usage
+            // TODO fuel usage - done
             // TODO organisation loss - done
 
             // Added reliability losses for the defender side after his attack
             float reliability_losses_for_attacker = Tools.ReturnCombatLossesThroughReliability(thisPartyStruct._reliab / thisPartyNrOfUnits, thisPartyStruct._hp);
             _def.DamageTerHp(reliability_losses_for_attacker);
+
+            // Doctrine + Commander modifiers
+            damage *= 1 + _def._doctrine.attackModifier;
+            damage *= 1 + _def._commander._level * (float)0.15;
+            damage += _atk._doctrine.defendModifier;
+            damage += _atk._commander._level * (float)0.15;
 
             // Finally, dish the damage
             if (_def._fuel_left != 0)

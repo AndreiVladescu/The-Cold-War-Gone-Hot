@@ -810,7 +810,7 @@ namespace Wargame.Forms
             // TrackBarFuel
             // 
             this.TrackBarFuel.AutoSize = false;
-            this.TrackBarFuel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TrackBarFuel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TrackBarFuel.Location = new System.Drawing.Point(17, 152);
             this.TrackBarFuel.Maximum = 5000;
             this.TrackBarFuel.Name = "TrackBarFuel";
@@ -852,7 +852,7 @@ namespace Wargame.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1456, 1018);
+            this.ClientSize = new System.Drawing.Size(1456, 1100);
             this.Controls.Add(this.PanelArmyComposition);
             this.Controls.Add(this.PictureCommander);
             this.Controls.Add(this.PanelAir);
