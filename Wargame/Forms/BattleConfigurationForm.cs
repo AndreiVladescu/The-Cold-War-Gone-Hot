@@ -1,11 +1,15 @@
 ﻿using Battlefield_NS;
 using System;
+using System.Media;
 using System.Windows.Forms;
+using Wargame.User_Defined.Tools;
 
 namespace Wargame.Forms
 {
     public partial class BattleConfigurationForm : Form
     {
+        private SoundPlayer buttonSound = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\button0.wav");
+
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
         protected override CreateParams CreateParams
         {
@@ -40,6 +44,7 @@ namespace Wargame.Forms
 
         private void plainsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureTerrain.Image = global::Wargame.Properties.Resources.terrain_plains;
             LblTerrainShow.Text = "Plains";
             battlefieldInstance._terrain = Enums_NS.Terrain_Enum.Plain;
@@ -47,6 +52,7 @@ namespace Wargame.Forms
 
         private void forestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureTerrain.Image = global::Wargame.Properties.Resources.terrain_forest;
             LblTerrainShow.Text = "Forest";
             battlefieldInstance._terrain = Enums_NS.Terrain_Enum.Forest;
@@ -54,6 +60,7 @@ namespace Wargame.Forms
 
         private void hillToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureTerrain.Image = global::Wargame.Properties.Resources.terrain_hills;
             LblTerrainShow.Text = "Hills";
             battlefieldInstance._terrain = Enums_NS.Terrain_Enum.Hill;
@@ -61,6 +68,7 @@ namespace Wargame.Forms
 
         private void mountainToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureTerrain.Image = global::Wargame.Properties.Resources.terrain_mountain;
             LblTerrainShow.Text = "Mountains";
             battlefieldInstance._terrain = Enums_NS.Terrain_Enum.Mountain;
@@ -68,6 +76,7 @@ namespace Wargame.Forms
 
         private void cityToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureTerrain.Image = global::Wargame.Properties.Resources.terrain_urban;
             LblTerrainShow.Text = "City";
             battlefieldInstance._terrain = Enums_NS.Terrain_Enum.Urban;
@@ -75,6 +84,7 @@ namespace Wargame.Forms
 
         private void noRiverToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureRiver.Visible = false;
             LblRiverShow.Text = "No river";
             battlefieldInstance._river = Enums_NS.River_Enum.No;
@@ -82,6 +92,7 @@ namespace Wargame.Forms
 
         private void riverToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureRiver.Visible = true;
             LblRiverShow.Text = "River";
             battlefieldInstance._river = Enums_NS.River_Enum.Normal;
@@ -89,6 +100,7 @@ namespace Wargame.Forms
 
         private void largeRiverToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureRiver.Visible = true;
             LblRiverShow.Text = "Large river";
             battlefieldInstance._river = Enums_NS.River_Enum.Large;
@@ -96,6 +108,7 @@ namespace Wargame.Forms
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureWeather.Image = global::Wargame.Properties.Resources.weather_clear;
             LblWeatherShow.Text = "Clear";
             battlefieldInstance._weather = Enums_NS.Weather_Enum.Clear;
@@ -103,6 +116,7 @@ namespace Wargame.Forms
 
         private void windyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureWeather.Image = global::Wargame.Properties.Resources.weather_light_rain;
             LblWeatherShow.Text = "Windy";
             battlefieldInstance._weather = Enums_NS.Weather_Enum.Windy;
@@ -110,6 +124,7 @@ namespace Wargame.Forms
 
         private void stormyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureWeather.Image = global::Wargame.Properties.Resources.weather_heavy_rain;
             LblWeatherShow.Text = "Stormy";
             battlefieldInstance._weather = Enums_NS.Weather_Enum.Stormy;
@@ -117,6 +132,7 @@ namespace Wargame.Forms
 
         private void springToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             LblSeasonShow.Text = "Spring";
             PictureSeason.Visible = false;
             battlefieldInstance._season = Enums_NS.Season_Enum.Spring;
@@ -124,6 +140,7 @@ namespace Wargame.Forms
 
         private void summerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             LblSeasonShow.Text = "Summer";
             PictureSeason.Visible = false;
             battlefieldInstance._season = Enums_NS.Season_Enum.Summer;
@@ -131,6 +148,7 @@ namespace Wargame.Forms
 
         private void autumnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             LblSeasonShow.Text = "Autumn";
             PictureSeason.Visible = false;
             battlefieldInstance._season = Enums_NS.Season_Enum.Autumn;
@@ -138,6 +156,7 @@ namespace Wargame.Forms
 
         private void winterToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             LblSeasonShow.Text = "Winter";
             PictureSeason.Visible = true;
             battlefieldInstance._season = Enums_NS.Season_Enum.Winter;

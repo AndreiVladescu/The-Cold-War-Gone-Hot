@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Windows.Forms;
 using Ter_Units_NS;
 using Wargame.User_Defined.Tools;
@@ -13,6 +14,8 @@ namespace Wargame.Forms
 {
     public partial class DefenderForm : Form
     {
+        private SoundPlayer buttonSound = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\button0.wav");
+
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
 
         List<string> legUnitNames = new List<string> { "Inf_Eq", "Art", "L_Art", "H_Art", "AAG", "AT" };
@@ -133,6 +136,7 @@ namespace Wargame.Forms
         }
         private void PictureFlagDefender_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureFlagDefender.Image = null;
 
             if (flagCounter == 0)
@@ -236,6 +240,7 @@ namespace Wargame.Forms
         }
         private void BtnLegGen_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureLeg.Image = Image.FromFile(GetUnitPicturePath(legUnitNames, legUnitNameCounter, ref legGen));
             PictureLegGen.Image = Image.FromFile(GetGenPicturePath(legGen));
 
@@ -243,6 +248,7 @@ namespace Wargame.Forms
         }
         private void BtnMobGen_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureMob.Image = Image.FromFile(GetUnitPicturePath(mobUnitNames, mobUnitNameCounter, ref mobGen));
             PictureMobGen.Image = Image.FromFile(GetGenPicturePath(mobGen));
 
@@ -250,6 +256,7 @@ namespace Wargame.Forms
         }
         private void BtnAirGen_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             PictureAir.Image = Image.FromFile(GetUnitPicturePath(airUnitNames, airUnitNameCounter, ref airGen, true));
             PictureAirGen.Image = Image.FromFile(GetGenPicturePath(airGen));
 
@@ -257,6 +264,7 @@ namespace Wargame.Forms
         }
         private void BtnNextLeg_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             legUnitNameCounter++;
             legUnitNameCounter = legUnitNameCounter % legUnitNames.Count();
             PictureLeg.Image = Image.FromFile(UpdateUnitPicture(legUnitNames, legUnitNameCounter, legGen));
@@ -266,6 +274,7 @@ namespace Wargame.Forms
 
         private void BtnNextMob_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             mobUnitNameCounter++;
             mobUnitNameCounter = mobUnitNameCounter % mobUnitNames.Count();
             PictureMob.Image = Image.FromFile(UpdateUnitPicture(mobUnitNames, mobUnitNameCounter, mobGen));
@@ -275,6 +284,7 @@ namespace Wargame.Forms
 
         private void BtnNextAir_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             airUnitNameCounter++;
             airUnitNameCounter = airUnitNameCounter % airUnitNames.Count();
             PictureAir.Image = Image.FromFile(UpdateUnitPicture(airUnitNames, airUnitNameCounter, airGen, true));
@@ -283,6 +293,7 @@ namespace Wargame.Forms
         }
         private void BtnPrevLeg_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             legUnitNameCounter--;
             if (legUnitNameCounter < 0)
                 legUnitNameCounter = legUnitNames.Count() - 1;
@@ -293,6 +304,7 @@ namespace Wargame.Forms
 
         private void BtnPrevMob_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             mobUnitNameCounter--;
             if (mobUnitNameCounter < 0)
                 mobUnitNameCounter = mobUnitNames.Count() - 1;
@@ -303,6 +315,7 @@ namespace Wargame.Forms
 
         private void BtnPrevAir_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             airUnitNameCounter--;
             if (airUnitNameCounter < 0)
                 airUnitNameCounter = airUnitNames.Count() - 1;
@@ -313,6 +326,7 @@ namespace Wargame.Forms
 
         private void BtnAddLeg_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             Ter_Units_Enum unit_type = (Ter_Units_Enum)(legUnitNameCounter + 201);
             Gen_Enum unit_gen = (Gen_Enum)(legGen - 1);
             Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(legExp - 1);
@@ -326,6 +340,7 @@ namespace Wargame.Forms
 
         private void BtnSubLeg_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             Ter_Units_Enum unit_type = (Ter_Units_Enum)(legUnitNameCounter + 201);
             Gen_Enum unit_gen = (Gen_Enum)(legGen - 1);
             Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(legExp - 1);
@@ -339,6 +354,7 @@ namespace Wargame.Forms
 
         private void BtnAddMob_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             Ter_Units_Enum unit_type = (Ter_Units_Enum)(mobUnitNameCounter + 101);
             Gen_Enum unit_gen = (Gen_Enum)(mobGen - 1);
             Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(mobExp - 1);
@@ -352,6 +368,7 @@ namespace Wargame.Forms
 
         private void BtnSubMob_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             Ter_Units_Enum unit_type = (Ter_Units_Enum)(mobUnitNameCounter + 101);
             Gen_Enum unit_gen = (Gen_Enum)(mobGen - 1);
             Regiment_Exp_Enum unit_xp = (Regiment_Exp_Enum)(mobExp - 1);
@@ -365,6 +382,7 @@ namespace Wargame.Forms
 
         private void BtnSubAir_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             Air_Units_Enum unit_type = (Air_Units_Enum)(airUnitNameCounter + 301);
             if (airUnitNameCounter == 4 || airUnitNameCounter == 3)
                 unit_type += 97;
@@ -380,6 +398,7 @@ namespace Wargame.Forms
 
         private void BtnAddAir_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             Air_Units_Enum unit_type = (Air_Units_Enum)(airUnitNameCounter + 301);
             if (airUnitNameCounter == 4 || airUnitNameCounter == 3)
                 unit_type += 97;
@@ -395,6 +414,7 @@ namespace Wargame.Forms
 
         private void PictureLegExp_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             legExp++;
             legExp %= 5;
             PictureLegExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(legExp + 1) + ".jpg");
@@ -404,6 +424,7 @@ namespace Wargame.Forms
         }
         private void PictureMobExp_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             mobExp++;
             mobExp %= 5;
             PictureMobExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(mobExp + 1) + ".jpg");
@@ -413,6 +434,7 @@ namespace Wargame.Forms
         }
         private void PictureAirExp_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             airExp++;
             airExp %= 5;
             PictureAirExp.Image = Image.FromFile(Tools.dirPath + "\\Resources\\Icons\\unit_level_" + Convert.ToString(airExp + 1) + ".jpg");
@@ -423,6 +445,7 @@ namespace Wargame.Forms
 
         private void ChangeCommander()
         {
+            buttonSound.Play();
             string commander_name = battlefieldInstance.GetCommanderNameDef();
 
             if (commander_name == "Zhukov")

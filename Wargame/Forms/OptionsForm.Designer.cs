@@ -32,6 +32,8 @@ namespace Wargame.Forms
             this.TrackBarVolume = new System.Windows.Forms.TrackBar();
             this.TrackBarSensitivity = new System.Windows.Forms.TrackBar();
             this.PictureOptions = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarSensitivity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureOptions)).BeginInit();
@@ -77,6 +79,30 @@ namespace Wargame.Forms
             this.PictureOptions.TabIndex = 1;
             this.PictureOptions.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(319, 495);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Volume";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(222, 582);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(181, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Mouse Sensitivity";
+            // 
             // OptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -84,6 +110,8 @@ namespace Wargame.Forms
             this.BackgroundImage = global::Wargame.Properties.Resources.bg_options;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1554, 1041);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TrackBarSensitivity);
             this.Controls.Add(this.TrackBarVolume);
             this.Controls.Add(this.PictureOptions);
@@ -96,6 +124,7 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.TrackBarSensitivity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureOptions)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +133,7 @@ namespace Wargame.Forms
         private System.Windows.Forms.PictureBox PictureOptions;
         private System.Windows.Forms.TrackBar TrackBarVolume;
         private System.Windows.Forms.TrackBar TrackBarSensitivity;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -12,9 +12,8 @@ namespace Wargame
         private Form activeForm;
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
         public MusicPlayerForm playerForm = new MusicPlayerForm();
-        private SoundPlayer buttonSound = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\button0.wav");
+        private SoundPlayer buttonSound = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\button6.wav");
         
-
         protected override CreateParams CreateParams
         {
             get
