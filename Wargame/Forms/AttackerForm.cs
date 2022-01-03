@@ -18,7 +18,7 @@ namespace Wargame.Forms
 
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
 
-        List<string> legUnitNames = new List<string> { "Inf_Eq", "Art", "L_Art", "H_Art", "AAG", "AT" };
+        List<string> legUnitNames = new List<string> { "Inf_Eq", "AAG", "Art", "L_Art", "H_Art", "AT" };
         List<string> mobUnitNames = new List<string> { "MBT", "L_Tank", "L_Mech", "H_Mech", "Mot", "SPAAG", "SPL_Art", "SPArt", "SPH_Art", "SPAT", "SPRArt" };
         List<string> airUnitNames = new List<string> { "MultiRole_Jet", "CAS", "Interd", "AtkHeli", "L_AtkHeli" };
 

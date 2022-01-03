@@ -40,12 +40,6 @@ namespace Ter_Units_NS
 
             List<float> Attr = Parser.Units.GetUnitField((int)unit_type);
 
-            /// Console test
-            //foreach (float attr in Attr)
-            //{
-            //    Console.WriteLine(attr);
-            //}
-
             float hp = Attr[0];
             float s_atk = Attr[1];
             float h_atk = Attr[2];
