@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using Wargame.Forms;
 using Wargame.User_Defined.Tools;
+using System.Media;
 
 namespace Wargame
 {
@@ -11,6 +12,8 @@ namespace Wargame
         private Form activeForm;
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
         public MusicPlayerForm playerForm = new MusicPlayerForm();
+        private SoundPlayer buttonSound = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\button0.wav");
+        
 
         protected override CreateParams CreateParams
         {
@@ -42,38 +45,45 @@ namespace Wargame
         }
         private void BtnCloseApp(object sender, EventArgs e)
         {
+            buttonSound.Play();
             Tools.UpdateMouseValue(Tools.pvParam);
             System.Environment.Exit(1);
         }
 
         private void BtnBattlefieldConfig_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             OpenChildForm(new Forms.BattleConfigurationForm(), sender);
         }
 
         private void BtnOptions_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             OpenChildForm(new Forms.OptionsForm(), sender);
         }
 
         private void BtnAtkConfig_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             OpenChildForm(new Forms.AttackerForm(), sender);
         }
 
         private void BtnDefConfig_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             OpenChildForm(new Forms.DefenderForm(), sender);
         }
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             OpenChildForm(new Forms.PlayForm(), sender);
         }
 
 
         private void BtnMusicPlayer_Click(object sender, EventArgs e)
         {
+            buttonSound.Play();
             if (playerForm.Visible == false)
                 playerForm.Visible = true;
             else

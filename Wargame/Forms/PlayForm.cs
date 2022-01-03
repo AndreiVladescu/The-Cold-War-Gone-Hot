@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Wargame.User_Defined.Tools;
+using System.Media;
 
 namespace Wargame.Forms
 {
@@ -24,6 +25,7 @@ namespace Wargame.Forms
         static public Doctrine_Enum defDoctrine = Doctrine_Enum.Elastic_Defense;
 
         Battlefield battlefieldInstance = Battlefield.battlefieldInstance;
+        private SoundPlayer declareWarButton = new SoundPlayer(Tools.dirPath + "Resources\\SFX\\declareWar.wav");
         protected override CreateParams CreateParams
         {
             get
@@ -110,6 +112,7 @@ namespace Wargame.Forms
             simulationStarted = !simulationStarted;
             if (simulationStarted)
             {
+                declareWarButton.Play();
                 while (simulationStarted)
                 {
                     if (Math.Abs(StartSimulation()) == 3)

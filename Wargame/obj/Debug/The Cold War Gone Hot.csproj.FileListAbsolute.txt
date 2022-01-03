@@ -89,3 +89,27 @@ D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Ho
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.exe
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.pdb
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\bin\Debug\Wargame.exe.config
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\bin\Debug\Wargame.exe
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\bin\Debug\Wargame.pdb
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\bin\Debug\System.Numerics.Vectors.dll
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\bin\Debug\Interop.WMPLib.dll
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\bin\Debug\AxInterop.WMPLib.dll
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\The Cold War Gone Hot.csproj.AssemblyReference.cache
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Interop.WMPLib.dll
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\AxInterop.WMPLib.dll
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Forms.AttackerForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Forms.BattleConfigurationForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Forms.DefenderForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.MainForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Forms.OptionsForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Forms.PlayForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Forms.SplashScreenForm.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.Properties.Resources.resources
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\The Cold War Gone Hot.csproj.GenerateResource.cache
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\The Cold War Gone Hot.csproj.CopyComplete
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.exe
+H:\Cursuri\Anul 3 Sem 1\Joc Cu Baietzii\The Cold war\Wargame\obj\Debug\Wargame.pdb
