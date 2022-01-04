@@ -1,4 +1,7 @@
 ﻿
+using System.Drawing;
+using Wargame.User_Defined.Tools;
+
 namespace Wargame.Forms
 {
     partial class SplashScreenForm
@@ -75,6 +78,7 @@ namespace Wargame.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
+            this.Icon = new Icon(Tools.dirPath + "\\Resources\\ColdWar_icon.ico");
         }
 
         #endregion

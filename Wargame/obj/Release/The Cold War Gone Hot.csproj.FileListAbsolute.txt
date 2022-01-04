@@ -33,3 +33,10 @@ C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold W
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.exe
 C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.pdb
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Release\Interop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\bin\Release\AxInterop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Interop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\AxInterop.WMPLib.dll
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.ResolveComReference.cache
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\Wargame.Forms.MusicPlayerForm.resources
+C:\Users\Admin\source\repos\The-Cold-War-Gone-Hot\Wargame\obj\Release\The Cold War Gone Hot.csproj.CopyComplete

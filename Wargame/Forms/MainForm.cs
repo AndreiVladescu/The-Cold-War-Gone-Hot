@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Wargame.Forms;
 using Wargame.User_Defined.Tools;
 using System.Media;
+using System.Drawing;
 
 namespace Wargame
 {
@@ -26,6 +27,7 @@ namespace Wargame
         public MainForm()
         {
             InitializeComponent();
+            this.Icon = new Icon(Tools.dirPath + "\\Resources\\ColdWar_icon.ico");
             playerForm.Visible = false;
         }
         private void OpenChildForm(Form childForm, object btnSender)

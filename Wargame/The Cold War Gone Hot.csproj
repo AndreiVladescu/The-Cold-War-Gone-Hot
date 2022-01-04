@@ -52,7 +52,7 @@
     </Win32Resource>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>ColdWar_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\ColdWar_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -210,7 +210,7 @@
     <None Include="Resources\Icons\Button Icons\Music player\previous_button.png" />
     <None Include="Resources\Icons\Button Icons\Music player\pause_button.png" />
     <None Include="Resources\Icons\Button Icons\Music player\next_button.png" />
-    <Content Include="ColdWar_icon.ico" />
+    <Content Include="Resources\ColdWar_icon.ico" />
     <Content Include="Resources\PeaceDealSound.wav" />
     <Content Include="Resources\XML_Files\airUnits.xml" />
     <Content Include="Resources\XML_Files\groundUnits.xml" />
