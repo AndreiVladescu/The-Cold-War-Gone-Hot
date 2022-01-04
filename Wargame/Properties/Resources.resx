@@ -121,6 +121,9 @@
   <data name="play_button_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\play_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SUA_Mot_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unit_Images\Ter_Units\SUA_Mot_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="play_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\play_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,6 +132,9 @@
   </data>
   <data name="unit_level_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\unit_level_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\Music player\play_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gen_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\gen_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,14 +163,14 @@
   <data name="gen_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\gen_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="right_arrow_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Button Icons\right_arrow_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="elastic_defence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doctrines\elastic_defence.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="generic_bg_307x1132" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit_button_icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stop_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\Music player\stop_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="music_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\music_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +190,8 @@
   <data name="play_button_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\play_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="elastic_defence" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Doctrines\elastic_defence.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SUA_Inf_Eq_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unit_Images\Ter_Units\SUA_Inf_Eq_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SUA_MultiRole_Jet_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unit_Images\Air_Units\SUA_MultiRole_Jet_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +202,8 @@
   <data name="bg_options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SUA_Mot_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unit_Images\Ter_Units\SUA_Mot_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unit_level_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\unit_level_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="generic_bg_307x113" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\generic_bg_307x113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,8 +214,14 @@
   <data name="macarthur" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Commanders\macarthur.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pause_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\Music player\pause_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="main_menu_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\main_menu_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="multi_group_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\multi_group_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit_button_icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -231,6 +243,9 @@
   </data>
   <data name="background_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\background_panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="previous_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\Music player\previous_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="attacker_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\attacker_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,9 +271,6 @@
   <data name="battlefield_config_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\battlefield_config_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SUA_Inf_Eq_Gen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unit_Images\Ter_Units\SUA_Inf_Eq_Gen1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="main_frame_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Panels\main_frame_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -274,11 +286,11 @@
   <data name="bg_battle_configuration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_battle_configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gen_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\gen_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="USA_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Flags\USA_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unit_level_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\unit_level_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit_button_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,16 +340,19 @@
   <data name="minus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Button Icons\minus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="exit_button_icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\exit_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="battlefield_config_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battlefield_config_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="weather_clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\weather_clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="multi_group_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\multi_group_bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="right_arrow_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\right_arrow_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gen_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Button Icons\gen_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="next_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Button Icons\Music player\next_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

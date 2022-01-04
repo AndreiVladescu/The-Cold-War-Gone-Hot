@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -46,6 +46,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ColdWar_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -198,6 +205,12 @@
     <None Include="Resources\bg_battle_configuration.png" />
     <None Include="Resources\bg_options.png" />
     <None Include="Resources\Icons\Button Icons\gen_button_icon.png" />
+    <None Include="Resources\Icons\Button Icons\Music player\play_button.png" />
+    <None Include="Resources\Icons\Button Icons\Music player\stop_button.png" />
+    <None Include="Resources\Icons\Button Icons\Music player\previous_button.png" />
+    <None Include="Resources\Icons\Button Icons\Music player\pause_button.png" />
+    <None Include="Resources\Icons\Button Icons\Music player\next_button.png" />
+    <Content Include="ColdWar_icon.ico" />
     <Content Include="Resources\PeaceDealSound.wav" />
     <Content Include="Resources\XML_Files\airUnits.xml" />
     <Content Include="Resources\XML_Files\groundUnits.xml" />

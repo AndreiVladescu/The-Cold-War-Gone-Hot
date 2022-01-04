@@ -75,7 +75,6 @@ D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Ho
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\The Cold War Gone Hot.csproj.ResolveComReference.cache
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.AttackerForm.resources
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.BattleConfigurationForm.resources
-D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.CreditsForm.resources
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.DefenderForm.resources
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.MainForm.resources
 D:\ANUL 3\Sem 1\Sisteme pentru modelare si simulare\Proiect\The-Cold-War-Gone-Hot\Wargame\obj\Debug\Wargame.Forms.MusicPlayerForm.resources
